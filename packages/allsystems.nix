@@ -16,6 +16,7 @@
     parsec-bin
     juno-theme
     atlauncher
+    minecraft-launcher
   ];
 
 
