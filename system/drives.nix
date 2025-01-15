@@ -7,13 +7,13 @@
 
   # More Drives
   fileSystems."/run/media/asyu/Games" = {
-    device = "/dev/sda2";
+    device = "/dev/sdb2";
     fsType = "ntfs";
     options = [ "auto" ];
   };
 
   fileSystems."/run/media/asyu/Vault" = {
-    device = "/dev/sdb2";
+    device = "/dev/sda2";
     fsType = "ntfs";
     options = [ "auto" ];
   };
