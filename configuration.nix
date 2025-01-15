@@ -63,13 +63,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.etc."gtk-3.0/settings.ini".text = ''
-    [Settings]
-    gtk-theme-name=Catppuccin-Mocha-Standard-Blue-Dark
-  '';
-
-
-
   # Flake Support
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
