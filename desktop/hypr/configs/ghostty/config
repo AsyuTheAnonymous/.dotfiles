@@ -1,0 +1,4 @@
+shell-integration = zsh
+theme = duckbones
+cursor-style = block_hollow
+window-decoration = false
