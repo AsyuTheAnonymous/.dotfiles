@@ -10,6 +10,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+
+      # Swap Desktops
       #./desktop/kde/kde.nix
       ./desktop/hypr/hypr.nix
       ./packages/allsystems.nix
@@ -27,11 +29,12 @@
       
     ];
 
-
+  # Enabling nerdfonts
   fonts.packages = with pkgs; [ nerdfonts ];
   fonts.fontconfig.enable = true;
 
-  networking.hostName = "asyus-system"; # Define your hostname.
+  # Dude its literally just your hostname..
+  networking.hostName = "asyus-system";
 
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

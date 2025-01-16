@@ -15,7 +15,7 @@
     catppuccin-gtk
     parsec-bin
     juno-theme
-    atlauncher
+    # atlauncher
     # minecraft
   ];
 
