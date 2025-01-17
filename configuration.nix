@@ -64,7 +64,7 @@
     ];
   };
 
-
+  hardware.sensors.enable = true;
   hardware.bluetooth.enable = true;
 
   nixpkgs.config.allowUnfree = true;
