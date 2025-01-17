@@ -23,7 +23,7 @@
 
 
   # Deprecating soon
-  catppuccin.gtk.enable = true;
+  # catppuccin.gtk.enable = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -77,6 +77,11 @@
   gtk.enable = true;
   gtk.cursorTheme.package = pkgs.bibata-cursors;
   gtk.cursorTheme.name = "Bibata-Modern-Ice";
+
+
+  # This also works yo!!
+  gtk.theme.name = "Sweet-Ambar-Blue-Dark";
+  gtk.theme.package = pkgs.sweet;
   
   # GTK Themes
   # gtk = {
