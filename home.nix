@@ -82,6 +82,13 @@
   # This also works yo!!
   gtk.theme.name = "Sweet-Ambar-Blue-Dark";
   gtk.theme.package = pkgs.sweet;
+
+
+  # GTK Icons
+  gtk.iconTheme = {
+    package = pkgs.zafiro-icons;
+    name = "Zafiro-Icons-Light-Blue-f";
+  };
   
   # GTK Themes
   # gtk = {
