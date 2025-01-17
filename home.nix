@@ -36,7 +36,8 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages =  with pkgs; [
+    candy-icons
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -75,19 +76,25 @@
   };
   # These work future me!!
   gtk.enable = true;
-  gtk.cursorTheme.package = pkgs.bibata-cursors;
-  gtk.cursorTheme.name = "Bibata-Modern-Ice";
 
 
-  # This also works yo!!
-  gtk.theme.name = "Sweet-Ambar-Blue-Dark";
-  gtk.theme.package = pkgs.sweet;
 
+  # Theme
+  gtk.theme = {
+    package = pkgs.sweet;
+    name = "Sweet-Ambar-Blue-Dark-v40";
+  };
 
-  # GTK Icons
+  # Icons
   gtk.iconTheme = {
-    package = pkgs.zafiro-icons;
-    name = "Zafiro-Icons-Light-Blue-f";
+    package = pkgs.candy-icons;
+    name = "candy-icons";
+  };
+
+  # Cursor
+  gtk.cursorTheme = {
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
   };
   
   # GTK Themes

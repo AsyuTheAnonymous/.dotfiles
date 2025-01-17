@@ -14,7 +14,6 @@
     btop
     parsec-bin
     code-cursor
-    
     # File Manager + plugins
     # krusader
     # unzip
