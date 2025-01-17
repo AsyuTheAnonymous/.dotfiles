@@ -5,27 +5,25 @@
 }
 
 window.bottom_bar#waybar {
-  background-color: rgba(255, 255, 255, 0.7); /* Replace with actual color */
-  border-top: solid alpha(@surface1, 0.7) 2;
-  /* background-color: alpha(@base, 0.7);
-  border-top: solid alpha(@surface1, 0.7) 2; */
+  background-color: rgba(24, 25, 38, 0.7); /* base */
+  border-top: solid rgba(73, 77, 100, 0.7) 2; /* surface1 */
 }
 
 window.top_bar#waybar {
-  background-color: alpha(@base, 0.7);
-  border-bottom: solid alpha(@surface1, 0.7) 2;
+  background-color: rgba(24, 25, 38, 0.7);
+  border-bottom: solid rgba(73, 77, 100, 0.7) 2;
 }
 
 window.left_bar#waybar {
-  background-color: alpha(@base, 0.7);
-  border-top: solid alpha(@surface1, 0.7) 2;
-  border-right: solid alpha(@surface1, 0.7) 2;
-  border-bottom: solid alpha(@surface1, 0.7) 2;
+  background-color: rgba(24, 25, 38, 0.7);
+  border-top: solid rgba(73, 77, 100, 0.7) 2;
+  border-right: solid rgba(73, 77, 100, 0.7) 2;
+  border-bottom: solid rgba(73, 77, 100, 0.7) 2;
   border-radius: 0 15 15 0;
 }
 
 window.bottom_bar .modules-center {
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   color: @green;
   border-radius: 15;
   padding-left: 20;
@@ -35,7 +33,7 @@ window.bottom_bar .modules-center {
 }
 
 window.bottom_bar .modules-left {
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   border-radius: 0 15 15 0;
   padding-left: 20;
   padding-right: 20;
@@ -44,7 +42,7 @@ window.bottom_bar .modules-left {
 }
 
 window.bottom_bar .modules-right {
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   border-radius: 15 0 0 15;
   padding-left: 20;
   padding-right: 20;
@@ -86,7 +84,7 @@ window.bottom_bar .modules-right {
 }
 
 #submap {
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   border-radius: 15;
   padding-left: 15;
   padding-right: 15;
@@ -98,7 +96,7 @@ window.bottom_bar .modules-right {
 
 window.top_bar .modules-center {
   font-weight: bold;
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   color: @peach;
   border-radius: 15;
   padding-left: 20;
@@ -132,7 +130,7 @@ window.top_bar .modules-center {
 }
 
 #bluetooth {
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   border-radius: 15;
   padding-left: 15;
   padding-right: 15;
@@ -141,7 +139,7 @@ window.top_bar .modules-center {
 }
 
 #bluetooth.disabled {
-  background-color: alpha(@surface0, 0.7);
+  background-color: rgba(54, 55, 76, 0.7);
   color: @subtext0;
 }
 
@@ -154,7 +152,7 @@ window.top_bar .modules-center {
 }
 
 #network {
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   border-radius: 15;
   padding-left: 15;
   padding-right: 15;
@@ -165,7 +163,7 @@ window.top_bar .modules-center {
 }
 
 #network.disabled {
-  background-color: alpha(@surface0, 0.7);
+  background-color: rgba(54, 55, 76, 0.7);
   color: @subtext0;
 }
 
@@ -240,7 +238,7 @@ window.top_bar .modules-center {
 
 #custom-logout_menu {
   color: @red;
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   border-radius: 15 0 0 15;
   padding-left: 10;
   padding-right: 5;
@@ -249,7 +247,7 @@ window.top_bar .modules-center {
 }
 
 window.left_bar .modules-center {
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   border-radius: 0 15 15 0;
   margin-right: 5;
   margin-top: 15;
@@ -265,7 +263,7 @@ window.left_bar .modules-center {
 }
 
 #taskbar button.active {
-  background-color: alpha(@surface1, 0.7);
+  background-color: rgba(73, 77, 100, 0.7);
   border-radius: 10;
 }
 
@@ -276,7 +274,7 @@ window.left_bar .modules-center {
 }
 
 #tray>.needs-attention {
-  background-color: alpha(@maroon, 0.7);
+  background-color: rgba(235, 111, 146, 0.7); /* maroon */
   border-radius: 10;
 }
 

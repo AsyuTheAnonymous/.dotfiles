@@ -16,6 +16,7 @@
     catppuccin-gtk
     parsec-bin
     juno-theme
+    code-cursor
     # atlauncher
     # minecraft
   ];
