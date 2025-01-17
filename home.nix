@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, nix-colors, ... }:
+{ config, pkgs, inputs, nix-colors, catppuccin, ... }:
 
 {
   imports = [
@@ -21,6 +21,9 @@
     };
   };
 
+
+  # Deprecating soon
+  catppuccin.gtk.enable = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

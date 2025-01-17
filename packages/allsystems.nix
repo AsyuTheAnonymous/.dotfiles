@@ -8,14 +8,12 @@
     ghostty
     discord
     git
-    nautilus
+    spacedrive
     unzip
     neofetch
     tradingview
     btop
-    catppuccin-gtk
     parsec-bin
-    juno-theme
     code-cursor
     # atlauncher
     # minecraft
