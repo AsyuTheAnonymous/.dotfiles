@@ -8,7 +8,7 @@
     ghostty
     discord
     git
-    spacedrive
+    mucommander
     unzip
     neofetch
     tradingview
