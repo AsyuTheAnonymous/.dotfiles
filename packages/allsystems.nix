@@ -8,7 +8,7 @@
     ghostty
     discord
     git
-    nemo-with-extensions
+    nautilus
     unzip
     neofetch
     tradingview
