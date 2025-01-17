@@ -14,8 +14,10 @@
       # Swap Desktops
       #./desktop/kde/kde.nix
       ./desktop/hypr/hypr.nix
-      ./packages/allsystems.nix
+      ./packages/essential.nix
       ./packages/unstable.nix
+      ./packages/code.nix
+      ./packages/proton.nix
       ./system/bootloader/grub.nix
       # Remove Nvidia module for laptop support
       ./system/nvidia.nix
@@ -26,7 +28,7 @@
       ./support/zsh.nix
       ./support/ssh.nix
       ./support/flatpak.nix
-      ./packages/proton.nix
+  
       
     ];
 
