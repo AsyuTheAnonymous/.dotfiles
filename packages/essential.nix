@@ -14,7 +14,6 @@
     parsec-bin
     protonmail-desktop
     protonvpn-gui
-
   ];
 
 

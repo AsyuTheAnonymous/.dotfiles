@@ -11,6 +11,8 @@
     flake = "nix flake update";
     rebuild = "sudo nixos-rebuild switch --flake .";
     home = "home-manager switch --flake .";
+    clean = "nix-env --delete-generations 5d";
+    cleanhm = "home-manager expire-generations '-5 days'";
   };
   
 
