@@ -17,6 +17,7 @@
       ./packages/allsystems.nix
       ./packages/unstable.nix
       ./system/bootloader/grub.nix
+      # Remove Nvidia module for laptop support
       ./system/nvidia.nix
       ./system/pipewire.nix
       ./system/drives.nix

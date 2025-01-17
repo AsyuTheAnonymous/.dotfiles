@@ -8,15 +8,18 @@
     ghostty
     discord
     git
-    mucommander
-    unzip
+    nemo
     neofetch
     tradingview
     btop
     parsec-bin
     code-cursor
-    # atlauncher
-    # minecraft
+    
+    # File Manager + plugins
+    # krusader
+    # unzip
+    # kompare
+    # kate
   ];
 
 
