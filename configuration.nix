@@ -58,11 +58,14 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.asyu = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "input" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
   };
+
+
+  hardware.bluetooth.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 

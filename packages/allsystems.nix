@@ -12,6 +12,7 @@
     unzip
     neofetch
     tradingview
+    btop
     catppuccin-gtk
     parsec-bin
     juno-theme
