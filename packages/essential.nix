@@ -14,6 +14,7 @@
     parsec-bin
     protonmail-desktop
     protonvpn-gui
+    catppuccin-sddm
   ];
 
 

@@ -9,7 +9,7 @@
   };
 
   # SDDM
-  services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.enable = true;
 
   # Enable Hyprland
   programs.hyprland = {

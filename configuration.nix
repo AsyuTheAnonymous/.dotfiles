@@ -13,6 +13,7 @@
 
       # Swap Desktops
       #./desktop/kde/kde.nix
+      ./sddm.nix
       ./desktop/hypr/hypr.nix
       ./packages/essential.nix
       ./packages/unstable.nix
