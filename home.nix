@@ -22,9 +22,6 @@
   };
 
 
-  # Deprecating soon
-  # catppuccin.gtk.enable = true;
-
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -58,7 +55,6 @@
 
   programs.waybar = {
     enable = true;
-    #style = ./desktop/hypr/configs/waybar/style.css;
   };
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -74,10 +70,8 @@
     ".config/waybar/config.jsonc".source = ./desktop/hypr/configs/waybar/config.jsonc;
     ".config/waybar/macchiato.css".source = ./desktop/hypr/configs/waybar/macchiato.css;
   };
-  # These work future me!!
+  # Enable themes for GTK apps (file managers and other apps use GTK)
   gtk.enable = true;
-
-
 
   # Theme
   gtk.theme = {
@@ -96,40 +90,6 @@
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Ice";
   };
-  
-  # GTK Themes
-  # gtk = {
-  #   enable = true;
-  #   theme = {
-  #     name = "Catppuccin-Mocha-Standard-Blue-Dark";
-  #     package = pkgs.catppuccin-gtk;
-  #   };
-  #   iconTheme = {
-  #     name = "Juno";
-  #     package = pkgs.juno-theme;
-
-  #   };
-  # };
-
-  # # Dconf for nemo
-  # dconf.settings = {
-  #   "org/gnome/desktop/interface" = {
-  #     gtk-theme = "Catppuccin-Mocha-Standard-Blue-Dark";
-  #     icon-theme = "Juno";
-  #   };
-  # };
-
-
-
-
-
-
-
-
-
-
-
-
 
   # Starship and Neofetch + ZSH Enabled
   programs.zsh = {
