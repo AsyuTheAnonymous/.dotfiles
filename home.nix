@@ -54,7 +54,7 @@
 
   programs.waybar = {
     enable = true;
-    style = ./desktop/hypr/configs/waybar/style.css;
+    #style = ./desktop/hypr/configs/waybar/style.css;
   };
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -66,7 +66,9 @@
     ".config/neofetch/config.conf".source = ./desktop/hypr/configs/neofetch/config.conf;
     ".config/hypr/hyprpaper.conf".source = ./desktop/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./desktop/hypr/configs/starship/starship.toml;
-  
+    ".config/waybar/style.css".source = ./desktop/hypr/configs/waybar/style.css;
+    ".config/waybar/config.jsonc".source = ./desktop/hypr/configs/waybar/config.jsonc;
+    ".config/waybar/macchiato.css".source = ./desktop/hypr/configs/waybar/macchiato.css;
   };
   # These work future me!!
   gtk.enable = true;
