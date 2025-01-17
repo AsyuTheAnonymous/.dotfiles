@@ -24,7 +24,7 @@
       ./system/drives.nix
       ./system/shell.nix
       ./support/steam.nix
-      ./support/zsh.nix
+      # ./support/zsh.nix
       ./support/ssh.nix
       ./support/flatpak.nix
   
