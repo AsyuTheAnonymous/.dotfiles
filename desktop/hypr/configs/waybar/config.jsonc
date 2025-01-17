@@ -7,8 +7,8 @@
     "passthrough": false,
     "fixed-center": true,
 
-    "modules-left": ["hyprland/workspaces", "custom/sep", "hyprland/window"],
-    "modules-center": ["custom/music-player"],
+    "modules-left": ["custom/sep", "hyprland/window"],
+    "modules-center": ["custom/music-player", "hyprland/workspaces"],
     "modules-right": [
         "custom/screen-recorder",
         "custom/sep",
@@ -40,7 +40,7 @@
         "on-click-right": "~/.config/waybar/modules/music_player.sh next",
     },
 
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{name}",
         "all-outputs": true,
@@ -100,6 +100,7 @@
         "on-click-middle": "pamixer -t",
         "on-click": "pavucontrol",
     },
+    
 
     "pulseaudio#microphone": {
         "format": "{format_source}",
