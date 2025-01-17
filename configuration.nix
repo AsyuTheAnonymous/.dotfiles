@@ -17,7 +17,6 @@
       ./packages/essential.nix
       ./packages/unstable.nix
       ./packages/code.nix
-      ./packages/proton.nix
       ./system/bootloader/grub.nix
       # Remove Nvidia module for laptop support
       ./system/nvidia.nix

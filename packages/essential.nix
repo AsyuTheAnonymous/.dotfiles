@@ -12,6 +12,9 @@
     tradingview
     btop
     parsec-bin
+    protonmail-desktop
+    protonvpn-gui
+
   ];
 
 
