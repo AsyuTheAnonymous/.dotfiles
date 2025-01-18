@@ -4,6 +4,7 @@
 {
   environment.systemPackages = with pkgs; [
     brave
+    vivaldi
     ghostty
     discord
     git
