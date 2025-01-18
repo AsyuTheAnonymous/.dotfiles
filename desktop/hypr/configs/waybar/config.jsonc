@@ -166,7 +166,7 @@
     "width": 100, // Increased for 4K
     "margin-top": 15,
     "margin-bottom": 15,
-    "modules-left": ["hyprland/taskbar"],
+    "modules-left": ["wlr/taskbar"],
     "modules-center": ["cpu", "memory", "disk", "pulseaudio", "systemd-failed-units"],
     "modules-right": ["tray"],
 
