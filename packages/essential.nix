@@ -15,6 +15,7 @@
     protonmail-desktop
     protonvpn-gui
     catppuccin-sddm
+    osu-lazer
   ];
 
 
