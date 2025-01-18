@@ -130,7 +130,7 @@
     "modules-right": ["keyboard-state", "hyprland/language"],
 
     "hyprland/window": {
-        "format": "  {title}  ",
+        "format": "   {title}   ",
         "max-length": 100 // Increased for 4K
     },
 
