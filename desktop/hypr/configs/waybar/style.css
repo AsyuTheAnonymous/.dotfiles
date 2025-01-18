@@ -175,77 +175,6 @@ window.top_bar .modules-center {
   color: @teal;
 }
 
-#idle_inhibitor {
-  margin-right: 2px;
-}
-
-#idle_inhibitor.deactivated {
-  color: @subtext0;
-}
-
-#custom-dunst.off {
-  color: @subtext0;
-}
-
-#custom-airplane_mode {
-  margin-right: 2px;
-}
-
-#custom-airplane_mode.off {
-  color: @subtext0;
-}
-
-#custom-night_mode {
-  margin-right: 2px;
-}
-
-#custom-night_mode.off {
-  color: @subtext0;
-}
-
-#custom-dunst {
-  margin-right: 2px;
-}
-
-#custom-media.Paused {
-  color: @subtext0;
-}
-
-#custom-webcam {
-  color: @maroon;
-  margin-right: 3px;
-}
-
-#privacy-item.screenshare {
-  color: @peach;
-  margin-right: 5px;
-}
-
-#privacy-item.audio-in {
-  color: @pink;
-  margin-right: 4px;
-}
-
-#custom-recording {
-  color: @red;
-  margin-right: 4px;
-}
-
-#custom-geo {
-  color: @yellow;
-  margin-right: 4px;
-}
-
-#custom-logout_menu {
-  color: @red;
-  background-color: rgba(73, 77, 100, 0.7);
-  border-radius: 15px 0 0 15px;
-  padding-left: 10px;
-  padding-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 window.left_bar .modules-center {
   background-color: rgba(73, 77, 100, 0.7);
   border-radius: 0 15px 15px 0;
@@ -356,54 +285,6 @@ window.left_bar .modules-center {
 
 #temperature.critical {
   color: @red;
-}
-
-#battery {
-  color: @teal;
-}
-
-#battery.low {
-  color: @red;
-}
-
-#battery.lower-medium {
-  color: @maroon;
-}
-
-#battery.medium {
-  color: @peach;
-}
-
-#battery.upper-medium {
-  color: @flamingo;
-}
-
-#battery.high {
-  color: @rosewater;
-}
-
-#backlight {
-  color: @overlay0;
-}
-
-#backlight.low {
-  color: @overlay1;
-}
-
-#backlight.lower-medium {
-  color: @overlay2;
-}
-
-#backlight.medium {
-  color: @subtext0;
-}
-
-#backlight.upper-medium {
-  color: @subtext1;
-}
-
-#backlight.high {
-  color: @text;
 }
 
 #pulseaudio.bluetooth {
