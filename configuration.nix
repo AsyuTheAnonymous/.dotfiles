@@ -17,7 +17,7 @@
       ./desktop/hypr/hypr.nix
       ./packages/essential.nix
       ./packages/unstable.nix
-      ./packages/code.nix
+      ./packages/tech.nix
       ./system/bootloader/grub.nix
       # Remove Nvidia module for laptop support
       ./system/nvidia.nix
