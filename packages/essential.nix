@@ -16,6 +16,7 @@
     protonvpn-gui
     catppuccin-sddm
     osu-lazer
+    flameshot
   ];
 
 
