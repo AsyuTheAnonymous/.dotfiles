@@ -17,6 +17,7 @@
     catppuccin-sddm
     osu-lazer
     flameshot
+    lutris
   ];
 
 
