@@ -42,6 +42,9 @@
           ./home.nix
           catppuccin.homeManagerModules.catppuccin
          ];
+         extraSpecialArgs = {
+          inherit pkgs-unstable;
+         };
       };
     };
   };
