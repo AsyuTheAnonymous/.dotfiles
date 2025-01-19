@@ -9,7 +9,7 @@
   };
 
   # SDDM
-  # services.displayManager.sddm.enable = true;
+  # enabled as a module
 
   # Enable Hyprland
   programs.hyprland = {
@@ -24,7 +24,7 @@
 
 
   # Pipewire pulse
-  services.pipewire.pulse.enable = true;
+  # services.pipewire.pulse.enable = true;
 
   # REQUIREMENTS
   environment.systemPackages = with pkgs; [

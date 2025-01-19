@@ -14,9 +14,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-
+  # Add only essential packages
   environment.systemPackages = with pkgs; [
-
+    kate
   ];
 
 
