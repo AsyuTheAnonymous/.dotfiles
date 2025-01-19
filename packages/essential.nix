@@ -15,7 +15,6 @@
     protonvpn-gui
     catppuccin-sddm
     flameshot
-    openrgb
   ];
 
 
