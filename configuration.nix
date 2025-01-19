@@ -18,19 +18,15 @@
       ./packages/essential.nix
       ./packages/unstable.nix
       ./packages/tech.nix
-      ./packages/gaming.nix
       ./system/bootloader/grub.nix
       # Remove Nvidia module for laptop support
       ./system/nvidia.nix
       ./system/pipewire.nix
       ./system/drives.nix
       ./system/shell.nix
-      ./support/steam.nix
-      # ./support/zsh.nix
+      ./support/gaming.nix
       ./support/ssh.nix
-      ./support/flatpak.nix
-  
-      
+      ./support/flatpak.nix      
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg:
