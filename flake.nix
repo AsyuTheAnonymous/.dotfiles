@@ -17,18 +17,22 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+      username = "asyu";
+      name = "Ash";
     in {
 
     # System Config    
     nixosConfigurations = {
-      asyus-system = lib.nixosSystem {
-        inherit system;
+      asyus-system = lib.nixosSystem { # System Builder Function from stable
+        inherit system; # stable
         modules = [ 
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
           ./configuration.nix
         ];
         specialArgs = {
+          inherit username;
+          inherit name;
           inherit pkgs-unstable;
         };
       };
@@ -36,13 +40,15 @@
 
     # Home Manager Config
     homeConfigurations = {
-      asyu = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      asyu = home-manager.lib.homeManagerConfiguration { # Home-manager Builder function (stable)
+        inherit pkgs; # stable
         modules = [ 
           ./home.nix
           catppuccin.homeManagerModules.catppuccin
          ];
          extraSpecialArgs = {
+          inherit username;
+          inherit name;
           inherit pkgs-unstable;
          };
       };
