@@ -34,13 +34,6 @@
           inherit username;
           inherit name;
           inherit pkgs-unstable;
-          # nixpkgs.config = {
-            # allowUnfree = true;
-            # allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-            #   "osu-lazer-bin"
-          #   ];
-          # };
-
         };
       };
     };
