@@ -16,6 +16,7 @@
     catppuccin-sddm
     flameshot
     tree
+    lolcat
   ];
 
 
