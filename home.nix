@@ -53,10 +53,6 @@
     ".config/hypr/hyprpaper.conf".source = ./desktop/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./desktop/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./desktop/hypr/configs/waybar;
-
-    # ".config/waybar/style.css".source = ./desktop/hypr/configs/waybar/style.css;
-    # ".config/waybar/config.jsonc".source = ./desktop/hypr/configs/waybar/config.jsonc;
-    # ".config/waybar/macchiato.css".source = ./desktop/hypr/configs/waybar/macchiato.css;
     # Add more to vesktop later
     ".config/vesktop/themes".source = ./support/vesk-themes;
   };
