@@ -28,7 +28,7 @@
         modules = [ 
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager
-          ./configuration.nix
+          ./system/configuration.nix
         ];
         specialArgs = {
           inherit username;
