@@ -18,7 +18,8 @@
       ./system/nvidia.nix
       ./system/pipewire.nix
       ./system/drives.nix
-      ./system/shell.nix
+      #./system/shell.nix
+      ./shell.nix
       ./support/gaming.nix
       ./support/ssh.nix
       ./support/flatpak.nix      
