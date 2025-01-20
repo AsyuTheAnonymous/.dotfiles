@@ -55,6 +55,7 @@
     ".config/waybar/style.css".source = ./desktop/hypr/configs/waybar/style.css;
     ".config/waybar/config.jsonc".source = ./desktop/hypr/configs/waybar/config.jsonc;
     ".config/waybar/macchiato.css".source = ./desktop/hypr/configs/waybar/macchiato.css;
+    "/config/vesktop/themes".source = ./support/vesk-themes;
   };
   
   # Enable themes for GTK apps (file managers and other apps use GTK)
