@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../system/sddm.nix
+    ./../../system/sddm.nix
 
   ];
 
