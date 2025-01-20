@@ -53,13 +53,17 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.asyu = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "input" "libvirtd" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
     ];
   };
   # Enable bluetooth
   hardware.bluetooth.enable = true;
   
+  # Enable virtualization
+  virtualisation.libvirtd.enable = true;
+
+
   # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
 
