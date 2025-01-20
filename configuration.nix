@@ -29,19 +29,6 @@
       ./support/flatpak.nix      
     ];
 
-    nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      # Add additional package names here
-      "osu-lazer"
-    ];
-
-
-
-
-
-
-
-
   # Enabling nerdfonts
   fonts.packages = with pkgs; [ nerdfonts ];
   fonts.fontconfig.enable = true;
