@@ -8,14 +8,14 @@
       ./hardware-configuration.nix
       # Swap Desktop environments
       #./desktop/kde/kde.nix
-      #./sddm.nix
+      # Remove Nvidia module for laptop support
+      ./system/nvidia.nix
       ./desktop/hypr/hypr.nix
       ./packages/essential.nix
       ./packages/unstable.nix
       ./packages/tech.nix
       ./system/bootloader/grub.nix
-      # Remove Nvidia module for laptop support
-      ./system/nvidia.nix
+
       ./system/pipewire.nix
       ./system/drives.nix
       ./system/shell.nix
