@@ -3,5 +3,6 @@
 {
   environment.systemPackages = with pkgs-unstable; [
     vesktop
+    # osu-lazer-bin
   ];
 }
