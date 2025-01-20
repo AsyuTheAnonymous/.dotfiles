@@ -82,7 +82,7 @@
   programs.zsh = {
     enable = true;
     initExtra = ''
-      neofetch
+      neofetch | lolcat
       eval "$(starship init zsh)"
     '';
   };
