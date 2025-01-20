@@ -8,7 +8,7 @@
       ./hardware-configuration.nix
       # Swap Desktop environments
       #./desktop/kde/kde.nix
-      ./sddm.nix
+      #./sddm.nix
       ./desktop/hypr/hypr.nix
       ./packages/essential.nix
       ./packages/unstable.nix

@@ -1,6 +1,13 @@
 {config, lib, pkgs, ... }:
 
 {
+  imports = [
+    ../../system/sddm.nix
+
+  ];
+
+
+
   # Enable X11 Windowing System
   services.xserver = {
     xkb.layout = "us";
