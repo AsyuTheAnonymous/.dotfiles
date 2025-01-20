@@ -15,6 +15,7 @@
     protonvpn-gui
     catppuccin-sddm
     flameshot
+    tree
   ];
 
 

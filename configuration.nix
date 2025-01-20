@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 { config, lib, pkgs, pkgs-unstable, ... }:
 
 {
@@ -10,8 +6,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-
-      # Swap Desktops
+      # Swap Desktop environments
       #./desktop/kde/kde.nix
       ./sddm.nix
       ./desktop/hypr/hypr.nix
@@ -60,17 +55,19 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "input" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-      tree
     ];
   };
-
+  # Enable bluetooth
   hardware.bluetooth.enable = true;
+  
+  # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
 
   # Flake Support
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  system.stateVersion = "24.11"; # Did you read the comment?
+  
+  # Never change this value shit will break
+  system.stateVersion = "24.11"; 
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
