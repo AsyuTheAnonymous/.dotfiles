@@ -5,10 +5,11 @@
     ./support/zsh.nix
   ];
 
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
+  # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
 
   # Set-up Github repo
   programs.git= {
@@ -35,7 +36,8 @@
   home.packages =  with pkgs; [
     candy-icons
   ];
-
+  
+  # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
   programs.waybar = {
     enable = true;
   };
@@ -54,6 +56,7 @@
     ".config/waybar/config.jsonc".source = ./desktop/hypr/configs/waybar/config.jsonc;
     ".config/waybar/macchiato.css".source = ./desktop/hypr/configs/waybar/macchiato.css;
   };
+  
   # Enable themes for GTK apps (file managers and other apps use GTK)
   gtk.enable = true;
 
@@ -103,9 +106,4 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-
-
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
