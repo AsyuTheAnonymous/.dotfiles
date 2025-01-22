@@ -10,9 +10,8 @@
       #./desktop/kde/kde.nix
       # Remove Nvidia module for laptop support
       ./desktop/hypr/hypr.nix
-      ./packages/essential.nix
-      ./packages/unstable.nix
-      ./packages/tech.nix
+      # Packages
+      ./packages/settings.nix
       # System Settings
       ./system/settings.nix
       # Support for resources
