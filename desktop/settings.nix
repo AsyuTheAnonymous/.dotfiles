@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./hypr.nix
+    ./hypr/hypr.nix
    #./kde.nix
   ];
 
