@@ -9,16 +9,16 @@
       # Swap Desktop environments
       #./desktop/kde/kde.nix
       # Remove Nvidia module for laptop support
-      ./system/nvidia.nix
       ./desktop/hypr/hypr.nix
       ./packages/essential.nix
       ./packages/unstable.nix
       ./packages/tech.nix
-      ./system/bootloader/grub.nix
-
-      ./system/pipewire.nix
-      ./system/drives.nix
-      ./system/shell.nix
+      ./system/settings.nix
+      # ./system/bootloader/grub.nix
+      # ./system/nvidia.nix
+      # ./system/pipewire.nix
+      # ./system/drives.nix
+      # ./system/shell.nix
       ./support/gaming.nix
       ./support/ssh.nix
       ./support/flatpak.nix      
