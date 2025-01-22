@@ -16,9 +16,7 @@
       # System Settings
       ./system/settings.nix
       # Support for resources
-      ./support/gaming.nix
-      ./support/ssh.nix
-      ./support/flatpak.nix      
+      ./support/settings.nix  
     ];
 
 
