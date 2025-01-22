@@ -5,7 +5,7 @@
   # Insert System Modules
   imports =
     [ # Move hardware-configuration.nix from /etc/nixos/ into this folder if you switch to laptop/desktop
-      ./hardware-configuration.nix
+      ./system/hardware-configuration.nix
       # Desktop Environments
       ./desktop/settings.nix
       # Packages
