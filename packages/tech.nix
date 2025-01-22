@@ -6,5 +6,8 @@
     vscode
     impression
     gnome-boxes
+    # Tools
+    unzip
+    unrar
   ];
 }
