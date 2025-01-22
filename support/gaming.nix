@@ -17,6 +17,7 @@
     wine
     winetricks
     mangohud
+    bottles
   ];
   # Game Mode + Game Scope + Mangohud usage
   # - launch properties
