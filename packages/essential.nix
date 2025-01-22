@@ -19,6 +19,7 @@
     tree
     lolcat
     themechanger
+    notion-app-enhanced
   ];
 
 
