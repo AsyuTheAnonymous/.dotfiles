@@ -4,12 +4,10 @@
 
   # Insert System Modules
   imports =
-    [ # Include the results of the hardware scan.
+    [ # Move hardware-configuration.nix from /etc/nixos/ into this folder if you switch to laptop/desktop
       ./hardware-configuration.nix
-      # Swap Desktop environments
-      #./desktop/kde/kde.nix
-      # Remove Nvidia module for laptop support
-      ./desktop/hypr/hypr.nix
+      # Desktop Environments
+      ./desktop/settings.nix
       # Packages
       ./packages/settings.nix
       # System Settings
