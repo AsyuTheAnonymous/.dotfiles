@@ -43,7 +43,7 @@
       asyu = home-manager.lib.homeManagerConfiguration { # Home-manager Builder function (stable)
         inherit pkgs; # stable
         modules = [ 
-          ./home.nix
+          ./home/home.nix
           catppuccin.homeManagerModules.catppuccin
          ];
          extraSpecialArgs = {
