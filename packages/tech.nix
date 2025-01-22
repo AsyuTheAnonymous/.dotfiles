@@ -9,5 +9,6 @@
     # Tools
     unzip
     unrar
+    nix-tree
   ];
 }
