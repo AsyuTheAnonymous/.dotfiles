@@ -45,16 +45,16 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/hypr/hyprland.conf".source = ./desktop/hypr/hyprland.conf;
-    ".config/ghostty/config".source = ./desktop/hypr/configs/ghostty/config;
-    ".config/rofi/config.rasi".source = ./desktop/hypr/configs/rofi/config.rasi;
-    ".config/rofi/catppuccin-mocha.rasi".source = ./desktop/hypr/configs/rofi/catppuccin-mocha.rasi;
-    ".config/neofetch/config.conf".source = ./desktop/hypr/configs/neofetch/config.conf;
-    ".config/hypr/hyprpaper.conf".source = ./desktop/hypr/hyprpaper.conf;
-    ".config/starship.toml".source = ./desktop/hypr/configs/starship/starship.toml;
-    ".config/waybar".source = ./desktop/hypr/configs/waybar;
+    ".config/hypr/hyprland.conf".source = ./../desktop/hypr/hyprland.conf;
+    ".config/ghostty/config".source = ./../desktop/hypr/configs/ghostty/config;
+    ".config/rofi/config.rasi".source = ./../desktop/hypr/configs/rofi/config.rasi;
+    ".config/rofi/catppuccin-mocha.rasi".source = ./../desktop/hypr/configs/rofi/catppuccin-mocha.rasi;
+    ".config/neofetch/config.conf".source = ./../desktop/hypr/configs/neofetch/config.conf;
+    ".config/hypr/hyprpaper.conf".source = ./../desktop/hypr/hyprpaper.conf;
+    ".config/starship.toml".source = ./../desktop/hypr/configs/starship/starship.toml;
+    ".config/waybar".source = ./../desktop/hypr/configs/waybar;
     # Add more to vesktop later
-    ".config/vesktop/themes".source = ./support/vesk-themes;
+    ".config/vesktop/themes".source = ./../support/vesk-themes;
   };
   
   # Enable themes for GTK apps (file managers and other apps use GTK)
