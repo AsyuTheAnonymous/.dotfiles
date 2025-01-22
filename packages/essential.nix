@@ -10,6 +10,7 @@
     neofetch
     tradingview
     btop
+    pavucontrol
     parsec-bin
     protonmail-desktop
     protonvpn-gui
