@@ -16,7 +16,7 @@
       home = "home-manager switch --flake .";
       clean = "nix-env --delete-generations 5d";
       cleanhm = "home-manager expire-generations '-5 days'";
-      gc = "sudo nix-collect-garbage -d"
+      gc = "sudo nix-collect-garbage -d";
     };
   };
 
