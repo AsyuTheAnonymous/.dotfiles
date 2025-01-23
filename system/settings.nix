@@ -14,5 +14,6 @@
     ./bootloader/grub.nix
     #./system/bootloader/sysd.nix
     ./auto.nix
+    ./virtualization.nix
   ];
 }
