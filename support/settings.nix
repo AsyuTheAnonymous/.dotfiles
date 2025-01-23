@@ -9,7 +9,7 @@
   ];
   services.ollama = {
     enable = true;
-    models = "/run/media/asyu/Vault/Models"
+    models = "/run/media/asyu/Vault/Models";
 
   };
 
