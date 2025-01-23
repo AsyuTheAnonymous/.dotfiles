@@ -6,11 +6,9 @@
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    catppuccin.url = "github:catppuccin/nix";
-
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, catppuccin,... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... } @ inputs:
     # Variables
     let
       lib = nixpkgs.lib;
@@ -26,8 +24,6 @@
       asyus-system = lib.nixosSystem { # System Builder Function from stable
         inherit system; # stable
         modules = [ 
-          catppuccin.nixosModules.catppuccin
-          home-manager.nixosModules.home-manager
           ./configuration.nix
         ];
         specialArgs = {
@@ -45,7 +41,6 @@
         inherit pkgs; # stable
         modules = [ 
           ./home/home.nix
-          catppuccin.homeManagerModules.catppuccin
          ];
          extraSpecialArgs = {
           inherit username;
