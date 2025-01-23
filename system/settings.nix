@@ -2,12 +2,11 @@
 
 {
   imports = [
-    ./drives.nix
-    ./nvidia.nix
-    ./pipewire.nix
-    # sddm is declared in ./desktop/hypr/hypr.nix
-    #./system/sddm.nix
-    ./shell.nix
+    ./drives/drives.nix
+    ./gpu/nvidia.nix
+    ./audio/pipewire.nix
+    ./system/greeter/sddm.nix
+    ./shell/zsh.nix
     ./ssh.nix
     ./bootloader/grub.nix
    #./system/bootloader/sysd.nix
