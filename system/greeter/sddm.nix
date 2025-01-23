@@ -7,7 +7,7 @@
       flavor = "mocha";
       font  = "Noto Sans";
       fontSize = "9";
-      background = "${./wallpapers/pusheen.jpg}";
+      background = "${./../wallpapers/pusheen.jpg}";
       loginBackground = true;
     }
   )];
