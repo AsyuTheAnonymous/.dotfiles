@@ -10,7 +10,7 @@
 
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, catppuccin,... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, catppuccin,... } @ inputs:
     # Variables
     let
       lib = nixpkgs.lib;
@@ -31,6 +31,7 @@
           ./configuration.nix
         ];
         specialArgs = {
+          inherit inputs;
           inherit username;
           inherit name;
           inherit pkgs-unstable;
