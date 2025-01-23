@@ -1,13 +1,14 @@
-{ config, pkgs, inputs, nix-colors, catppuccin, ... }:
+{ config, pkgs, inputs, catppuccin, ... }:
 
 {
   imports = [
-    #./support/zsh.nix
+    ./gtk/gtk.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -57,26 +58,6 @@
     ".config/vesktop/themes".source = ./../support/vesk-themes;
   };
   
-  # Enable themes for GTK apps (file managers and other apps use GTK)
-  gtk.enable = true;
-
-  # Theme
-  gtk.theme = {
-    package = pkgs.sweet;
-    name = "Sweet-Ambar-Blue-Dark-v40";
-  };
-
-  # Icons
-  gtk.iconTheme = {
-    package = pkgs.candy-icons;
-    name = "candy-icons";
-  };
-
-  # Cursor
-  gtk.cursorTheme = {
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
-  };
 
   # Starship and Neofetch + ZSH Enabled
   programs.zsh = {
