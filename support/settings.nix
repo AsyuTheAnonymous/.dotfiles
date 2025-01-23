@@ -4,6 +4,7 @@
   imports = [
     ./gaming.nix
     ./flatpak.nix
+    ./font.nix
   ];
 
 
