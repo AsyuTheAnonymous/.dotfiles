@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, catppuccin, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Enable themes for GTK apps (file managers and other apps use GTK)
