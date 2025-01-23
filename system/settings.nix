@@ -5,7 +5,7 @@
     ./drives/drives.nix
     ./gpu/nvidia.nix
     ./audio/pipewire.nix
-    ./system/greeter/sddm.nix
+    ./greeter/sddm.nix
     ./shell/zsh.nix
     ./ssh.nix
     ./bootloader/grub.nix
