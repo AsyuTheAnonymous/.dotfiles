@@ -8,6 +8,9 @@
     ./greeter/sddm.nix
     ./shell/zsh.nix
     ./network/ssh.nix
+    ./network/locale.nix
+    ./network/nm.nix
+    ./network/bluetooth.nix
     ./bootloader/grub.nix
     #./system/bootloader/sysd.nix
     ./auto.nix

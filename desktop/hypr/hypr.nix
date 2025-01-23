@@ -1,11 +1,6 @@
 {config, lib, pkgs, ... }:
 
 {
-  imports = [
-
-  ];
-
-
 
   # Enable X11 Windowing System
   services.xserver = {
