@@ -52,6 +52,8 @@
     '';
   };
 
+
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -65,6 +67,8 @@
     ".config/waybar".source = ./../desktop/hypr/configs/waybar;    # Add more to vesktop later
     ".config/vesktop/themes".source = ./../support/vesk-themes;
     ".config/open-interpreter".source = ./../support/ai/open-interpreter;
+    ".config/open-interpreter/profiles/default.yaml".source = ./../support/ai/open-interpreter/profiles/default.yaml;
+
   };
 
   # Home Manager can also manage your environment variables through

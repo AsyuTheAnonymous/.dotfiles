@@ -6,6 +6,6 @@
     ./flatpak.nix
     ./font.nix
     ./ai/ollama.nix
-    ./ai/interpreter.nix
+   # ./ai/interpreter.nix
   ];
 }
