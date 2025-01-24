@@ -18,6 +18,8 @@
     winetricks
     mangohud
   ];
+  # 32 bit DRI Support for steam
+  hardware.graphics.enable32Bit = true;
 
   # Game Mode + Game Scope + Mangohud usage
   # - launch properties
