@@ -9,7 +9,6 @@
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
-  programs.dconf.enable = true;
 
   environment.systemPackages = with pkgs; [
     protonup-qt
