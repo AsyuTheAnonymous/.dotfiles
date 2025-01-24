@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pkgs-unstable, inputs, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -13,7 +13,7 @@
       # System Settings
       ./system/settings.nix
       # Support for resources
-      ./support/settings.nix  
+      ./support/settings.nix
     ];
 
 
@@ -27,13 +27,12 @@
     packages = with pkgs; [
     ];
   };
-  
+
   # Flake Support
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
   # Never change this value shit will break
-  system.stateVersion = "24.11"; 
+  system.stateVersion = "24.11";
 
 
 }
-
