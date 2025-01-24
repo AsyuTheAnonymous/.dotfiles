@@ -62,9 +62,7 @@
     ".config/neofetch/config.conf".source = ./../desktop/hypr/configs/neofetch/config.conf;
     ".config/hypr/hyprpaper.conf".source = ./../desktop/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../desktop/hypr/configs/starship/starship.toml;
-    ".config/waybar".source = ./../desktop/hypr/configs/waybar;
-    ".local/share/lutris".source = ./run/media/Vault/Lutris;
-    # Add more to vesktop later
+    ".config/waybar".source = ./../desktop/hypr/configs/waybar;    # Add more to vesktop later
     ".config/vesktop/themes".source = ./../support/vesk-themes;
   };
   
