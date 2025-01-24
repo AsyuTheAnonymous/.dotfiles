@@ -1,6 +1,6 @@
-{config, lib, pkgs, ... }:
+{... }:
 
-{  
+{
 
   # Enable NTFS
   boot.supportedFilesystems = [ "ntfs" ];

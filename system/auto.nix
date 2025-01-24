@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ ... }:
 
 {
   # Automatic updating
@@ -10,5 +10,5 @@
   nix.gc.dates = "daily";
   nix.gc.options = "--delete-older-than 10d";
   nix.settings.auto-optimise-store = true;
-  
+
 }

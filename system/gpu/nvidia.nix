@@ -1,4 +1,4 @@
-{config, lib, pkgs, ...}:
+{ ... }:
 
 {
 
@@ -6,5 +6,5 @@
   hardware.nvidia.open = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.modesetting.enable = true;
-  
+
 }
