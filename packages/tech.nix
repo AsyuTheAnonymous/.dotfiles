@@ -9,6 +9,7 @@
     zed-editor
     nixd
     nil
+    bottles
     impression
     gnome-boxes
     # Tools
