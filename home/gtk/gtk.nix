@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   # Enable themes for GTK apps (file managers and other apps use GTK)

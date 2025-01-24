@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -37,12 +37,12 @@
   home.packages =  with pkgs; [
     candy-icons
   ];
-  
+
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
   programs.waybar = {
     enable = true;
   };
-  
+
     # Starship and Neofetch + ZSH Enabled
   programs.zsh = {
     enable = true;
@@ -65,7 +65,7 @@
     ".config/waybar".source = ./../desktop/hypr/configs/waybar;    # Add more to vesktop later
     ".config/vesktop/themes".source = ./../support/vesk-themes;
   };
-  
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell
