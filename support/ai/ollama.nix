@@ -27,6 +27,7 @@
       AUDIO_STT_MODEL = "whisper-1";
       AUDIO_TTS_ENGINE = "openai";
       AUDIO_TTS_VOICE = "shimmer";
+      ENABLE_EVALUATION_ARENA_MODELS = "False";
       OPENAI_API_KEY = "$(cat ~/.dotfiles/secret/openai.txt)";
 
     };
