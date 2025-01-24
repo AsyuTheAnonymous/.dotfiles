@@ -23,6 +23,7 @@
     tree
     lolcat
     themechanger
+    minecraft
   ];
 
 
