@@ -64,6 +64,7 @@
     ".config/starship.toml".source = ./../desktop/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./../desktop/hypr/configs/waybar;    # Add more to vesktop later
     ".config/vesktop/themes".source = ./../support/vesk-themes;
+    ".config/open-interpreter".source = ./../support/ai/open-interpreter;
   };
 
   # Home Manager can also manage your environment variables through
