@@ -35,7 +35,7 @@
       };
     };
 
-    devShells.x86_64.default = (import ./dev/shell.nix { inherit pkgs;});
+    devShells.${system}.default = (import ./dev/shell.nix { inherit pkgs;});
 
     # Home Manager Config
     homeConfigurations = {
