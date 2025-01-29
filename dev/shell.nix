@@ -5,11 +5,9 @@ pkgs.mkShell
   nativeBuildInputs = with pkgs; [
     nodejs
   ];
-  shellHook = ''
-    echo = "Whalecum"
+  # shellHook = ''  
   
-  
-  '';
+  # '';
   COLOR = "blue";
 
 
