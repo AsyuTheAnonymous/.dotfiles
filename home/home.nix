@@ -19,6 +19,8 @@
     userEmail = "asyutheanonymous@gmail.com";
     extraConfig = {
       init.defaultBranch = "main";
+      safe.directory = "/run/media/asyu/Vault";
+
     };
   };
 
