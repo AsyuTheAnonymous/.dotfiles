@@ -6,6 +6,7 @@ pkgs.mkShell
     nodejs
     python311
   ];
+  inputsFrom = [ pkgs.bat ];
   # shellHook = ''  
   
   # '';
