@@ -19,11 +19,11 @@
       name = "Ash";
     in {
 
-    # System Config    
+    # System Config
     nixosConfigurations = {
       asyus-system = lib.nixosSystem { # System Builder Function from stable
         inherit system; # stable
-        modules = [ 
+        modules = [
           ./configuration.nix
         ];
         specialArgs = {
@@ -35,11 +35,13 @@
       };
     };
 
+    devShells.x86_64.default = (import ./dev/shell.nix { inherit pkgs;});
+
     # Home Manager Config
     homeConfigurations = {
       asyu = home-manager.lib.homeManagerConfiguration { # Home-manager Builder function (stable)
         inherit pkgs; # stable
-        modules = [ 
+        modules = [
           ./home/home.nix
          ];
          extraSpecialArgs = {
@@ -50,7 +52,5 @@
       };
     };
   };
-
-
 
 }
