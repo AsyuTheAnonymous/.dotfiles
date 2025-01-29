@@ -4,6 +4,7 @@ pkgs.mkShell
 {
   nativeBuildInputs = with pkgs; [
     nodejs
+    python311
   ];
   # shellHook = ''  
   
