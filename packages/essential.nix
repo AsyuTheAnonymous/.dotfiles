@@ -13,6 +13,7 @@
     nemo
     neofetch
     tradingview
+    telegram-desktop
     btop
     pavucontrol
     parsec-bin
