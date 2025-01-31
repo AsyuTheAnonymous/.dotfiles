@@ -70,7 +70,6 @@
     ".config/vesktop/themes".source = ./../support/vesk-themes;
     ".config/open-interpreter".source = ./../support/ai/open-interpreter;
     ".config/open-interpreter/profiles/default.yaml".source = ./../support/ai/open-interpreter/profiles/default.yaml;
-
   };
 
   # Home Manager can also manage your environment variables through

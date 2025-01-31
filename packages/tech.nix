@@ -16,5 +16,6 @@
     unzip
     unrar
     nix-tree
+    godot_4
   ];
 }
