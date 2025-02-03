@@ -163,7 +163,7 @@
     "layer": "top",
     "position": "left",
     "spacing": 8,
-    "width": 100, // Increased for 4K
+    "width": 75, // Increased for 4K
     "margin-top": 15,
     "margin-bottom": 15,
     "modules-left": ["wlr/taskbar"],
