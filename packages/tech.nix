@@ -4,7 +4,7 @@
 {
   environment.systemPackages = with pkgs; [
     # For git management
-    vscode
+    code-cursor
     # For Zed
     zed-editor
     nixd

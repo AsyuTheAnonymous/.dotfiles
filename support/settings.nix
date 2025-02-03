@@ -5,7 +5,7 @@
     ./gaming.nix
     ./flatpak.nix
     ./font.nix
-    #./ai/ollama.nix
+    ./ai/ollama.nix
    # ./ai/interpreter.nix
   ];
 }
