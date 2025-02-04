@@ -18,9 +18,9 @@
     enable = true;
     port = 8080;
     stateDir = "/run/media/asyu/Vault/Web-ui";
-    environmentFile = "/run/media/asyu/Vault/Web-ui/secret/openai.txt";
+    #environmentFile = "/run/media/asyu/Vault/Web-ui/secret/openai.txt";
     environment = {
-      OPENAI_API_BASE_URL = "https://api.mistral.ai/v1";
+      #OPENAI_API_BASE_URL = "https://api.mistral.ai/v1";
       WEBUI_AUTH = "False";
       ENABLE_IMAGE_GENERATION = "True";
       IMAGE_GENERATION_MODEL = "dall-e-3";
