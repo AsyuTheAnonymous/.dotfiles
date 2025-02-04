@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
     ollama
     open-webui
+    aider-chat
   ];
     # Ollama + Location
   services.ollama = {
