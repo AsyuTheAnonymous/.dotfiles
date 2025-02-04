@@ -34,7 +34,7 @@
     };
   };
   environment.variables = {
-    OPENAI_API_KEY = "/run/media/asyu/Vault/Web-ui/secret/api.txt";
+    OPENAI_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/api.txt)";
   };
 
   # Ollama Web Ui
