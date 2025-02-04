@@ -33,7 +33,9 @@
       ENABLE_EVALUATION_ARENA_MODELS = "False";
     };
   };
-
+  environment.variables = {
+    OPENAI_API_KEY = "/run/media/asyu/Vault/Web-ui/secret/api.txt";
+  };
 
   # Ollama Web Ui
   # services.nextjs-ollama-llm-ui = {
