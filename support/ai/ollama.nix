@@ -6,6 +6,7 @@
     ollama
     open-webui
     aider-chat
+    open-interpreter
   ];
     # Ollama + Location
   services.ollama = {
