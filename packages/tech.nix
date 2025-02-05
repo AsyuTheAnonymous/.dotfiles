@@ -19,5 +19,6 @@
     android-tools
   ];
 
+  programs.partition-manager.enable = true;
 
 }
