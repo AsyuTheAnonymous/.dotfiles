@@ -3,7 +3,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    ollama
+    ollama-cuda
     open-webui
     aider-chat
     open-interpreter
@@ -34,7 +34,8 @@
     };
   };
   environment.variables = {
-    OPENAI_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/api.txt)";
+    OPENAI_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/openai.txt)";
+    GROQ_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/groq.txt)";
     OLLAMA_API_BASE = "http://127.0.0.1:11434";
   };
 
