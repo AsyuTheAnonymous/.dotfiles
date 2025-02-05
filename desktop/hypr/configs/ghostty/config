@@ -1,4 +1,6 @@
 shell-integration = zsh
-theme = duckbones
+theme = catppuccin-frappe
 cursor-style = block_hollow
 window-decoration = false
+background-blur = true
+background-opacity = 5
