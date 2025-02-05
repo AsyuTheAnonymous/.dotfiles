@@ -2,5 +2,4 @@ shell-integration = zsh
 theme = catppuccin-frappe
 cursor-style = block_hollow
 window-decoration = false
-background-blur = true
-background-opacity = 5
+background-opacity = 15
