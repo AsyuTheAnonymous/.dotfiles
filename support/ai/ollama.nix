@@ -35,6 +35,7 @@
   };
   environment.variables = {
     OPENAI_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/api.txt)";
+    OLLAMA_API_BASE = "http://127.0.0.1:11434";
   };
 
   # Ollama Web Ui
