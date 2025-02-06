@@ -5,6 +5,5 @@
     vesktop
     atlauncher
     prismlauncher
-    # osu-lazer-bin
   ];
 }

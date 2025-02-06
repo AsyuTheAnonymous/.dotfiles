@@ -24,6 +24,7 @@
     tree
     lolcat
     themechanger
+    osu-lazer-bin
   ];
 
 
