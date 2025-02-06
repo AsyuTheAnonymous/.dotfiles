@@ -194,7 +194,7 @@
             "lower-medium": 30,
             "low": 10
         },
-        "on-click": "ghostty start btop"
+        "on-click": "btop"
     },
 
     "memory": {
