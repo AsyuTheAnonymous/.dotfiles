@@ -8,6 +8,7 @@ pkgs.mkShell
     python311Packages.pip
     python311Packages.envs
     python311Packages.ollama
+    python311Packages.tkinter
 
   ];
   inputsFrom = [ pkgs.bat ];
