@@ -25,6 +25,7 @@
     lolcat
     themechanger
     osu-lazer-bin
+    localsend
   ];
 
 
