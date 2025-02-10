@@ -13,7 +13,7 @@ pkgs.mkShell
     python311Packages.pyinstaller
 
   ];
-  inputsFrom = [ pkgs.bat ];
+  # inputsFrom = [ pkgs.bat ];
   # shellHook = ''  
   
   # '';
