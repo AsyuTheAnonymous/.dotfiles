@@ -10,6 +10,7 @@ pkgs.mkShell
     python311Packages.ollama
     python311Packages.kivy
     python311Packages.tkinter
+    python311Packages.pyinstaller
 
   ];
   inputsFrom = [ pkgs.bat ];
