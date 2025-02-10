@@ -13,6 +13,7 @@
     # Tools
     unzip
     unrar
+    zip
     android-tools
   ];
 
