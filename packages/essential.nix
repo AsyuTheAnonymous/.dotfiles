@@ -9,6 +9,10 @@
     enable = true;
     daemon.enable = true;
   };
+  # hardware.opentabletdriver.blacklistedKernelModules = [ 
+  #   "wacom"
+  #   "hid_uclogic"
+  # ];
 
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
@@ -31,7 +35,7 @@
     themechanger
     osu-lazer-bin
     localsend
-    opentabletdriver
+    # opentabletdriver
   ];
 
 
