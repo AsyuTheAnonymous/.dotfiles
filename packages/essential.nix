@@ -9,6 +9,9 @@
   hardware.opentabletdriver.enable = true;
   hardware.opentabletdriver.daemon.enable = true;
 
+  hardware.opentabletdriver.blacklistedKernelModules = [ "hid-uclogic" ];
+
+
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     vivaldi
