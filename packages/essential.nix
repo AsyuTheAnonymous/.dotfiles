@@ -9,6 +9,12 @@
     enable = true;
     daemon.enable = true;
   };
+  systemd.user.services.opentabletdriver = {
+    enable = true;
+    wantedBy = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+  };
+
   # hardware.opentabletdriver.blacklistedKernelModules = [ 
   #   "wacom"
   #   "hid_uclogic"
