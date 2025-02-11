@@ -5,6 +5,11 @@
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
 
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
+
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     vivaldi
