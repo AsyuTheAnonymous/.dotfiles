@@ -4,6 +4,10 @@
 {
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
+  
+  # Open Tablet Driver
+  hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver.daemon.enable = true;
 
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
