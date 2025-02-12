@@ -7,6 +7,7 @@
 
   systemd.user.services.opentabletdriver = {
     enable = true;
+    daemon.enable = true;
     description = lib.mkForce "OpenTabletDriver Daemon";
     wantedBy = [ "graphical-session.target" ];
     partOf = [ "graphical-session.target" ];
