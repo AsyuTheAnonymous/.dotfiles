@@ -5,10 +5,10 @@
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
 
-  # hardware.opentabletdriver = {
-  #   enable = true;
-  #   daemon.enable = true;
-  # };
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
   # systemd.user.services.opentabletdriver = {
   #   enable = true;
   #   wantedBy = [ "graphical-session.target" ];
@@ -41,7 +41,6 @@
     themechanger
     osu-lazer-bin
     localsend
-    libsForQt5.xp-pen-g430-driver
-    # opentabletdriver
+
   ];
 }
