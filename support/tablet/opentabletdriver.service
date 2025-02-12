@@ -1,0 +1,15 @@
+[Unit]
+After=graphical-session.target
+Description=Open source, cross-platform, user-mode tablet driver
+PartOf=graphical-session.target
+
+[Service]
+Environment="LOCALE_ARCHIVE=/nix/store/yr4m7nrg1p1qbl7fr2n5h04qh3pnzbzh-glibc-locales-2.40-36/lib/locale/locale-archive"
+Environment="PATH=/nix/store/6wgd8c9vq93mqxzc7jhkl86mv6qbc360-coreutils-9.5/bin:/nix/store/r99d2m4swgmrv9jvm4l9di40hvanq1aq-findutils-4.10.0/bin:/nix/store/vniy1y5n8g28c55y7788npwc4h09fh7c-gnugrep-3.11/bin:/nix/store/yq39xdwm4z0fhx7dsm8mlpgvcz3vbfg3-gnused-4.9/bin:/nix/store/xv7q10lk4lxfax7naj3b63aj2pyjv9gb-systemd-256.10/bin:/nix/store/6wgd8c9vq93mqxzc7jhkl86mv6qbc360-coreutils-9.5/sbin:/nix/store/r99d2m4swgmrv9jvm4l9di40hvanq1aq-findutils-4.10.0/sbin:/nix/store/vniy1y5n8g28c55y7788npwc4h09fh7c-gnugrep-3.11/sbin:/nix/store/yq39xdwm4z0fhx7dsm8mlpgvcz3vbfg3-gnused-4.9/sbin:/nix/store/xv7q10lk4lxfax7naj3b63aj2pyjv9gb-systemd-256.10/sbin"
+Environment="TZDIR=/nix/store/78mhfhbhfhvx95hjv9hkjx8m0vadynjv-tzdata-2024b/share/zoneinfo"
+ExecStart=/nix/store/777drdfvgl0rd6g9jknvxd69fqg67i67-OpenTabletDriver-0.6.4.0-unstable-2024-11-25/bin/otd-daemon
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=graphical-session.target graphical-session.target
