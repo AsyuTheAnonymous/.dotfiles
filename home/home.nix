@@ -38,6 +38,7 @@
   # environment.
   home.packages =  with pkgs; [
     candy-icons
+    opentabletdriver
   ];
 
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
@@ -73,20 +74,20 @@
     # ".config/systemd/user/opentabletdriver.service".source = ./../support/tablet/opentabletdriver.service;
   };
 
-  systemd.user.services.opentabletdriver = {
-    Unit = {
-      Description = "OpenTabletDriver Daemon";
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-    Service = {
-      ExecStart = "${pkgs.opentabletdriver}/bin/otd-daemon";
-      Restart = "on-failure";
-    };
-  };
+  # systemd.user.services.opentabletdriver = {
+  #   Unit = {
+  #     Description = "OpenTabletDriver Daemon";
+  #     PartOf = [ "graphical-session.target" ];
+  #     After = [ "graphical-session.target" ];
+  #   };
+  #   Install = {
+  #     WantedBy = [ "graphical-session.target" ];
+  #   };
+  #   Service = {
+  #     ExecStart = "${pkgs.opentabletdriver}/bin/otd-daemon";
+  #     Restart = "on-failure";
+  #   };
+  # };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a

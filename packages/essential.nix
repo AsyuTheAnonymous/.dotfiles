@@ -57,6 +57,5 @@
     themechanger
     osu-lazer-bin
     localsend
-    opentabletdriver
   ];
 }
