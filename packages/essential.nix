@@ -5,12 +5,12 @@
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
   
-  systemd.user.services.opentabletdriver = {
-    enable = true;
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
-    after = [ "graphical-session.target" ];
-  };
+  # systemd.user.services.opentabletdriver = {
+  #   enable = true;
+  #   wantedBy = [ "graphical-session.target" ];
+  #   partOf = [ "graphical-session.target" ];
+  #   after = [ "graphical-session.target" ];
+  # };
 
 
   # Enable the OpenTabletDriver
