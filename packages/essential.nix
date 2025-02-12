@@ -4,19 +4,14 @@
 {
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
-
+  
   systemd.user.services.opentabletdriver = {
     enable = true;
-    description = lib.mkForce "OpenTabletDriver Daemon";
     wantedBy = [ "graphical-session.target" ];
     partOf = [ "graphical-session.target" ];
     after = [ "graphical-session.target" ];
-    serviceConfig = {
-      ExecStart = "${pkgs.opentabletdriver}/bin/otd-daemon";
-      Restart = "on-failure";
-      RestartSec = 3;
-    };
   };
+
 
   # Enable the OpenTabletDriver
   hardware.opentabletdriver.enable = true;
