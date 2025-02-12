@@ -38,7 +38,6 @@
   # environment.
   home.packages =  with pkgs; [
     candy-icons
-    opentabletdriver
   ];
 
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)

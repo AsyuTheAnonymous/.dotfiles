@@ -12,29 +12,22 @@
   #   after = [ "graphical-session.target" ];
   # };
 
-
   # Enable the OpenTabletDriver
-  hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
 
+  systemd.user.services.opentabletdriver-gui = {
+    description = "OpenTabletDriver GUI";
+    wantedBy = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.opentabletdriver}/bin/otd-gui";
+      Restart = "on-failure";
+    };
+  };
 
-
-
-
-
-  # hardware.opentabletdriver = {
-  #   enable = true;
-  #   daemon.enable = true;
-  # };
-  # systemd.user.services.opentabletdriver = {
-  #   enable = true;
-  #   wantedBy = [ "graphical-session.target" ];
-  #   after = [ "graphical-session.target" ];
-  # };
-
-  # hardware.opentabletdriver.blacklistedKernelModules = [ 
-  #   "wacom"
-  #   "hid_uclogic"
-  # ];
 
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
