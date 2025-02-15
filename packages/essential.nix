@@ -50,5 +50,6 @@
     themechanger
     osu-lazer-bin
     localsend
+    newsflash
   ];
 }
