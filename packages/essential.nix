@@ -51,5 +51,6 @@
     osu-lazer-bin
     localsend
     newsflash
+    obs-studio
   ];
 }
