@@ -1,10 +1,20 @@
-{ ... }:
+{ config, lib, pkgs, ... }:
 
 {
 
-  # Nvidia Drivers (Open drivers)
-  hardware.nvidia.open = true;
+  # Enable the NVIDIA driver
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.modesetting.enable = true;
+ 
+
+
+  # Hardware
+  hardware.nvidia = {
+    open = false;
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 
 }
