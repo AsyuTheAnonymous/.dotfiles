@@ -164,7 +164,7 @@
     "margin-top": 15,
     "margin-bottom": 15,
     "modules-left": ["wlr/taskbar"],
-    "modules-center": ["cpu", "memory", "disk", "pulseaudio", "systemd-failed-units"],
+    "modules-center": [""],
     "modules-right": ["tray"],
 
     "wlr/taskbar": {
@@ -180,91 +180,10 @@
     "tray": {
         "icon-size": 32, // Increased for 4K
         "spacing": 4
-    },
-
-    "cpu": {
-        "format": " {usage}% ",
-        "states": {
-            "high": 90,
-            "upper-medium": 70,
-            "medium": 50,
-            "lower-medium": 30,
-            "low": 10
-        },
-        "on-click": "btop"
-    },
-
-    "memory": {
-        "format": " {percentage}%",
-        "tooltip-format": "Main: ({used} GiB/{total} GiB)({percentage}%), available {avail} GiB\nSwap: ({swapUsed} GiB/{swapTotal} GiB)({swapPercentage}%), available {swapAvail} GiB",
-        "states": {
-            "high": 90,
-            "upper-medium": 70,
-            "medium": 50,
-            "lower-medium": 30,
-            "low": 10
-        },
-        "on-click": "ghostty start btop"
-    },
-
-    "disk": {
-        "format": " {percentage_used}%",
-        "tooltip-format": "({used}/{total})({percentage_used}%) in '{path}', available {free}({percentage_free}%)",
-        "states": {
-            "high": 90,
-            "upper-medium": 70,
-            "medium": 50,
-            "lower-medium": 30,
-            "low": 10
-        },
-        "on-click": "ghostty start btop"
-    },
-
-    "temperature": {
-        "tooltip": false,
-        "thermal-zone": 8,
-        "critical-threshold": 80,
-        "format": "{icon}{temperatureC}󰔄",
-        "format-critical": "🔥{icon}{temperatureC}󰔄",
-        "format-icons": ["", "", "", "", ""]
-    },
-    
-
-
-    "pulseaudio": {
-        "states": {
-            "high": 90,
-            "upper-medium": 70,
-            "medium": 50,
-            "lower-medium": 30,
-            "low": 10
-        },
-        "tooltip-format": "{desc}",
-        "format": " {volume}%\n{format_source}",
-        "format-bluetooth": "󰂱{icon}{volume}%\n{format_source}",
-        "format-bluetooth-muted": "󰂱󰝟{volume}%\n{format_source}",
-        "format-muted": " {volume}%\n{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": " {volume}%",
-        "format-icons": {
-            "headphone": "󰋋",
-            "hands-free": "",
-            "headset": "󰋎",
-            "phone": "󰄜",
-            "portable": "󰦧",
-            "car": "󰄋",
-            "speaker": "󰓃",
-            "hdmi": "󰡁",
-            "hifi": "󰋌",
-            "default": ["󰕿", "󰖀", "󰕾"]
-        },
-        "reverse-scrolling": true,
-        "reverse-mouse-scrolling": true,
-        "on-click": "pavucontrol"
-    },
-
-    "systemd-failed-units": {
-        "format": "✗ {nr_failed}"
     }
+
+
+
+
 }
 ]
