@@ -18,15 +18,11 @@
     pavucontrol
     parsec-bin
     protonmail-desktop
-    protonvpn-gui
     catppuccin-sddm
-    flameshot
     tree
     lolcat
-    themechanger
     osu-lazer-bin
     localsend
-    newsflash
     obs-studio
   ];
 }

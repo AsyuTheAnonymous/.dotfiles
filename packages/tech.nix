@@ -14,7 +14,6 @@
     unzip
     unrar
     zip
-    android-tools
   ];
 
   programs.partition-manager.enable = true;
