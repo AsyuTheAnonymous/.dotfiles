@@ -14,6 +14,8 @@
     unzip
     unrar
     zip
+    # Ai
+    fabric-ai
   ];
 
 
