@@ -48,7 +48,7 @@
   programs.zsh = {
     enable = true;
     initExtra = ''
-      neofetch | lolcat
+      neofetch
       eval "$(starship init zsh)"
     '';
   };

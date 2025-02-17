@@ -24,5 +24,6 @@
     osu-lazer-bin
     localsend
     obs-studio
+    cmatrix
   ];
 }
