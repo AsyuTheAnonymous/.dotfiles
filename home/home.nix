@@ -59,6 +59,7 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/hypr/hyprland.conf".source = ./../desktop/hypr/hyprland.conf;
+    ".config/hypr/hypridle.conf".source = ./../desktop/hypr/hypridle.conf;
     ".config/ghostty/config".source = ./../desktop/hypr/configs/ghostty/config;
     ".config/rofi/config.rasi".source = ./../desktop/hypr/configs/rofi/config.rasi;
     ".config/rofi/catppuccin-mocha.rasi".source = ./../desktop/hypr/configs/rofi/catppuccin-mocha.rasi;
