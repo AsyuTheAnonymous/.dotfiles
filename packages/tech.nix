@@ -16,6 +16,5 @@
     zip
   ];
 
-  programs.partition-manager.enable = true;
 
 }
