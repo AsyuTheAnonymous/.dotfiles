@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs-unstable; [
-    webcord-vencord
+    webcord
     atlauncher
     prismlauncher
   ];
