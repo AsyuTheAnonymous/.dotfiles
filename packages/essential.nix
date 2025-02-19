@@ -10,6 +10,7 @@
     vivaldi
     ghostty
     git
+    libreoffice
     okular
     nemo
     neofetch
