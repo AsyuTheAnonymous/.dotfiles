@@ -5,5 +5,6 @@
     vesktop
     atlauncher
     prismlauncher
+    figma-linux
   ];
 }
