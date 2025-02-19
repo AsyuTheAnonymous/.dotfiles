@@ -10,6 +10,7 @@
     vivaldi
     ghostty
     git
+    okular
     nemo
     neofetch
     tradingview
