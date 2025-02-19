@@ -11,6 +11,7 @@
     ./network/locale.nix
     ./network/nm.nix
     ./network/bluetooth.nix
+    ./network/firewall.nix
     ./bootloader/grub.nix
     #./system/bootloader/sysd.nix
     ./auto.nix

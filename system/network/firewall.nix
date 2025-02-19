@@ -1,0 +1,13 @@
+{ config, lib, ... }:
+
+{
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 22 11434 3000 8080 80 ];
+    
+  };
+
+
+
+
+}
