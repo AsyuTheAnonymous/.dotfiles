@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs-unstable; [
-    webcord
+    discord
     atlauncher
     prismlauncher
   ];
