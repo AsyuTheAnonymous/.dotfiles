@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs-unstable; [
-    discord
+    vesktop
     atlauncher
     prismlauncher
   ];
