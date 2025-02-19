@@ -23,7 +23,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.asyu = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" "libvirtd" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "input" "libvirtd" ];
     packages = with pkgs; [
     ];
   };
