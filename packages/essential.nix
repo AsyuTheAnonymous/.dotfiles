@@ -12,7 +12,7 @@
     git
     libreoffice
     okular
-    nemo
+    dolphin
     neofetch
     tradingview
     telegram-desktop
