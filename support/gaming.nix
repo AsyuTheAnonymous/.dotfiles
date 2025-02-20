@@ -14,8 +14,6 @@
     protonup-qt
     lutris
     heroic
-    wine
-    winetricks
     mangohud
   ];
   # 32 bit DRI Support for steam

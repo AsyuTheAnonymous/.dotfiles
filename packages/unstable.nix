@@ -6,5 +6,7 @@
     atlauncher
     prismlauncher
     figma-linux
+    wine
+    winetricks
   ];
 }
