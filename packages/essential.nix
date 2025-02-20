@@ -12,7 +12,7 @@
     git
     libreoffice
     okular
-    dolphin
+    xfce.thunar
     neofetch
     tradingview
     telegram-desktop
