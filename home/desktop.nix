@@ -58,15 +58,15 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/hypr/hyprland.conf".source = ./../hosts/desktop/hypr/hyprland.conf;
-    ".config/hypr/hypridle.conf".source = ./../hosts/desktop/hypr/hypridle.conf;
-    ".config/ghostty/config".source = ./../hosts/desktop/hypr/configs/ghostty/config;
-    ".config/rofi/config.rasi".source = ./../hosts/desktop/hypr/configs/rofi/config.rasi;
-    ".config/rofi/catppuccin-mocha.rasi".source = ./../hosts/desktop/hypr/configs/rofi/catppuccin-mocha.rasi;
-    ".config/neofetch/config.conf".source = ./../hosts/desktop/hypr/configs/neofetch/config.conf;
-    ".config/hypr/hyprpaper.conf".source = ./../hosts/desktop/hypr/hyprpaper.conf;
-    ".config/starship.toml".source = ./../hosts/desktop/hypr/configs/starship/starship.toml;
-    ".config/waybar".source = ./../hosts/desktop/hypr/configs/waybar;    # Add more to vesktop later
+    ".config/hypr/hyprland.conf".source = ./../hosts/env/hypr/hyprland.conf;
+    ".config/hypr/hypridle.conf".source = ./../hosts/env/hypr/hypridle.conf;
+    ".config/ghostty/config".source = ./../hosts/env/hypr/configs/ghostty/config;
+    ".config/rofi/config.rasi".source = ./../hosts/env/hypr/configs/rofi/config.rasi;
+    ".config/rofi/catppuccin-mocha.rasi".source = ./../hosts/env/hypr/configs/rofi/catppuccin-mocha.rasi;
+    ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
+    ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
+    ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
+    ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;    # Add more to vesktop later
     ".config/vesktop/themes".source = ./../support/vesk-themes;
     ".config/open-interpreter".source = ./../support/ai/open-interpreter;
     ".config/open-interpreter/profiles/default.yaml".source = ./../support/ai/open-interpreter/profiles/default.yaml;
