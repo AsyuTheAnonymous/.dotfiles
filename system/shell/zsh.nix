@@ -12,6 +12,7 @@
     enable = true;
     shellAliases = {
       flake = "nix flake update";
+      unlock = "sudo chown asyu:users /home/asyu/.dotfiles/flake.lock";
       rebuild-desktop = "sudo nixos-rebuild switch --flake .#desktop";
       rebuild-laptop = "sudo nixos-rebuild switch --flake .#laptop";
       home-desktop = "home-manager switch --flake .#asyu@desktop";
