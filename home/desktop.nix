@@ -70,10 +70,10 @@
     ".config/vesktop/themes".source = ./../support/vesk-themes;
     ".config/open-interpreter".source = ./../support/ai/open-interpreter;
     ".config/open-interpreter/profiles/default.yaml".source = ./../support/ai/open-interpreter/profiles/default.yaml;
-    ".dotfiles/flake.lock" = {
-        source = ./../flake.lock;
-        target = "./dotfiles/hosts/desktop/flake.lock";
-    };
+    # ".dotfiles/flake.lock" = {
+    #     source = ./../flake.lock;
+    #     target = "./dotfiles/hosts/desktop/flake.lock";
+    # };
     # ".config/systemd/user/opentabletdriver.service".source = ./../support/tablet/opentabletdriver.service;
   };
 
