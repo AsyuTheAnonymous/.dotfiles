@@ -4,9 +4,6 @@
   imports = [
     ./essential.nix
     ./tech.nix
-    ./unstable.nix
-    ./games.nix
-    ./obs.nix
   ];
 
 

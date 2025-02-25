@@ -21,10 +21,22 @@
 
     # System Config
     nixosConfigurations = {
-      asyus-system = lib.nixosSystem { # System Builder Function from stable
-        inherit system; # stable
+      desktop = lib.nixosSystem {
+        inherit system;
         modules = [
-          ./configuration.nix
+          ./hosts/desktop/desktop.nix
+        ];
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit name;
+          inherit pkgs-unstable;
+        };
+      };
+      laptop = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/laptop/laptop.nix
         ];
         specialArgs = {
           inherit inputs;
@@ -34,21 +46,29 @@
         };
       };
     };
-
-    devShells.${system}.default = (import ./dev/shell.nix { inherit pkgs;});
-
     # Home Manager Config
     homeConfigurations = {
-      asyu = home-manager.lib.homeManagerConfiguration { # Home-manager Builder function (stable)
-        inherit pkgs; # stable
+      "asyu@desktop" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
         modules = [
-          ./home/home.nix
-         ];
-         extraSpecialArgs = {
+          ./home/desktop.nix
+        ];
+        extraSpecialArgs = {
           inherit username;
           inherit name;
           inherit pkgs-unstable;
-         };
+        };
+      };
+      "asyu@laptop" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home/laptop.nix
+        ];
+        extraSpecialArgs = {
+          inherit username;
+          inherit name;
+          inherit pkgs-unstable;
+        };
       };
     };
   };

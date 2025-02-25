@@ -8,14 +8,11 @@
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     vivaldi
-    ghostty
     git
     libreoffice
     okular
-    xfce.thunar
     neofetch
     tradingview
-    telegram-desktop
     btop
     pavucontrol
     parsec-bin
@@ -23,9 +20,7 @@
     catppuccin-sddm
     tree
     lolcat
-    osu-lazer-bin
     localsend
-    obs-studio
     cmatrix
   ];
 }
