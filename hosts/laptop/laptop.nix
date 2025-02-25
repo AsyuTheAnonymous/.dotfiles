@@ -6,7 +6,7 @@
     # Desktop Environments
     ./../env/kde/kde.nix
     # Packages
-    ./../../packages/laptop-settings.nix
+    ./../../packages/laptop.nix
     # System Settings
     ./../../system/laptop-settings.nix
     # Support for resources
