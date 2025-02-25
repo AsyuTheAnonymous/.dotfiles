@@ -8,7 +8,6 @@
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     firefox
-    vivaldi
     git
     libreoffice
     okular
