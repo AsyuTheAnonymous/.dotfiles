@@ -73,7 +73,7 @@
     # ".dotfiles/flake.lock" = {
     #     source = ".dotfiles/flake.lock";
     #     target = "./dotfiles/hosts/desktop/flake.lock";
-    };
+    # };
     # ".config/systemd/user/opentabletdriver.service".source = ./../support/tablet/opentabletdriver.service;
   };
 
