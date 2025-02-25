@@ -3,5 +3,6 @@
 {
   imports = [
     ./flatpak.nix
+    ./virtualization/virtualization.nix
   ];
 }
