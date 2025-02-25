@@ -12,8 +12,10 @@
     enable = true;
     shellAliases = {
       flake = "nix flake update";
-      rebuild = "sudo nixos-rebuild switch --flake .";
-      home = "home-manager switch --flake .";
+      rebuild-desktop = "sudo nixos-rebuild switch --flake .#desktop";
+      rebuild-laptop = "sudo nixos-rebuild switch --flake .#laptop";
+      home-desktop = "home-manager switch --flake .#asyu@desktop";
+      home-laptop = "home-manager switch --flake .#asyu@laptop";
       clean = "nix-env --delete-generations 5d";
       cleanhm = "home-manager expire-generations '-5 days'";
       gc = "sudo nix-collect-garbage -d";
