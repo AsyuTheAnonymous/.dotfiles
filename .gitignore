@@ -1,3 +1,4 @@
 secret/openai.txt
 secret
 .env
+flake.lock
