@@ -7,6 +7,6 @@
     ./font.nix
     ./ai/ollama.nix
     ./tablet/tablet.nix
-   # ./ai/interpreter.nix
+    ./virtualization/virtualization.nix
   ];
 }
