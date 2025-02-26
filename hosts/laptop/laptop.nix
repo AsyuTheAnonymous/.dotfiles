@@ -11,6 +11,8 @@
     ./../../system/laptop-settings.nix
     # Support for resources
     ./../../support/laptop-settings.nix
+    # Stylix 
+    ./../env/stylix/stylix.nix
   ];
   networking.hostName = "asyus-laptop";
   # Define a user account. Don't forget to set a password with ‘passwd’.
