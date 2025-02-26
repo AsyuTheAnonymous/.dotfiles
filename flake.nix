@@ -27,7 +27,7 @@
         modules = [
           ./hosts/desktop/desktop.nix
           stylix.nixosModules.stylix
-          ./hosts/env/stylix.nix
+          ./hosts/env/stylix/stylix.nix
         ];
         specialArgs = {
           inherit inputs;
