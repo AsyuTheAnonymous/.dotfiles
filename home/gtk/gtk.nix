@@ -7,7 +7,7 @@
   # Theme
   gtk.theme = {
     package = pkgs.sweet;
-    name = "Sweet-Ambar-Blue-Dark-v40";
+    name = "Sweet-Ambar-Blue-Dark-v41";
   };
 
   # Icons
@@ -19,6 +19,6 @@
   # Cursor
   gtk.cursorTheme = {
     package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
+    name = "Bibata-Modern-Jeroo";
   };
 }
