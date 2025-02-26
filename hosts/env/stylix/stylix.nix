@@ -31,23 +31,23 @@
     };
     
     # Set a wallpaper (you can use the one from your SDDM config)
-    image = ./hosts/env/wallpapers/pusheen.jpg;
+    image = ./../../../system/wallpapers/solo.jpg;
     
     # Configure fonts
     fonts = {
       serif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Serif";
+        package = pkgs.nerdfonts;
+        name = "JetBrainsMono Nerd Font";
       };
       
       sansSerif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Sans";
+        package = pkgs.nerdfonts;
+        name = "JetBrainsMono Nerd Font";
       };
       
       monospace = {
-        package = pkgs.noto-fonts-mono;
-        name = "Noto Sans Mono";
+        package = pkgs.nerdfonts;
+        name = "JetBrainsMono Nerd Font Mono";
       };
       
       emoji = {
