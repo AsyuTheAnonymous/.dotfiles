@@ -13,6 +13,7 @@
     bettercap
   ];
 
-
+  boot.extraModulePackages = [ config.boot.kernelPackages.rtl8814au ];
+  boot.kernelModules = [ "8814au" ];
 
 }
