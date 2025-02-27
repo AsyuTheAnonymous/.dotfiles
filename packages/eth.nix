@@ -6,8 +6,11 @@
     wireshark
     nmap
     kismet
-    reaver
-    wifite
+    wifite2
+    metasploit
+    john
+    hashcat
+    bettercap
   ];
 
 
