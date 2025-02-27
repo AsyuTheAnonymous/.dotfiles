@@ -2,6 +2,11 @@
 
 
 {
+  imports = [
+    ./eth.nix
+  ];
+
+
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
   
