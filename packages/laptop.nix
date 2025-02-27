@@ -14,6 +14,7 @@
   environment.systemPackages = with pkgs; [
     wirelesstools
     usbutils
+    iw
     firefox
     git
     libreoffice
