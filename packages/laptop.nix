@@ -13,6 +13,7 @@
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     wirelesstools
+    usbuitls
     firefox
     git
     libreoffice
