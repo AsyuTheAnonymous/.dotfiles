@@ -8,14 +8,16 @@
   fileSystems."/run/media/asyu/Games" = {
     device = "/dev/disk/by-uuid/29b54ca4-fced-43f8-a152-fdcc19941f5e";
     fsType = "ext4";
-    options = [ "uid=1000" "gid=100" "fmask=0022" "dmask=0000" "windows_names" "big_writes" ];
+    options = [ "defaults" "user" "rw" ];
+    # options = [ "uid=1000" "gid=100" "fmask=0022" "dmask=0000" "windows_names" "big_writes" ];
     # options = [ "auto" ];
   };
 
   fileSystems."/run/media/asyu/Vault" = {
     device = "/dev/disk/by-uuid/964C6CB04C6C8D35";
     fsType = "ntfs";
-    options = [ "defaults" "user" "rw" ];
+    options = [ "uid=1000" "gid=100" "fmask=0022" "dmask=0000" "windows_names" "big_writes" ];
+    # options = [ "defaults" "user" "rw" ];
     # options = [ "auto" ];
   };
 }
