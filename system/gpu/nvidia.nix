@@ -17,4 +17,9 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  # OpenGL deprecated use hardware.graphics
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 }
