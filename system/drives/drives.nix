@@ -6,10 +6,10 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   fileSystems."/run/media/asyu/Games" = {
-    device = "/dev/disk/by-uuid/4E385FD5385FBB23";
-    fsType = "ntfs";
-    options = [ "uid=1000" "gid=100" "fmask=0022" "dmask=0000" "windows_names" "big_writes" ];
-    # options = [ "auto" ];
+    device = "/dev/disk/by-uuid/29b54ca4-fced-43f8-a152-fdcc19941f5e";
+    fsType = "ext4";
+    # options = [ "uid=1000" "gid=100" "fmask=0022" "dmask=0000" "windows_names" "big_writes" ];
+    options = [ "auto" ];
   };
 
   fileSystems."/run/media/asyu/Vault" = {
