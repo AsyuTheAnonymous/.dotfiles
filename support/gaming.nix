@@ -11,14 +11,14 @@
   };
 
   environment.systemPackages = with pkgs; [
-    protonup-qt
+    protonup
     lutris
     heroic
     mangohud
   ];
-  # 32 bit DRI Support for steam
-  hardware.graphics.enable32Bit = true;
-
+  environment.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/asyu/.steam/compatibilitytools.d";
+  };
   # Game Mode + Game Scope + Mangohud usage
   # - launch properties
   # - gamemoderun %command%, mangohud %command%, gamescope %command%
