@@ -11,13 +11,13 @@
     # Ollama + Location
   services.ollama = {
     enable = true;
-    models = "/run/media/asyu/Vault/Models";
+    models = "/mnt/Vault/Models";
   };
   
   services.open-webui ={
     enable = true;
     port = 8080;
-    stateDir = "/run/media/asyu/Vault/Web-ui";
+    stateDir = "/mnt/Vault/Web-ui";
     #environmentFile = "/run/media/asyu/Vault/Web-ui/secret/openai.txt";
     environment = {
       #OPENAI_API_BASE_URL = "https://api.mistral.ai/v1";
@@ -34,8 +34,8 @@
     };
   };
   environment.variables = {
-    OPENAI_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/openai.txt)";
-    GROQ_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/groq.txt)";
+    OPENAI_API_KEY = "$(cat /mnt/Vault/Web-ui/secret/openai.txt)";
+    GROQ_API_KEY = "$(cat /mnt/Vault/Web-ui/secret/groq.txt)";
     OLLAMA_API_BASE = "http://127.0.0.1:11434";
     AIDER_TIMEOUT = 10;
   };
