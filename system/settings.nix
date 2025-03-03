@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./drives/drives.nix
+    #./drives/drives.nix
     ./gpu/nvidia.nix
     ./audio/pipewire.nix
     ./greeter/sddm.nix
