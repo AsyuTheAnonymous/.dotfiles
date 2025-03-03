@@ -8,19 +8,16 @@
   fileSystems."/mnt/Games" = {
     device = "/dev/disk/by-uuid/29b54ca4-fced-43f8-a152-fdcc19941f5e";
     fsType = "ext4";
-    options = [ "defaults" "users" "rw" ];
-    # options = [ "uid=1000" "gid=100" "fmask=0022" "dmask=0000" "windows_names" "big_writes" ];
-    # options = [ "auto" ];
+    options = [ "defaults" "noatime" "rw" "uid=1000" "gid=1000" ];
   };
 
   fileSystems."/mnt/Vault" = {
     device = "/dev/disk/by-uuid/964C6CB04C6C8D35";
     fsType = "ntfs";
-    options = [ "uid=1000" "gid=100" "fmask=0022" "dmask=0000" "windows_names" "big_writes" ];
-    # options = [ "defaults" "user" "rw" ];
-    # options = [ "auto" ];
+    options = [ "uid=1000" "gid=1000" "fmask=0022" "dmask=0000" "windows_names" "big_writes" "rw" ];
   };
 }
+
 
 # {
 
