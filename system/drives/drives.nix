@@ -8,7 +8,7 @@
   fileSystems."/run/media/asyu/Games" = {
     device = "/dev/disk/by-uuid/5cfc68e5-1858-4e9b-be84-bbfeb77767af";
     fsType = "ext4";
-    options = [ "auto"];
+    options = [ "defaults" "noatime" "rw" "nofail" ];
   #  options = [ "defaults" "noatime" "rw" "uid=1000" "gid=100" ];
   };
 
