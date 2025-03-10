@@ -22,5 +22,6 @@
     lolcat
     localsend
     cmatrix
+    vlc
   ];
 }
