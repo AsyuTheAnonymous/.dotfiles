@@ -8,5 +8,6 @@
     osu-lazer-bin
     runelite
     r2modman
+    nexusmods-app
   ];
 }
