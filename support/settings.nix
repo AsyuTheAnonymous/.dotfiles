@@ -5,7 +5,7 @@
     ./gaming.nix
     ./flatpak.nix
     ./font.nix
-#    ./ai/ollama.nix
+    ./ai/ollama.nix
     ./tablet/tablet.nix
     ./virtualization/virtualization.nix
   ];
