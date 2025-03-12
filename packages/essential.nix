@@ -23,5 +23,7 @@
     localsend
     cmatrix
     mpv
+    (pkgs.callPackage ./custom/msty {}) 
+
   ];
 }
