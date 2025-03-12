@@ -15,7 +15,7 @@
     wirelesstools
     usbutils
     iw
-    firefox
+    brave
     git
     libreoffice
     okular
