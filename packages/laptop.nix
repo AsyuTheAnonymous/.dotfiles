@@ -5,7 +5,7 @@
   imports = [
     ./eth.nix
   ];
-
+  msty = pkgs.callPackage ./custom/msty {}; 
 
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
