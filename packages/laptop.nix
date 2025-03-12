@@ -5,8 +5,6 @@
   imports = [
     ./eth.nix
   ];
-  msty = pkgs.callPackage ./custom/msty {}; 
-
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
   
@@ -35,5 +33,6 @@
     unzip
     unrar
     zip
+    (pkgs.callPackage ./custom/msty {}) 
   ];
 }
