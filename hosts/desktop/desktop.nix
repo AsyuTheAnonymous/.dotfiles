@@ -6,7 +6,7 @@
     # Desktop Environments
     ./../env/hypr/hypr.nix
     # Packages
-    ./../../packages/settings.nix
+    ./../../packages/desktop.nix
     # System Settings
     ./../../system/settings.nix
     # Support for resources

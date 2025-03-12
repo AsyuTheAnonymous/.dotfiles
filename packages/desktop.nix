@@ -2,26 +2,21 @@
 
 
 {
+  imports = [
+    ./common.nix
+    ./unstable/unstable.nix
+    ./gaming/games.nix
+    ./recording/obs.nix
+  ];
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
   
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     vivaldi
-    git
     libreoffice
-    okular
-    neofetch
     tradingview
-    btop
-    pavucontrol
-    parsec-bin
-    protonmail-desktop
     catppuccin-sddm
-    tree
-    lolcat
-    localsend
-    cmatrix
     mpv
     (pkgs.callPackage ./custom/msty {}) 
 
