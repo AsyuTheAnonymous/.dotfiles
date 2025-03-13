@@ -68,8 +68,6 @@
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;    # Add more to vesktop later
     ".config/vesktop/themes".source = ./../support/vesk-themes;
-    ".config/open-interpreter".source = ./../support/ai/open-interpreter;
-    ".config/open-interpreter/profiles/default.yaml".source = ./../support/ai/open-interpreter/profiles/default.yaml;
     # ".dotfiles/flake.lock" = {
     #     source = ./../flake.lock;
     #     target = "./dotfiles/hosts/desktop/flake.lock";
