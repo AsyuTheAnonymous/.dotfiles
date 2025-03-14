@@ -44,17 +44,6 @@
     enable = true;
   };
 
-    # Starship and Neofetch + ZSH Enabled
-  # programs.zsh = {
-  #   enable = true;
-  #   initExtra = ''
-  #     neofetch
-  #     eval "$(starship init zsh)"
-  #   '';
-  # };
-
-
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -65,7 +54,7 @@
     ".config/rofi/catppuccin-mocha.rasi".source = ./../hosts/env/hypr/configs/rofi/catppuccin-mocha.rasi;
     ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
     ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
-    ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
+    # ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;    # Add more to vesktop later
     ".config/vesktop/themes".source = ./../support/vesk-themes;
     # ".dotfiles/flake.lock" = {
