@@ -20,5 +20,6 @@
     iw
     git
     impression
+    putty
   ];
 }
