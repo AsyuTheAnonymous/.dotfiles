@@ -44,7 +44,7 @@
     enable = true;
   };
 
-    Starship and Neofetch + ZSH Enabled
+  #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
     enable = true;
     initExtra = ''
