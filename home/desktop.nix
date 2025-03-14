@@ -45,13 +45,13 @@
   };
 
     # Starship and Neofetch + ZSH Enabled
-  programs.zsh = {
-    enable = true;
-    initExtra = ''
-      neofetch
-      eval "$(starship init zsh)"
-    '';
-  };
+  # programs.zsh = {
+  #   enable = true;
+  #   initExtra = ''
+  #     neofetch
+  #     eval "$(starship init zsh)"
+  #   '';
+  # };
 
 
 

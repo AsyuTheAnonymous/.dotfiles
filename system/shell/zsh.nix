@@ -21,6 +21,10 @@
       cleanhm = "home-manager expire-generations '-5 days'";
       gc = "sudo nix-collect-garbage -d";
     };
+    interactiveShellInit = ''
+      neofetch
+      eval "$(starship init zsh)"
+    '';
   };
 
 
