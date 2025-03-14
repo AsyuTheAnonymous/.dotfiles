@@ -13,16 +13,16 @@
   programs.home-manager.enable = true;
 
   # Set-up Github repo
-  programs.git= {
-    enable = true;
-    userName = "AsyuTheAnonymous";
-    userEmail = "asyutheanonymous@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-      safe.directory = "/run/media/asyu/Vault";
+  # programs.git= {
+  #   enable = true;
+  #   userName = "AsyuTheAnonymous";
+  #   userEmail = "asyutheanonymous@gmail.com";
+  #   extraConfig = {
+  #     init.defaultBranch = "main";
+  #     safe.directory = "/run/media/asyu/Vault";
 
-    };
-  };
+  #   };
+  # };
   
 
   # This value determines the Home Manager release that your configuration is
