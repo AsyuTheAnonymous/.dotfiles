@@ -8,9 +8,9 @@
     # Packages
     ./../../packages/desktop.nix
     # System Settings
-    ./../../system/settings.nix
+    ./../../system/desktop.nix
     # Support for resources
-    ./../../support/settings.nix
+    ./../../support/desktop.nix
   ];
   networking.hostName = "asyus-system";
   # Define a user account. Don't forget to set a password with ‘passwd’.

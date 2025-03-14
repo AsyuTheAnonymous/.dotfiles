@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./flatpak.nix
+    ./flatpak/flatpak.nix
     ./virtualization/virtualization.nix
   ];
 }

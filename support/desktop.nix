@@ -3,7 +3,7 @@
 {
   imports = [
     ./gaming.nix
-    ./flatpak.nix
+    ./flatpak/flatpak.nix
     ./ai/ollama.nix
     ./tablet/tablet.nix
     ./virtualization/virtualization.nix

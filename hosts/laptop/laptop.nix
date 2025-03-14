@@ -8,9 +8,9 @@
     # Packages
     ./../../packages/laptop.nix
     # System Settings
-    ./../../system/laptop-settings.nix
+    ./../../system/laptop.nix
     # Support for resources
-    ./../../support/laptop-settings.nix
+    ./../../support/laptop.nix
     # Stylix 
     # ./../env/stylix/stylix.nix
   ];
