@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./gaming.nix
+    ./gaming/gaming.nix
     ./flatpak/flatpak.nix
     ./ai/ollama.nix
     ./tablet/tablet.nix
