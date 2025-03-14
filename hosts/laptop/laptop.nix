@@ -1,5 +1,6 @@
 { config, lib, pkgs, ... }: {
 
+  # Routing
   imports = [
     # Hardware config (MOST ESSENTIAL)
     ./hardware-configuration.nix
@@ -11,19 +12,15 @@
     ./../../system/laptop.nix
     # Support for resources
     ./../../support/laptop.nix
+    # User
+    ./../../user/asyu.nix
     # Stylix 
     # ./../env/stylix/stylix.nix
   ];
+  # Hostname
   networking.hostName = "asyus-laptop";
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.asyu = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "input" "libvirtd" ];
-    packages = with pkgs; [
-    ];
-  };
 
-  # Flake Support
+  # Flake Support + Nix Command
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Never change this value shit will break
