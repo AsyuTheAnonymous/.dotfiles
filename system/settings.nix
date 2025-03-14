@@ -13,6 +13,7 @@
     ./network/bluetooth.nix
     ./network/firewall.nix
     ./bootloader/grub.nix
+    ./fonts/nerd.nix
     #./system/bootloader/sysd.nix
     ./auto.nix
   ];
