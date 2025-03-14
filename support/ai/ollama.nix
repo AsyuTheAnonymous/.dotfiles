@@ -8,13 +8,13 @@
     # Ollama + Location
   services.ollama = {
     enable = true;
-    models = "/run/media/asyu/Vault/Models";
+    models = "$MODELS_PATH";
   };
   
   environment.variables = {
-    OPENAI_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/openai.txt)";
-    GROQ_API_KEY = "$(cat /run/media/asyu/Vault/Web-ui/secret/groq.txt)";
-    OLLAMA_API_BASE = "http://127.0.0.1:11434";
+    OPENAI_API_KEY = "$OPENAI_API_KEY";
+    GROQ_API_KEY = "$GROQ_API_KEY";
+    OLLAMA_API_BASE = "$OLLAMA_API_BASE";
     # AIDER_TIMEOUT = 10;
   };
 
