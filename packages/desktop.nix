@@ -18,7 +18,6 @@
     tradingview
     catppuccin-sddm
     mpv
-    hyprpanel
     (pkgs.callPackage ./custom/msty {}) 
 
   ];
