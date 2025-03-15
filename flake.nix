@@ -17,11 +17,7 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-         overlays = [
-          (final: prev: {
-            hyprpanel = hyprpanel.packages.${system}.default;
-          })
-        ];
+        overlays = [ hyprpanel.overlay ];
       };
       # pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
