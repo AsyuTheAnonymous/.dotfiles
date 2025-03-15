@@ -7,14 +7,19 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, hyprpanel, ... } @ inputs:
     # Variables
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ hyprpanel.overlay ];
+      };
+      # pkgs = nixpkgs.legacyPackages.${system};
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
       username = "asyu";
       name = "Ash";
@@ -22,11 +27,11 @@
 
     # System Config
     nixosConfigurations = {
+      # Desktop
       desktop = lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/desktop/desktop.nix
-
         ];
         specialArgs = {
           inherit inputs;
@@ -35,6 +40,7 @@
           inherit pkgs-unstable;
         };
       };
+      # Laptop
       laptop = lib.nixosSystem {
         inherit system;
         modules = [

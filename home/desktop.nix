@@ -40,9 +40,9 @@
   ];
 
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
-  programs.waybar = {
-    enable = true;
-  };
+  # programs.waybar = {
+  #   enable = true;
+  # };
 
   #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
@@ -65,7 +65,7 @@
     ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
     ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
-    ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;    # Add more to vesktop later
+    # ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;    # Add more to vesktop later
     ".config/vesktop/themes".source = ./../support/vesk-themes;
     # ".dotfiles/flake.lock" = {
     #     source = ./../flake.lock;
