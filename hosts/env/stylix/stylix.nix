@@ -4,7 +4,6 @@
   stylix = {
     # Enable Stylix
     enable = true;
-    
     # Base16 color scheme
     base16Scheme = {
       # You can use a file path to a JSON or YAML file
