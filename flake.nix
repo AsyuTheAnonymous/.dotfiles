@@ -1,5 +1,7 @@
 {
+  # Flake name
   description = "Asyu's Flake";
+
   # Inputs that are normally for repos and such
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.11";
@@ -7,24 +9,25 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, hyprpanel, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... } @ inputs:
     # Variables
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ inputs.hyprpanel.overlay ];
-      };
-      # pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
       username = "asyu";
       name = "Ash";
-    in {
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
 
+    in {
     # System Config
     nixosConfigurations = {
       # Desktop
