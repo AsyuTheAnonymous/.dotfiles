@@ -19,6 +19,6 @@
   # Cursor
   gtk.cursorTheme = {
     package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Jeroo";
+    name = "Bibata-Modern-Ice";
   };
 }
