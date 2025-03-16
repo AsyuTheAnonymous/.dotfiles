@@ -11,7 +11,7 @@
         "memory",
         "disk"
     ],
-    "modules-center": ["mpd"],
+    "modules-center": ["hyprland/window"],
     "modules-right": [
         "tray",
         "idle_inhibitor",
@@ -36,6 +36,14 @@
             "default": ""
         },
         "sort-by-number": true
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 100,
+        "separate-outputs": true,
+        "tooltip": true,
+        "tooltip-format": "{app} - {title}"
     },
 
     "clock": {
