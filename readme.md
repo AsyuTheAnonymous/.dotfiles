@@ -1,4 +1,4 @@
-Steps to rebuild system w dotfiles
+Steps to rebuild system w dotfiles on desktop
 
 Modify /etc/nixos/configuration.nix:
   # Add Nvidia Drivers
