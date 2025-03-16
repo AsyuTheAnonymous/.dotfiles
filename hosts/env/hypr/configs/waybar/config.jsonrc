@@ -123,14 +123,3 @@
         "max-length": 45
     }
 }
-```
-
-I've removed:
-- `custom/launcher`
-- `custom/recorder`
-- `custom/power`
-
-This configuration should work with the default waybar modules. Would you like me to also provide a matching style.css file? Also, make sure you have these packages installed in your NixOS configuration:
-- `pavucontrol`
-- `nm-connection-editor`
-- `htop`
