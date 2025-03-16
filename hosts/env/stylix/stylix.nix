@@ -30,7 +30,7 @@
     };
     
     # Set a wallpaper (you can use the one from your SDDM config)
-    image = ./../../../system/wallpapers/solo.jpg;
+    image = /home/asyu/.dotfiles/system/wallpapers/solo.jpg;
     
     # Configure fonts
     fonts = {
