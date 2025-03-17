@@ -5,7 +5,8 @@
     # ./gtk/gtk.nix
   ];
   
-  stylix.image = ./wallpapers/solo.jpg;
+  stylix.image = ./wallpaper/solo.jpg;
+  stylix.enable = true;
   
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
