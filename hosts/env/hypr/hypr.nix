@@ -36,7 +36,7 @@
   environment.systemPackages = with pkgs; [
     waybar
     ghostty
-    nautilus
+    nemo
     adwaita-icon-theme  # For proper icon support
     gnome-themes-extra  # For additional theme support
     rofi
