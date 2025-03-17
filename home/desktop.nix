@@ -3,8 +3,20 @@
 {
   imports = [
     # ./gtk/gtk.nix
+    ./../hosts/env/stylix/desktop.nix
   ];
-  stylix.targets.hyprland.enable = true;
+  stylix.targets = {
+    hyprland = {
+      enable = true;
+    };
+    gtk = {
+      enable = true;
+    };
+    kde = {
+      enable = true;
+    };
+  };
+
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";

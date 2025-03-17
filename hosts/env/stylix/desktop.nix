@@ -29,9 +29,6 @@
       base0F = "#f5bde6"; # pink
     };
 
-    # GTK
-    targets.gtk.enable = true;
-
     # Set a wallpaper (you can use the one from your SDDM config)
     image = /home/asyu/.dotfiles/system/wallpapers/solo.jpg;
 
