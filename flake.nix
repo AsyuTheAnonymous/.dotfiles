@@ -35,7 +35,7 @@
         inherit system;
         modules = [
           ./hosts/desktop/desktop.nix
-          inputs.stylix.nixosModules.stylix
+          stylix.nixosModules.stylix
         ];
         specialArgs = {
           inherit inputs;

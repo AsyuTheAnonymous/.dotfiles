@@ -54,7 +54,7 @@
         name = "Noto Color Emoji";
       };
     };
-    
+
     # Configure cursor
     cursor = {
       package = pkgs.bibata-cursors;
