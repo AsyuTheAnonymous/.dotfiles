@@ -47,7 +47,7 @@
     xdg-utils
     xwayland
     starship
-    hyprpaper
+    # hyprpaper
     catppuccin-kvantum
     bibata-cursors
   ];
