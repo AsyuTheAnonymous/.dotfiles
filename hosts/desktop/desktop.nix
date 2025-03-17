@@ -14,6 +14,8 @@
     ./../../support/desktop.nix
     # User
     ./../../user/asyu.nix
+    # Stylix
+    ./../env/stylix/stylix.nix
   ];
   # Hostname
   networking.hostName = "asyus-system";
