@@ -2,14 +2,6 @@
 
 {
 
-  # Enable GNOME services needed by Nautilus
-  services.gnome.core-utilities.enable = true;
-
-  # Enable GNOME Virtual File System
-  services.gvfs.enable = true;
-
-
-
   # Enable X11 Windowing System
   services.xserver = {
     xkb.layout = "us";
@@ -28,7 +20,6 @@
     enable = true;
   };
 
-
   # Pipewire pulse
   # services.pipewire.pulse.enable = true;
 
@@ -36,9 +27,7 @@
   environment.systemPackages = with pkgs; [
     waybar
     ghostty
-    nemo
-    adwaita-icon-theme  # For proper icon support
-    gnome-themes-extra  # For additional theme support
+    dolphin
     rofi
     hypridle
     swaynotificationcenter
