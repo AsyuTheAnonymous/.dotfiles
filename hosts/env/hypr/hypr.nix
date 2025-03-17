@@ -2,6 +2,14 @@
 
 {
 
+  # Enable GNOME services needed by Nautilus
+  services.gnome.core-utilities.enable = true;
+
+  # Enable GNOME Virtual File System
+  services.gvfs.enable = true;
+
+
+
   # Enable X11 Windowing System
   services.xserver = {
     xkb.layout = "us";
@@ -29,6 +37,8 @@
     waybar
     ghostty
     nautilus
+    adwaita-icon-theme  # For proper icon support
+    gnome-themes-extra  # For additional theme support
     rofi
     hypridle
     swaynotificationcenter

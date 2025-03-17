@@ -31,7 +31,7 @@
     
     # Set a wallpaper (you can use the one from your SDDM config)
     image = /home/asyu/.dotfiles/system/wallpapers/solo.jpg;
-    
+    targets.gtk.enable = true;
     # Configure fonts
     fonts = {
       serif = {
