@@ -60,7 +60,7 @@
     # Configure cursor
     cursor = {
       package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Jeroo";
+      name = "Bibata-Modern-Ice";
       size = 16;
     };
   };
