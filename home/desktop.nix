@@ -3,19 +3,23 @@
 {
   imports = [
     # ./gtk/gtk.nix
-    ./../hosts/env/stylix/desktop.nix
   ];
-  stylix.targets = {
-    hyprland = {
-      enable = true;
-    };
-    gtk = {
-      enable = true;
-    };
-    kde = {
-      enable = true;
+  stylix = {
+    enable = true;
+    image = ./../system/wallpapers/solo.jpg;
+    targets = {
+      hyprland = {
+        enable = true;
+      };
+      gtk = {
+        enable = true;
+      };
+      kde = {
+        enable = true;
+      };
     };
   };
+
 
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
@@ -78,7 +82,7 @@
     ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;   
-    ".config/vesktop/themes".source = ./../support/vesk-themes;
+    # ".config/vesktop/themes".source = ./../support/vesk-themes;
     # ".config/systemd/user/opentabletdriver.service".source = ./../support/tablet/opentabletdriver.service;
   };
 
