@@ -4,22 +4,6 @@
   imports = [
     # ./gtk/gtk.nix
   ];
-  stylix = {
-    enable = true;
-    image = ./../system/wallpapers/solo.jpg;
-    targets = {
-      hyprland = {
-        enable = true;
-      };
-      gtk = {
-        enable = true;
-      };
-      kde = {
-        enable = true;
-      };
-    };
-  };
-
 
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
@@ -27,19 +11,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # Set-up Github repo
-  # programs.git= {
-  #   enable = true;
-  #   userName = "AsyuTheAnonymous";
-  #   userEmail = "asyutheanonymous@gmail.com";
-  #   extraConfig = {
-  #     init.defaultBranch = "main";
-  #     safe.directory = "/run/media/asyu/Vault";
-
-  #   };
-  # };
-  
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
