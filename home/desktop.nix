@@ -6,11 +6,14 @@
   ];
   stylix = {
     enable = true;
-    image = ./../system/wallpapers/solo.jpg;
+    image = ./wallpaper/solo.jpg;
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
       size = 16;
+    };
+    targets.hyprland = {
+      enable = true;
     };
   };
 
@@ -73,7 +76,7 @@
     ".config/rofi/config.rasi".source = ./../hosts/env/hypr/configs/rofi/config.rasi;
     ".config/rofi/catppuccin-mocha.rasi".source = ./../hosts/env/hypr/configs/rofi/catppuccin-mocha.rasi;
     ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
-    ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
+    # ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;   
     # ".config/vesktop/themes".source = ./../support/vesk-themes;
