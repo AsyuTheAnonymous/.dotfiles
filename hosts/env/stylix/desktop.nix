@@ -10,7 +10,7 @@
       # path = ./path/to/your/scheme.yaml;
       
       # Or define colors inline (based on Catppuccin Macchiato from your waybar config)
-      scheme = "Catppuccin Macchiato";
+      # scheme = "Catppuccin Macchiato";
       base00 = "#24273a"; # base
       base01 = "#1e2030"; # mantle
       base02 = "#363a4f"; # surface0
@@ -31,7 +31,9 @@
     
     # Set a wallpaper (you can use the one from your SDDM config)
     image = /home/asyu/.dotfiles/system/wallpapers/solo.jpg;
-    targets.gtk.enable = true;
+    targets.gtk = {
+      enable = true;
+    };
     # Configure fonts
     fonts = {
       serif = {
