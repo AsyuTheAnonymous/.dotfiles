@@ -4,6 +4,17 @@
   imports = [
     # ./gtk/gtk.nix
   ];
+  stylix = {
+    enable = true;
+    image = ./../system/wallpapers/solo.jpg;
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 16;
+    };
+  };
+
+
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
