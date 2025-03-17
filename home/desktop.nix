@@ -4,6 +4,45 @@
   imports = [
     # ./gtk/gtk.nix
   ];
+  stylix = {
+    enable = true;
+    base16Scheme = {
+      # You can use a file path to a JSON or YAML file
+      # path = ./path/to/your/scheme.yaml;
+      
+      # Or define colors inline (based on Catppuccin Macchiato from your waybar config)
+      # scheme = "Catppuccin Macchiato";
+      base00 = "#24273a"; # base
+      base01 = "#1e2030"; # mantle
+      base02 = "#363a4f"; # surface0
+      base03 = "#494d64"; # surface1
+      base04 = "#5b6078"; # surface2
+      base05 = "#cad3f5"; # text
+      base06 = "#f4dbd6"; # rosewater
+      base07 = "#b7bdf8"; # lavender
+      base08 = "#ed8796"; # red
+      base09 = "#f5a97f"; # peach
+      base0A = "#eed49f"; # yellow
+      base0B = "#a6da95"; # green
+      base0C = "#8bd5ca"; # teal
+      base0D = "#8aadf4"; # blue
+      base0E = "#c6a0f6"; # mauve
+      base0F = "#f5bde6"; # pink
+    };
+    image = ./../system/wallpapers/solo.jpg;
+    targets = {
+      hyprland = {
+        enable = true;
+      };
+      gtk = {
+        enable = true;
+      };
+      kde = {
+        enable = true;
+      };
+    };
+  };
+
 
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
@@ -11,6 +50,19 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Set-up Github repo
+  # programs.git= {
+  #   enable = true;
+  #   userName = "AsyuTheAnonymous";
+  #   userEmail = "asyutheanonymous@gmail.com";
+  #   extraConfig = {
+  #     init.defaultBranch = "main";
+  #     safe.directory = "/run/media/asyu/Vault";
+
+  #   };
+  # };
+  
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
