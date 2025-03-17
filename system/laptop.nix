@@ -13,5 +13,6 @@
     ./bootloader/grub.nix
     #./system/bootloader/sysd.nix
     ./auto.nix
+    ./nix.nix
   ];
 }

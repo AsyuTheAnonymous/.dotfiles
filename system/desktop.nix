@@ -16,5 +16,6 @@
     ./fonts/nerd.nix
     #./system/bootloader/sysd.nix
     ./auto.nix
+    ./nix.nix
   ];
 }
