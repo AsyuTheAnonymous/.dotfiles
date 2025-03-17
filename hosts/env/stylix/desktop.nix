@@ -29,9 +29,6 @@
       base0F = "#f5bde6"; # pink
     };
 
-    # Set a wallpaper (you can use the one from your SDDM config)
-    image = ./../../../system/wallpapers/solo.jpg;
-
     # Configure fonts
     fonts = {
       serif = {

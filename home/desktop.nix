@@ -5,6 +5,8 @@
     # ./gtk/gtk.nix
   ];
   
+  stylix.image = ./wallpapers/solo.jpg;
+  
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
