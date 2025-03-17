@@ -16,7 +16,7 @@
     nixpkgs, 
     nixpkgs-unstable, 
     home-manager, 
-    # stylix, 
+    stylix, 
     ... 
     } @ inputs:
 
