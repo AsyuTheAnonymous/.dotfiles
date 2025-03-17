@@ -8,7 +8,7 @@
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    stylix.url = "github:danth/stylix/release-24.11";
+    # stylix.url = "github:danth/stylix/release-24.11";
   };
   # Outputs
   outputs = { 
@@ -16,7 +16,7 @@
     nixpkgs, 
     nixpkgs-unstable, 
     home-manager, 
-    stylix, 
+    # stylix, 
     ... 
     } @ inputs:
 
@@ -43,7 +43,7 @@
         inherit system;
         modules = [
           ./hosts/desktop/desktop.nix
-          stylix.nixosModules.stylix
+          # stylix.nixosModules.stylix
         ];
         specialArgs = {
           inherit inputs;
@@ -72,7 +72,7 @@
         inherit pkgs;
         modules = [
           ./home/desktop.nix
-          stylix.homeManagerModules.stylix
+          # stylix.homeManagerModules.stylix
         ];
         extraSpecialArgs = {
           inherit username;
