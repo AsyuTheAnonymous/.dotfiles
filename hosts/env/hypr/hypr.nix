@@ -28,7 +28,7 @@
   environment.systemPackages = with pkgs; [
     waybar
     ghostty
-    xfce.thunar
+    nautilus
     rofi
     hypridle
     swaynotificationcenter
