@@ -8,5 +8,6 @@
     figma-linux
     wine
     winetricks
+    zed-editor
   ];
 }
