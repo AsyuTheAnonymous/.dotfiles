@@ -5,6 +5,7 @@
   imports = [
     ./hacking/eth.nix
     ./common.nix
+    ./unstable/laptop.nix
   ];
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
