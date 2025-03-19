@@ -53,7 +53,7 @@
         };
       };
       # Laptop
-      laptop = lib.nixosSystem {
+      asyus-laptop = lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/laptop/laptop.nix
