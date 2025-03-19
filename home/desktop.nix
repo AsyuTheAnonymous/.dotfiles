@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   stylix = {
@@ -31,20 +31,17 @@
       enable = true;
     };
   };
-  gtk = {
+  gtk =  lib.mkForce {
     enable = true;
     theme = {
       name = "Catppuccin-Mocha-Standard-Blue-Dark";
-      package = pkgs.catppuccin-gtk;  # if available in your pkgs
+      package = pkgs.catppuccin-gtk;
     };
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;  # if available in your pkgs
+      package = pkgs.papirus-icon-theme;
     };
   };
-
-
-
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
@@ -78,7 +75,7 @@
   # environment.
   home.packages =  with pkgs; [
     catppuccin-gtk
-    catppuccin-papirus-folders
+    # catppuccin-papirus-folders
     papirus-icon-theme
   ];
 
@@ -87,9 +84,6 @@
   #     ${pkgs.catppuccin-papirus-folders}/bin/catppuccin-papirus-folders -C mocha -a blue --theme Papirus-Dark
   #   '';
   # };
-
-
-
 
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
   programs.waybar = {
@@ -103,8 +97,6 @@
       eval "$(starship init zsh)"
     '';
   };
-
-
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
