@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # ./gtk/gtk.nix
+    ./gtk/gtk.nix
   ];
   stylix = {
     enable = true;
@@ -54,7 +54,7 @@
 
   #   };
   # };
-  
+
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -68,7 +68,19 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages =  with pkgs; [
+    catppuccin-gtk
+    catppuccin-papirus-folders
+    papirus-icon-theme
   ];
+
+  # home.activation = {
+  #   changePapirusFolders = ''
+  #     ${pkgs.catppuccin-papirus-folders}/bin/catppuccin-papirus-folders -C mocha -a blue --theme Papirus-Dark
+  #   '';
+  # };
+
+
+
 
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
   programs.waybar = {
@@ -96,7 +108,7 @@
     ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
     # ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
-    ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;   
+    ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;
     # ".config/vesktop/themes".source = ./../support/vesk-themes;
     # ".config/systemd/user/opentabletdriver.service".source = ./../support/tablet/opentabletdriver.service;
   };
