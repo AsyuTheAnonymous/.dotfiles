@@ -31,7 +31,7 @@
       enable = true;
     };
   };
-  gtk =  lib.mkForce {
+  gtk = {
     enable = true;
     theme = {
       name = "rose-pine-moon";
