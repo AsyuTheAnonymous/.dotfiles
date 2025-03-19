@@ -68,7 +68,7 @@
     };
     # Home Manager Config
     homeConfigurations = {
-      "asyu@desktop" = home-manager.lib.homeManagerConfiguration {
+      "asyu@asyus-system" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home/desktop.nix
@@ -80,7 +80,7 @@
           inherit pkgs-unstable;
         };
       };
-      "asyu@laptop" = home-manager.lib.homeManagerConfiguration {
+      "asyu@asyus-laptop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home/laptop.nix
