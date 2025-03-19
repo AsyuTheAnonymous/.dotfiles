@@ -22,6 +22,7 @@
     nh
     nix-output-monitor
     nvd
+    nixd
     alejandra
   ];
 
