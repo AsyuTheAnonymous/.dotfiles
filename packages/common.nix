@@ -20,5 +20,6 @@
     git
     impression
     putty
+    nh
   ];
 }

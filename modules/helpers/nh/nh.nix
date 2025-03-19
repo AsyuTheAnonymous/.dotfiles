@@ -4,6 +4,6 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/asyu/.dotfiles/flake.nix";
+    flake = "/home/asyu/.dotfiles/";
   };
 }
