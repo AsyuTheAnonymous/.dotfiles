@@ -11,13 +11,13 @@
     stylix.url = "github:danth/stylix/release-24.11";
   };
   # Outputs
-  outputs = { 
-    self, 
-    nixpkgs, 
-    nixpkgs-unstable, 
-    home-manager, 
-    stylix, 
-    ... 
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    home-manager,
+    stylix,
+    ...
     } @ inputs:
 
     # Variables
@@ -39,7 +39,7 @@
     # System Config
     nixosConfigurations = {
       # Desktop
-      desktop = lib.nixosSystem {
+      asyus-system = lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/desktop/desktop.nix
