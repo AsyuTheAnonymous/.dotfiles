@@ -31,7 +31,7 @@
       enable = true;
     };
   };
-  gtk = {
+  gtk =  lib.mkDefault {
     enable = true;
     theme = {
       name = "rose-pine-moon";
