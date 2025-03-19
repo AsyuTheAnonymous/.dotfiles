@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Routing
   imports = [
     # Hardware config (MOST ESSENTIAL)
@@ -21,13 +25,8 @@
   networking.hostName = "asyus-system";
 
   # Flake Support
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Never change this value shit will break
   system.stateVersion = "24.11";
-
-
-
-
-
 }

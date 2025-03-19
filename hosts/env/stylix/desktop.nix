@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   stylix = {
     # Enable Stylix
     enable = true;
@@ -8,7 +11,7 @@
     base16Scheme = {
       # You can use a file path to a JSON or YAML file
       # path = ./path/to/your/scheme.yaml;
-      
+
       # Or define colors inline (based on Catppuccin Macchiato from your waybar config)
       # scheme = "Catppuccin Macchiato";
       base00 = "#24273a"; # base
@@ -35,22 +38,21 @@
         package = pkgs.nerdfonts;
         name = "JetBrainsMono Nerd Font";
       };
-      
+
       sansSerif = {
         package = pkgs.nerdfonts;
         name = "JetBrainsMono Nerd Font";
       };
-      
+
       monospace = {
         package = pkgs.nerdfonts;
         name = "JetBrainsMono Nerd Font Mono";
       };
-      
+
       emoji = {
         package = pkgs.noto-fonts-emoji;
         name = "Noto Color Emoji";
       };
     };
   };
-
 }

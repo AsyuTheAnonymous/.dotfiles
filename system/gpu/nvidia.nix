@@ -1,11 +1,11 @@
-{ config, lib, pkgs, ... }:
-
 {
-
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Enable the NVIDIA driver
-  services.xserver.videoDrivers = [ "nvidia" ];
- 
-
+  services.xserver.videoDrivers = ["nvidia"];
 
   # Hardware
   hardware.nvidia = {

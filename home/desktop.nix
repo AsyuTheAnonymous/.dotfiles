@@ -1,6 +1,8 @@
-{ pkgs, lib, ... }:
-
 {
+  pkgs,
+  lib,
+  ...
+}: {
   stylix = {
     enable = true;
     image = ./wallpaper/solo.jpg;
@@ -31,7 +33,7 @@
       enable = true;
     };
   };
-  gtk =  lib.mkDefault {
+  gtk = lib.mkDefault {
     enable = true;
     theme = {
       name = "rose-pine-moon";
@@ -50,10 +52,9 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages =  with pkgs; [
+  home.packages = with pkgs; [
     rose-pine-gtk-theme
     rose-pine-icon-theme
     papirus-icon-theme

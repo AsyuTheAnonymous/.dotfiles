@@ -18,24 +18,22 @@
     home-manager,
     stylix,
     ...
-    } @ inputs:
-
-    # Variables
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      username = "asyu";
-      name = "Ash";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
-
-    in {
+  } @ inputs:
+  # Variables
+  let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    username = "asyu";
+    name = "Ash";
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
+  in {
     # System Config
     nixosConfigurations = {
       # Desktop
@@ -93,5 +91,4 @@
       };
     };
   };
-
 }

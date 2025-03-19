@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-
-{
-
+{pkgs, ...}: {
   # Enable X11 Windowing System
   services.xserver = {
     xkb.layout = "us";
@@ -61,6 +58,4 @@
       pkgs.xdg-desktop-portal-gtk
     ];
   };
-
-
 }

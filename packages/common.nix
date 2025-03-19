@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-{
-
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     brave
     parsec-bin

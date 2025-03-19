@@ -1,6 +1,10 @@
-{ config, lib, pkgs, pkgs-unstable, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   imports = [
     ./gaming/gaming.nix
     ./flatpak/flatpak.nix

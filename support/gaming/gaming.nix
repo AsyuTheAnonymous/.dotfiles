@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Enable Game Mode
   programs.gamemode.enable = true;
   programs.steam = {

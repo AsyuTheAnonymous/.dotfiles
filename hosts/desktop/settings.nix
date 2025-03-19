@@ -1,13 +1,10 @@
-{ config, lib, pkgs, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./desktop.nix
   ];
-
-
-  
-
-
-
-
 }

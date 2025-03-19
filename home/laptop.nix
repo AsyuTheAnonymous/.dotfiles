@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   imports = [
     #./gtk/gtk.nix
   ];
@@ -13,17 +11,15 @@
   programs.home-manager.enable = true;
 
   # Set-up Github repo
-  programs.git= {
+  programs.git = {
     enable = true;
     userName = "AsyuTheAnonymous";
     userEmail = "asyutheanonymous@gmail.com";
     extraConfig = {
       init.defaultBranch = "main";
       safe.directory = "/run/media/asyu/Vault";
-
     };
   };
-
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -36,9 +32,8 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages =  with pkgs; [
+  home.packages = with pkgs; [
   ];
-
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
