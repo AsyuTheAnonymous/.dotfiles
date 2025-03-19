@@ -1,5 +1,5 @@
 shell-integration = zsh
-theme = catppuccin-frape
+theme = catppuccin-frappe
 cursor-style = block_hollow
 window-decoration = false
 background-opacity = 15
