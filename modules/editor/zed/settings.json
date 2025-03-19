@@ -26,7 +26,14 @@
   },
   "languages": {
     "Nix": {
-      "language_servers": ["nixd"]
+      "language_servers": ["nixd"],
+      "formatter": {
+        "external": {
+          "command": "alejandra",
+          "arguments": ["--quiet"]
+        }
+      },
+      "format_on_save": "on"
     }
   },
   "lsp": {

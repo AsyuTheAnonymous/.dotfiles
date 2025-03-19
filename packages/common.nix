@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   environment.systemPackages = with pkgs; [
     brave
     parsec-bin
@@ -24,4 +24,7 @@
     nvd
     alejandra
   ];
+
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
 }
