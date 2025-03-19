@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   environment.systemPackages = with pkgs; [
     brave
@@ -21,5 +22,8 @@
     impression
     putty
     nh
+    nix-output-monitor
+    nvd
+    alejandra
   ];
 }
