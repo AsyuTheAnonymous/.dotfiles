@@ -34,8 +34,8 @@
   gtk =  lib.mkForce {
     enable = true;
     theme = {
-      name = "Catppuccin-Mocha-Standard-Blue-Dark";
-      package = pkgs.catppuccin-gtk;
+      name = "rose-pine-moon";
+      package = pkgs.rose-pine-gtk-theme;
     };
     iconTheme = {
       name = "Papirus-Dark";
@@ -74,8 +74,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages =  with pkgs; [
-    catppuccin-gtk
-    # catppuccin-papirus-folders
+    rose-pine-gtk-theme    # catppuccin-papirus-folders
     papirus-icon-theme
   ];
 
