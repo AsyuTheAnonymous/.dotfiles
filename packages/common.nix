@@ -20,6 +20,5 @@
     git
     impression
     putty
-    nixd
   ];
 }
