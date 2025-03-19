@@ -107,6 +107,9 @@
     ".config/rofi/config.rasi".source = ./../hosts/env/hypr/configs/rofi/config.rasi;
     ".config/rofi/catppuccin-mocha.rasi".source = ./../hosts/env/hypr/configs/rofi/catppuccin-mocha.rasi;
     ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
+    ".config/zed/settings.json".source = ./../modules/editor/zed/settings.json;
+    ".config/zed/keymap.json".source = ./../modules/editor/zed/keymap.json;
+    # ".config/zed/themes".source = ./../modules/editor/zed/themes;
     # ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;
