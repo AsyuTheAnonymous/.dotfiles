@@ -42,5 +42,10 @@
         "path": "/run/current-system/sw/bin/nixd"
       }
     }
+  },
+  "settings": {
+    "nixpkgs": {
+      "expr": "import <nixpkgs> {}"
+    }
   }
 }
