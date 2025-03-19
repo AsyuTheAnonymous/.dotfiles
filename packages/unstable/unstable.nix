@@ -9,5 +9,8 @@
     wine
     winetricks
     zed-editor
+    #Nix Language server
+    nixd
+    nil
   ];
 }

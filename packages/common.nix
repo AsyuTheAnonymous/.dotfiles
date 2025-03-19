@@ -8,7 +8,6 @@
     neofetch
     pavucontrol
     bottles
-    vscode
     localsend
     unzip
     unrar

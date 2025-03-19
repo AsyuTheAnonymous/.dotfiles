@@ -1,9 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-  imports = [
-    # ./gtk/gtk.nix
-  ];
   stylix = {
     enable = true;
     image = ./wallpaper/solo.jpg;
@@ -34,8 +31,17 @@
       enable = true;
     };
   };
-
-
+  gtk =  lib.mkForce {
+    enable = true;
+    theme = {
+      name = "rose-pine-moon";
+      package = pkgs.rose-pine-gtk-theme;
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+  };
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
@@ -54,7 +60,7 @@
 
   #   };
   # };
-  
+
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -68,7 +74,15 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages =  with pkgs; [
+    rose-pine-gtk-theme    # catppuccin-papirus-folders
+    papirus-icon-theme
   ];
+
+  # home.activation = {
+  #   changePapirusFolders = ''
+  #     ${pkgs.catppuccin-papirus-folders}/bin/catppuccin-papirus-folders -C mocha -a blue --theme Papirus-Dark
+  #   '';
+  # };
 
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
   programs.waybar = {
@@ -83,8 +97,6 @@
     '';
   };
 
-
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -96,7 +108,7 @@
     ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
     # ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
-    ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;   
+    ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;
     # ".config/vesktop/themes".source = ./../support/vesk-themes;
     # ".config/systemd/user/opentabletdriver.service".source = ./../support/tablet/opentabletdriver.service;
   };
