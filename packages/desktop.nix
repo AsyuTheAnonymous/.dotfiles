@@ -17,7 +17,9 @@
     libreoffice
     tradingview
     catppuccin-sddm
+    catppuccin-gtk
     mpv
+    numix-icon-theme
     (pkgs.callPackage ./custom/msty {})
 
   ];
