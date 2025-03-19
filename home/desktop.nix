@@ -110,7 +110,7 @@
     ".config/zed/settings.json".source = ./../modules/editor/zed/settings.json;
     ".config/zed/keymap.json".source = ./../modules/editor/zed/keymap.json;
     # ".config/zed/themes".source = ./../modules/editor/zed/themes;
-    # ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
+    ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;
     # ".config/vesktop/themes".source = ./../support/vesk-themes;
