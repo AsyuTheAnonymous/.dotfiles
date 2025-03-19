@@ -16,24 +16,41 @@
     "light": "Catppuccin Frappé",
     "dark": "One Dark"
   },
+  "show_extension_recommendations": false,
+  "file_types": {
+    "Nix": ["*.nix"]
+  },
   "languages": {
     "Nix": {
+      "file_extensions": ["nix"],
       "language_servers": ["nixd"],
-      "formatter": "alejandra",
-      "format_on_save": "on"
+      "formatter": {
+        "external": {
+          "command": "/run/current-system/sw/bin/alejandra",
+          "arguments": ["--quiet", "-"]
+        }
+      },
+      "format_on_save": "on",
+      "language_server": {
+        "name": "nixd"
+      }
     }
   },
   "lsp": {
     "nixd": {
       "binary": {
         "path": "/run/current-system/sw/bin/nixd"
+      },
+      "settings": {
+        "diagnostic": {
+          "suppress": ["sema-extra-with"]
+        }
+      },
+      "initialization_options": {
+        "formatting": {
+          "command": ["/run/current-system/sw/bin/alejandra", "--quiet", "-"]
+        }
       }
-    }
-  },
-  "formatter": {
-    "alejandra": {
-      "command": "/run/current-system/sw/bin/alejandra",
-      "arguments": ["--quiet"]
     }
   }
 }
