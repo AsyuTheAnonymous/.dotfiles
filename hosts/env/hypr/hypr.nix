@@ -26,6 +26,7 @@
   # REQUIREMENTS
   environment.systemPackages = with pkgs; [
     waybar
+    hyprpaper
     ghostty
     pcmanfm
     rofi

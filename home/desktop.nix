@@ -38,8 +38,8 @@
       package = pkgs.rose-pine-gtk-theme;
     };
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "rose-pine-moon";
+      package = pkgs.rose-pine-icon-theme;
     };
   };
   # Home Manager needs a bit of information about you and the paths it should manage.
@@ -74,7 +74,8 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages =  with pkgs; [
-    rose-pine-gtk-theme    # catppuccin-papirus-folders
+    rose-pine-gtk-theme
+    rose-pine-icon-theme
     papirus-icon-theme
   ];
 
