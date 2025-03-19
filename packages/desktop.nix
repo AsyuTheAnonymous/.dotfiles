@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 
 {
@@ -10,7 +10,7 @@
   ];
     # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
-  
+
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     vivaldi
@@ -18,7 +18,7 @@
     tradingview
     catppuccin-sddm
     mpv
-    (pkgs.callPackage ./custom/msty {}) 
+    (pkgs.callPackage ./custom/msty {})
 
   ];
 }

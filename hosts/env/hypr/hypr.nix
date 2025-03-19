@@ -27,7 +27,7 @@
   environment.systemPackages = with pkgs; [
     waybar
     ghostty
-    dolphin
+    pcmanfm
     rofi
     hypridle
     swaynotificationcenter
