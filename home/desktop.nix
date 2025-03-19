@@ -1,9 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./gtk/gtk.nix
-  ];
   stylix = {
     enable = true;
     image = ./wallpaper/solo.jpg;
@@ -34,6 +31,18 @@
       enable = true;
     };
   };
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Catppuccin-Mocha-Standard-Blue-Dark";
+      package = pkgs.catppuccin-gtk;  # if available in your pkgs
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;  # if available in your pkgs
+    };
+  };
+
 
 
   # Home Manager needs a bit of information about you and the paths it should manage.
