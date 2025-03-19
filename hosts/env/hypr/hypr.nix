@@ -28,7 +28,7 @@
     waybar
     hyprpaper
     ghostty
-    pcmanfm
+    # pcmanfm
     rofi
     hypridle
     swaynotificationcenter
