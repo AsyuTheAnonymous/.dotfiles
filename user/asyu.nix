@@ -1,9 +1,16 @@
-{ config, lib, pkgs, ... }: {
-    
-    users.users.asyu = {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  users.users.asyu = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" "libvirtd" ];
+    extraGroups = ["wheel" "input" "libvirtd"];
     packages = with pkgs; [
     ];
+  };
+  environment.sessionVariables = {
+    FLAKE = "/home/asyu/.dotfiles/";
   };
 }

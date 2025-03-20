@@ -1,11 +1,11 @@
-{ pkgs ? import <nixpkgs> {} }:
+{pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
   name = "flowise-dev-shell";
 
   buildInputs = [
-    pkgs.nodejs-18_x  # Adjust as needed; your log shows nodejs-20.18.1 in use
-    pkgs.pnpm         # Optional: if you plan on using pnpm for other tasks
-    pkgs.git          # Useful for cloning and version control
+    pkgs.nodejs-18_x # Adjust as needed; your log shows nodejs-20.18.1 in use
+    pkgs.pnpm # Optional: if you plan on using pnpm for other tasks
+    pkgs.git # Useful for cloning and version control
   ];
 
   shellHook = ''

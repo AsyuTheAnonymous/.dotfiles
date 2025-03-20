@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{pkgs, inputs, ...}: {
   environment.systemPackages = with pkgs; [
     brave
     parsec-bin
@@ -20,5 +19,13 @@
     git
     impression
     putty
+    nh
+    nix-output-monitor
+    nvd
+    nixd
+    alejandra
   ];
+
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
 }

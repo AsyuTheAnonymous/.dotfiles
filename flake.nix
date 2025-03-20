@@ -11,35 +11,33 @@
     stylix.url = "github:danth/stylix/release-24.11";
   };
   # Outputs
-  outputs = { 
-    self, 
-    nixpkgs, 
-    nixpkgs-unstable, 
-    home-manager, 
-    stylix, 
-    ... 
-    } @ inputs:
-
-    # Variables
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      username = "asyu";
-      name = "Ash";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
-
-    in {
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    home-manager,
+    stylix,
+    ...
+  } @ inputs:
+  # Variables
+  let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    username = "asyu";
+    name = "Ash";
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
+  in {
     # System Config
     nixosConfigurations = {
       # Desktop
-      desktop = lib.nixosSystem {
+      asyus-system = lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/desktop/desktop.nix
@@ -53,7 +51,7 @@
         };
       };
       # Laptop
-      laptop = lib.nixosSystem {
+      asyus-laptop = lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/laptop/laptop.nix
@@ -68,7 +66,7 @@
     };
     # Home Manager Config
     homeConfigurations = {
-      "asyu@desktop" = home-manager.lib.homeManagerConfiguration {
+      "asyu@asyus-system" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home/desktop.nix
@@ -80,7 +78,7 @@
           inherit pkgs-unstable;
         };
       };
-      "asyu@laptop" = home-manager.lib.homeManagerConfiguration {
+      "asyu@asyus-laptop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           ./home/laptop.nix
@@ -93,5 +91,4 @@
       };
     };
   };
-
 }

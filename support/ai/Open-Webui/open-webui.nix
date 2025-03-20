@@ -1,11 +1,14 @@
-  {config, lib, pkgs, ... }:
-  
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     open-webui
   ];
-  
-  services.open-webui ={
+
+  services.open-webui = {
     enable = true;
     port = 8080;
     stateDir = "$WEBUI_STATE_DIR";

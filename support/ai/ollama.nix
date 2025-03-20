@@ -1,16 +1,18 @@
-{ config, lib, pkgs, ... }:
-
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     ollama-cuda
   ];
-    # Ollama + Location
+  # Ollama + Location
   services.ollama = {
     enable = true;
     models = "$MODELS_PATH";
   };
-  
+
   environment.variables = {
     OPENAI_API_KEY = "$OPENAI_API_KEY";
     GROQ_API_KEY = "$GROQ_API_KEY";

@@ -1,19 +1,19 @@
-{ pkgs, ... }:
-
-
-{
+{pkgs, ...}: {
   imports = [
     ./common.nix
     ./unstable/unstable.nix
     ./gaming/games.nix
     ./recording/obs.nix
+    # Inserting a module here remove later
+    ./../modules/helpers/nh/nh.nix
   ];
-    # Sorrrrrrrrrrrrryyyyy
+  # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
 
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     vivaldi
+    dolphin
     libreoffice
     tradingview
     catppuccin-sddm
@@ -21,6 +21,5 @@
     mpv
     numix-icon-theme
     (pkgs.callPackage ./custom/msty {})
-
   ];
 }

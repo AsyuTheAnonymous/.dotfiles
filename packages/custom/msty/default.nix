@@ -15,28 +15,27 @@
 
   # Extract the AppImage contents for icon and desktop file
   appimageContents = appimageTools.extractType2 {inherit pname version src;};
-in 
+in
   appimageTools.wrapType2 {
     inherit pname version src;
-    
+
     nativeBuildInputs = [makeWrapper];
 
     # Install desktop file and icon, fixing the Exec path
     extraInstallCommands = ''
       # Install desktop file
       install -m 444 -D ${appimageContents}/msty.desktop -t $out/share/applications
-      
+
       # Fix desktop file Exec path
       substituteInPlace $out/share/applications/msty.desktop \
         --replace-warn "Exec=AppRun" "Exec=${pname}"
-      
+
       # Install icon
       install -m 444 -D ${appimageContents}/msty.png \
         $out/share/icons/hicolor/256x256/apps/msty.png
-      
+
       # Wrap the binary with GNOME desktop environment
       wrapProgram $out/bin/${pname} \
         --set XDG_CURRENT_DESKTOP GNOME
     '';
   }
-  

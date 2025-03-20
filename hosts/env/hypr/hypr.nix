@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-
-{
-
+{pkgs, ...}: {
   # Enable X11 Windowing System
   services.xserver = {
     xkb.layout = "us";
@@ -26,8 +23,9 @@
   # REQUIREMENTS
   environment.systemPackages = with pkgs; [
     waybar
+    hyprpaper
     ghostty
-    pcmanfm
+    # pcmanfm
     rofi
     hypridle
     swaynotificationcenter
@@ -60,6 +58,4 @@
       pkgs.xdg-desktop-portal-gtk
     ];
   };
-
-
 }

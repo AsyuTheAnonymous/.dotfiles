@@ -1,11 +1,12 @@
-{ config, lib, pkgs, ...}:
-
 {
-  
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # KDE Requirements
   services.desktopManager.plasma6.enable = true;
   services.displayManager.defaultSession = "plasma";
-
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -17,6 +18,4 @@
   environment.systemPackages = with pkgs; [
     kate
   ];
-
-
 }

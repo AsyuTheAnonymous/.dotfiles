@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   imports = [
     ./drives/drives.nix
     ./gpu/nvidia.nix

@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   imports = [
     ./audio/pipewire.nix
     # ./greeter/sddm.nix

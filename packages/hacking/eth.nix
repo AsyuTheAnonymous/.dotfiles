@@ -1,6 +1,9 @@
-{ config, lib, pkgs-unstable, ... }:
 {
-
+  config,
+  lib,
+  pkgs-unstable,
+  ...
+}: {
   environment.systemPackages = with pkgs-unstable; [
     aircrack-ng
     wireshark
@@ -13,7 +16,6 @@
     bettercap
   ];
 
-  boot.extraModulePackages = [ config.boot.kernelPackages.rtl8814au ];
-  boot.kernelModules = [ "8814au" ];
-
+  boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
+  boot.kernelModules = ["8814au"];
 }

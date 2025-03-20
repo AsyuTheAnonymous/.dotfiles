@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: {
-    programs.git = {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  programs.git = {
     enable = true;
     config = {
       init.defaultBranch = "main";
@@ -10,5 +15,4 @@
       safe.directory = "/run/media/asyu/Vault";
     };
   };
-
 }
