@@ -29,27 +29,6 @@
           "command": "/run/current-system/sw/bin/alejandra",
           "arguments": ["--quiet", "-"]
         }
-      },
-      "format_on_save": "on",
-      "language_server": {
-        "name": "nixd"
-      }
-    }
-  },
-  "lsp": {
-    "nixd": {
-      "binary": {
-        "path": "/run/current-system/sw/bin/nixd"
-      },
-      "settings": {
-        "diagnostic": {
-          "suppress": ["sema-extra-with"]
-        }
-      },
-      "initialization_options": {
-        "formatting": {
-          "command": ["/run/current-system/sw/bin/alejandra", "--quiet", "-"]
-        }
       }
     }
   }
