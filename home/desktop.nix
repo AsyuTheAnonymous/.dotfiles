@@ -5,6 +5,7 @@
 }: {
   stylix = {
     enable = true;
+    # Stylix requires an image
     image = ./../system/wallpapers/solo.jpg;
     base16Scheme = {
       base00 = "#24273a"; # base
@@ -24,21 +25,25 @@
       base0E = "#c6a0f6"; # mauve
       base0F = "#f5bde6"; # pink
     };
+    # Cursor
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
-      size = 22;
+      size = 30;
     };
+    # Specifying Hyprland Session
     targets.hyprland = {
       enable = true;
     };
   };
+  # Some apps need this so best suit the seem how I can!
   gtk = lib.mkDefault {
     enable = true;
     theme = {
       name = "rose-pine-moon";
       package = pkgs.rose-pine-gtk-theme;
     };
+    # Icons
     iconTheme = {
       name = "rose-pine-moon";
       package = pkgs.rose-pine-icon-theme;
