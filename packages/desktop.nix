@@ -13,7 +13,7 @@
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     vivaldi
-    dolphin
+    pcmanfm
     libreoffice
     tradingview
     catppuccin-sddm
