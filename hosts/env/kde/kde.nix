@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # KDE Requirements
   services.desktopManager.plasma6.enable = true;
   services.displayManager.defaultSession = "plasma";

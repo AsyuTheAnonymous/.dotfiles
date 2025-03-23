@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   nix = {
     settings = {
       download-buffer-size = 16777216;

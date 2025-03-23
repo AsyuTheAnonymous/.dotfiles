@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   # Routing
   imports = [
     # Hardware config (MOST ESSENTIAL)

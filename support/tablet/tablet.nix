@@ -1,8 +1,4 @@
-{
-  config,
-  lib,
-  ...
-}: {
+{...}: {
   systemd.user.services.opentabletdriver = {
     enable = true;
     wantedBy = ["graphical-session.target"];
