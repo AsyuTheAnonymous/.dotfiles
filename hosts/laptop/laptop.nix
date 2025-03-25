@@ -18,6 +18,8 @@
     ./../../support/laptop.nix
     # User
     ./../../user/asyu.nix
+    # Modules
+    ./../../modules/laptop.nix
     # Stylix
     # ./../env/stylix/stylix.nix
   ];

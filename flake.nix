@@ -21,10 +21,16 @@
   } @ inputs:
   # Variables
   let
+    # System Settings
     lib = nixpkgs.lib;
     system = "x86_64-linux";
+    # locale = "en-US.UTF-8";
+    # timezone = "America/Chicago";
+    # User Settings
     username = "asyu";
     name = "Ash";
+
+    #Packages
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
