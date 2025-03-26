@@ -50,12 +50,20 @@
     bibata-cursors
   ];
 
+  # # XDG Portal
+  # services.dbus.enable = true;
+  # xdg.portal = {
+  #   enable = true;
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-gtk
+  #   ];
+  # };
   # XDG Portal
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
     ];
   };
 }
