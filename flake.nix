@@ -34,7 +34,13 @@
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
+      # overlays = [
+      # # Lets make sense of this.. (Final = end resultof prev) (Prev = package we are overlaying)
+      # (final: prev: {
+      # })
+      # ];
     };
+
     pkgs-unstable = import nixpkgs-unstable {
       inherit system;
       config.allowUnfree = true;

@@ -50,12 +50,24 @@
     bibata-cursors
   ];
 
+  # # XDG Portal
+  # services.dbus.enable = true;
+  # xdg.portal = {
+  #   enable = true;
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-gtk
+  #   ];
+  # };
+
+  # Point vulkan driver, gpu not detected otherwise
+  environment.variables.VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
+
   # XDG Portal
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
     ];
   };
 }
