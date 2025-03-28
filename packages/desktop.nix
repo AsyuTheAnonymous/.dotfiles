@@ -10,7 +10,7 @@
 
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
-    vivaldi
+    brave
     pcmanfm
     libreoffice
     tradingview

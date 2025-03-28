@@ -10,5 +10,6 @@
     #Nix Language server
     nixd
     nil
+    r2modman
   ];
 }
