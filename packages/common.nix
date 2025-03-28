@@ -28,6 +28,7 @@
     nvd
     nixd
     alejandra
+    vscode
   ];
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
