@@ -9,8 +9,6 @@
     ./../../packages/desktop.nix
     # System Settings
     ./../../system/desktop.nix
-    # Support for resources
-    ./../../support/desktop.nix
     # User
     ./../../user/asyu.nix
     # Stylix

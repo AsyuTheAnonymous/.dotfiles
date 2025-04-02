@@ -14,8 +14,6 @@
     ./../../packages/laptop.nix
     # System Settings
     ./../../system/laptop.nix
-    # Support for resources
-    ./../../support/laptop.nix
     # User
     ./../../user/asyu.nix
     # Modules
