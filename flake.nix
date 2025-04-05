@@ -9,10 +9,10 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix/release-24.11";
-    # nixos-generators = { 
-    #   url = "github:nix-community/nixos-generators";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    nixos-generators = { 
+      url = "github:nix-community/nixos-generators";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   # Outputs
   outputs = {
@@ -21,7 +21,7 @@
     nixpkgs-unstable,
     home-manager,
     stylix,
-    # nixos-generators,
+    nixos-generators,
     ...
   } @ inputs:
   # Variables
@@ -66,6 +66,15 @@
           inherit username;
           inherit name;
           inherit pkgs-unstable;
+        };
+      };
+      packages.x86_64-linux = {
+        iso = nixos-generators.nixosGenerate {
+          system = "x86_64-linux";
+          modules = [
+            ./vm/desktop/configuration.nix
+          ];
+          format = "iso";
         };
       };
       # desktopImage = nixpkgs.lib.nixosSystem {
