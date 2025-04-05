@@ -68,12 +68,12 @@
           inherit pkgs-unstable;
         };
       };
-      desktopImage = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./vm/desktop/configuration.nix
-        ];
-      };
+      # desktopImage = nixpkgs.lib.nixosSystem {
+      #   specialArgs = { inherit inputs; };
+      #   modules = [
+      #     ./vm/desktop/configuration.nix
+      #   ];
+      # };
       # Laptop
       asyus-laptop = lib.nixosSystem {
         inherit system;
