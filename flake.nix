@@ -9,6 +9,10 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix/release-24.11";
+    # nixos-generators = { 
+    #   url = "github:nix-community/nixos-generators";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
   # Outputs
   outputs = {
@@ -17,6 +21,7 @@
     nixpkgs-unstable,
     home-manager,
     stylix,
+    # nixos-generators,
     ...
   } @ inputs:
   # Variables
@@ -30,7 +35,7 @@
     username = "asyu";
     name = "Ash";
 
-    #Packages
+    # Packages
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
@@ -45,6 +50,7 @@
       inherit system;
       config.allowUnfree = true;
     };
+
   in {
     # System Config
     nixosConfigurations = {
@@ -61,6 +67,12 @@
           inherit name;
           inherit pkgs-unstable;
         };
+      };
+      ubuntu = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./vm/desktop/configuration.nix
+        ];
       };
       # Laptop
       asyus-laptop = lib.nixosSystem {
