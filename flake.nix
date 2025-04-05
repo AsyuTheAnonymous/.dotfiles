@@ -68,7 +68,7 @@
           inherit pkgs-unstable;
         };
       };
-      ubuntu = nixpkgs.lib.nixosSystem {
+      desktopImage = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./vm/desktop/configuration.nix
