@@ -68,18 +68,7 @@
           inherit pkgs-unstable;
         };
       };
-      packages.x86_64-linux = {
-        iso = nixos-generators.nixosGenerate {
-          system = "x86_64-linux";
-          format = "iso";
-          modules = [
-            ./hosts/desktop/desktop.nix
-          ];
-          specialArgs = {
-            isImageTarget = true;
-          };
-        };
-      };
+
       # Laptop
       asyus-laptop = lib.nixosSystem {
         inherit system;
@@ -91,6 +80,20 @@
           inherit username;
           inherit name;
           inherit pkgs-unstable;
+        };
+      };
+    };
+
+    packages.x86_64-linux = {
+      iso = nixos-generators.nixosGenerate {
+        system = "x86_64-linux";
+        format = "iso";
+        modules = [
+          ./hosts/desktop/desktop.nix
+          stylix.nixosModules.stylix
+        ];
+        specialArgs = {
+          isImageTarget = true;
         };
       };
     };
