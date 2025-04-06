@@ -85,7 +85,7 @@
     };
 
     packages.x86_64-linux = {
-      iso = nixos-generators.nixosGenerate {
+      asyus-iso = nixos-generators.nixosGenerate {
         system = "x86_64-linux";
         format = "iso";
         modules = [
@@ -94,6 +94,10 @@
           stylix.nixosModules.stylix
         ];
         specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit name;
+          inherit pkgs-unstable;
           isImageTarget = true;
         };
       };
