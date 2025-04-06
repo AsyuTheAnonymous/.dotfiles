@@ -68,13 +68,16 @@
           inherit pkgs-unstable;
         };
       };
-      packages.x86_64-linux = {
-        iso = nixos-generators.nixosGenerate {
-          system = "x86_64-linux";
-          modules = [
-            ./vm/desktop/configuration.nix
-          ];
-          format = "iso";
+      asyus-iso = nixos-generators.nixosGenerate {
+        inherit system;
+        format = "iso";
+        modules = [
+          ./hosts/desktop/desktop.nix
+          ./vm/desktop/iso.nix
+          stylix.nixosModules.stylix
+        ];
+        specialArgs = {
+          inherit inputs username name pkgs-unstable;
         };
       };
       # desktopImage = nixpkgs.lib.nixosSystem {
