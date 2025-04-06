@@ -19,6 +19,7 @@
     mpv
     numix-icon-theme
     nixos-generators
+    ansible
     (pkgs.callPackage ./custom/msty {})
   ];
 }
