@@ -83,13 +83,32 @@
         };
       };
     };
-
+    # Desktop ISO
     packages.x86_64-linux = {
-      asyus-iso = nixos-generators.nixosGenerate {
+      desktop-iso = nixos-generators.nixosGenerate {
         system = "x86_64-linux";
         format = "iso";
         modules = [
           ./hosts/desktop/desktop.nix
+          ./vm/desktop/iso.nix
+          stylix.nixosModules.stylix
+        ];
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit name;
+          inherit pkgs-unstable;
+          isImageTarget = true;
+        };
+      };
+    };
+    # Laptop ISO
+    packages.x86_64-linux = {
+      laptop-iso = nixos-generators.nixosGenerate {
+        system = "x86_64-linux";
+        format = "iso";
+        modules = [
+          ./hosts/laptop/laptop.nix
           ./vm/desktop/iso.nix
           stylix.nixosModules.stylix
         ];
