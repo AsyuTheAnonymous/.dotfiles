@@ -69,7 +69,7 @@
         };
       };
       asyus-iso = nixos-generators.nixosGenerate {
-        inherit system;
+        system = "x86_64-linux";
         format = "iso";
         modules = [
           ./hosts/desktop/desktop.nix
@@ -77,7 +77,7 @@
           stylix.nixosModules.stylix
         ];
         specialArgs = {
-          inherit inputs username name pkgs-unstable;
+          inherit inputs username name pkgs pkgs-unstable;
         };
       };
       # desktopImage = nixpkgs.lib.nixosSystem {
