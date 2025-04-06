@@ -18,6 +18,7 @@
     catppuccin-gtk
     mpv
     numix-icon-theme
+    nixos-generators
     (pkgs.callPackage ./custom/msty {})
   ];
 }
