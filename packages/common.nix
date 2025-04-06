@@ -7,7 +7,8 @@
     brave
     parsec-bin
     protonmail-desktop
-    gnome-boxes
+    nixos-generators
+    ansible
     neofetch
     pavucontrol
     bottles
