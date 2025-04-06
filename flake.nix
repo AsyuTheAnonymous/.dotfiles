@@ -90,6 +90,7 @@
         format = "iso";
         modules = [
           ./hosts/desktop/desktop.nix
+          ./vm/desktop/iso.nix
           stylix.nixosModules.stylix
         ];
         specialArgs = {
