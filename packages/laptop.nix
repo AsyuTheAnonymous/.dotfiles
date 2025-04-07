@@ -3,6 +3,7 @@
     ./hacking/eth.nix
     ./common.nix
     ./unstable/laptop.nix
+    ./automation/automation.nix
   ];
   # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;

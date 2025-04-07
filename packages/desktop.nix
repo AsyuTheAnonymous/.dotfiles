@@ -4,6 +4,7 @@
     ./unstable/unstable.nix
     ./gaming/games.nix
     ./recording/obs.nix
+    ./automation/automation.nix
   ];
   # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;

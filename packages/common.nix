@@ -8,7 +8,6 @@
     parsec-bin
     protonmail-desktop
     nixos-generators
-    ansible
     neofetch
     pavucontrol
     bottles
@@ -30,7 +29,6 @@
     nixd
     alejandra
     vscode
-    sshpass
   ];
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
