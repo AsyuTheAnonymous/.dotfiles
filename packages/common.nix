@@ -30,6 +30,7 @@
     nixd
     alejandra
     vscode
+    jitsi-meet
   ];
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
