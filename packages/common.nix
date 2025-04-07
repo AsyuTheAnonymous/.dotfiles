@@ -30,6 +30,7 @@
     nixd
     alejandra
     vscode
+    sshpass
   ];
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
