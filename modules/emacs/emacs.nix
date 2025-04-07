@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }: {
-    service.emacs = {
+    services.emacs = {
         enable = true;
         package = pkgs.emacs;
-    }
+    };
 }
