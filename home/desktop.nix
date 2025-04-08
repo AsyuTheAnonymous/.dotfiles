@@ -99,6 +99,7 @@
     ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
     ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;
+    ".emacs".source = ./../modules/emacs/.emacs;
     # ".config/vesktop/themes".source = ./../support/vesk-themes;
     # ".config/systemd/user/opentabletdriver.service".source = ./../support/tablet/opentabletdriver.service;
   };
