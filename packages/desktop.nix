@@ -19,6 +19,6 @@
     catppuccin-gtk
     mpv
     numix-icon-theme
-    (pkgs.callPackage ./custom/msty {})
+    # (pkgs.callPackage ./custom/msty {})
   ];
 }

@@ -11,6 +11,6 @@
   # Main packages for all my systems
   environment.systemPackages = with pkgs; [
     libreoffice
-    (pkgs.callPackage ./custom/msty {})
+    # (pkgs.callPackage ./custom/msty {})
   ];
 }
