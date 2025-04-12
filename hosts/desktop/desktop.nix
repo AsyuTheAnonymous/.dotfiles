@@ -4,7 +4,8 @@
     # Hardware config (MOST ESSENTIAL)
     ./hardware-configuration.nix
     # Desktop Environments
-    ./../env/hypr/hypr.nix
+    ./../env/wayfire/wayfire.nix
+    # ./../env/hypr/hypr.nix
     # Packages
     ./../../packages/desktop.nix
     # System Settings

@@ -1,8 +1,12 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   programs.wayfire = {
     enable = true;
-
+  };
+  # Enable X11 Windowing System
+  services.xserver = {
+    xkb.layout = "us";
+    xkb.variant = "";
+    enable = true;
   };
   # Plugings
   programs.wayfire.plugins = with pkgs.wayfirePlugins; [
@@ -11,7 +15,7 @@
     wayfire-plugins-extra
   ];
   # XWayland Support
-  services.xserver.displayManager.sessionPackages = [ pkgs.wayfire ];
+  services.xserver.displayManager.sessionPackages = [pkgs.wayfire];
   services.xserver.windowManager.session = [
     {
       name = "wayfire";
@@ -40,8 +44,8 @@
     qt6.qtwayland
     xdg-utils
     xwayland
+    starship
   ];
   # Point Vulkan Driver
   environment.variables.VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
-
 }
