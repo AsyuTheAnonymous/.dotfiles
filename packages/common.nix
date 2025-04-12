@@ -29,6 +29,7 @@
     nixd
     alejandra
     vscode
+    ghostty
   ];
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
