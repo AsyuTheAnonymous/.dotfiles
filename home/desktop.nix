@@ -37,18 +37,18 @@
     # };
   };
   # Some apps need this so best suit the seem how I can!
-  gtk = lib.mkDefault {
-    enable = true;
-    theme = {
-      name = "rose-pine-moon";
-      package = pkgs.rose-pine-gtk-theme;
-    };
+  # gtk = lib.mkDefault {
+  #   enable = true;
+  #   theme = {
+  #     name = "rose-pine-moon";
+  #     package = pkgs.rose-pine-gtk-theme;
+  #   };
     # Icons
-    iconTheme = {
-      name = "rose-pine-moon";
-      package = pkgs.rose-pine-icon-theme;
-    };
-  };
+  #   iconTheme = {
+  #     name = "rose-pine-moon";
+  #     package = pkgs.rose-pine-icon-theme;
+  #   };
+  # };
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";

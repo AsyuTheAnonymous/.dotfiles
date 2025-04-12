@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, lib, ...}: {
   programs.wayfire = {
     enable = true;
   };
@@ -24,7 +24,6 @@
       '';
     }
   ];
-
   # XDG
   services.dbus.enable = true; # Required for portals
   xdg.portal = {
