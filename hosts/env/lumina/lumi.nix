@@ -1,6 +1,10 @@
-{ pkgs, ... }: {
-  services.xserver.enable = true;
-  services.xserver.desktopManager.lumina.enable = true;
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+{pkgs, ...}: {
+  services.xserver = {
+    enable = true;
+    desktopManager.lumina.enable = true;
+  };
+  xdg.portal = {
+    enable = true;
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  };
 }
