@@ -87,6 +87,7 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    ".config/wayfire.ini".source = ./../hosts/env/wayfire/wayfire.ini;
     # ".config/hypr/hyprland.conf".source = ./../hosts/env/hypr/hyprland.conf;
     # ".config/hypr/hypridle.conf".source = ./../hosts/env/hypr/hypridle.conf;
     ".config/ghostty/config".source = ./../hosts/env/hypr/configs/ghostty/config;
