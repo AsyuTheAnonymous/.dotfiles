@@ -9,7 +9,7 @@
     # Hardware config (MOST ESSENTIAL)
     ./hardware-configuration.nix
     # Desktop Environments
-    ./../env/kde/kde.nix
+    ./../env/lumina/lumi.nix
     # Packages
     ./../../packages/laptop.nix
     # System Settings
