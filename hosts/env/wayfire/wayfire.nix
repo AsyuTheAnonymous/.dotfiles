@@ -15,7 +15,7 @@
     wayfire-plugins-extra
   ];
   # XWayland Support
-  services.xserver.displayManager.sessionPackages = [pkgs.wayfire];
+  services.displayManager.sessionPackages = [pkgs.wayfire];
   services.xserver.windowManager.session = [
     {
       name = "wayfire";
