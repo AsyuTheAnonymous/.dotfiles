@@ -31,8 +31,19 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-wlr # Use this one
-      # pkgs.xdg-desktop-portal-gtk # Optionally add this if needed for GTK apps
     ];
+    config = {
+      common = {
+        default = "*"; # Default fallback if no interface matches
+      };
+      # Prioritize wlr portal for Wayfire/WLR interfaces
+      wlr = {
+        default = "wlr";
+        "org.freedesktop.impl.portal.Screenshot" = "wlr";
+        "org.freedesktop.impl.portal.ScreenCast" = "wlr";
+        # Add other interfaces if needed, but these are common
+      };
+    };
   };
   # Packages
   environment.systemPackages = with pkgs; [
