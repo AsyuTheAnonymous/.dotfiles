@@ -14,6 +14,7 @@
     wf-shell
     wayfire-plugins-extra
   ];
+  
   # XWayland Support
   services.displayManager.sessionPackages = [pkgs.wayfire];
   services.xserver.windowManager.session = [
@@ -29,7 +30,8 @@
   xdg.portal = {
     enable = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-wlr # Use this one
+      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
     ];
     config = {
       common = {
