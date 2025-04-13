@@ -31,20 +31,20 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-wlr
-      pkgs.xdg-desktop-portal-gtk
+      # pkgs.xdg-desktop-portal-gtk
     ];
-    config = {
-      common = {
-        default = "*"; # Default fallback if no interface matches
-      };
-      # Prioritize wlr portal for Wayfire/WLR interfaces
-      wlr = {
-        default = "wlr";
-        "org.freedesktop.impl.portal.Screenshot" = "wlr";
-        "org.freedesktop.impl.portal.ScreenCast" = "wlr";
-        # Add other interfaces if needed, but these are common
-      };
-    };
+    # config = {
+    #   common = {
+    #     default = "*"; # Default fallback if no interface matches
+    #   };
+    #   # Prioritize wlr portal for Wayfire/WLR interfaces
+    #   wlr = {
+    #     default = "wlr";
+    #     "org.freedesktop.impl.portal.Screenshot" = "wlr";
+    #     "org.freedesktop.impl.portal.ScreenCast" = "wlr";
+    #     # Add other interfaces if needed, but these are common
+    #   };
+    # };
   };
   # Packages
   environment.systemPackages = with pkgs; [

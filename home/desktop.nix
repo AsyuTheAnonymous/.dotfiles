@@ -60,9 +60,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    rose-pine-gtk-theme
-    rose-pine-icon-theme
-    papirus-icon-theme
+    # rose-pine-gtk-theme
+    # rose-pine-icon-theme
+    # papirus-icon-theme
   ];
 
   # home.activation = {
