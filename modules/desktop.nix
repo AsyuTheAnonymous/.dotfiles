@@ -3,7 +3,8 @@
     ./helpers/nh/nh.nix
     ./support/gaming/gaming.nix
     ./support/flatpak/flatpak.nix
-    # ./ai/ollama.nix
+    ./ai/ollama.nix
+    ./ai/open-webui/open-webui.nix
     # ./support/tablet/tablet.nix
     ./support/virtualization/virtualization.nix
     ./support/git/git.nix

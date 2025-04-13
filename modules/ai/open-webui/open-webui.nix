@@ -11,7 +11,7 @@
   services.open-webui = {
     enable = true;
     port = 8080;
-    stateDir = "$WEBUI_STATE_DIR";
+    stateDir = "/run/media/asyu/Vault/Web-ui";
     #environmentFile = "/run/media/asyu/Vault/Web-ui/secret/openai.txt";
     # environment = {
     #   WEBUI_AUTH = "$WEBUI_AUTH";

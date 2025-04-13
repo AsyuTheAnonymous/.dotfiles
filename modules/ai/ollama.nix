@@ -5,18 +5,18 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    ollama-cuda
+    ollama
   ];
   # Ollama + Location
   services.ollama = {
     enable = true;
-    models = "$MODELS_PATH";
+    models = "/run/media/asyu/Vault/Models";
   };
 
   environment.variables = {
-    OPENAI_API_KEY = "$OPENAI_API_KEY";
-    GROQ_API_KEY = "$GROQ_API_KEY";
-    OLLAMA_API_BASE = "$OLLAMA_API_BASE";
+    # OPENAI_API_KEY = "$OPENAI_API_KEY";
+    # GROQ_API_KEY = "$GROQ_API_KEY";
+    # OLLAMA_API_BASE = "$OLLAMA_API_BASE";
     # AIDER_TIMEOUT = 10;
   };
 
