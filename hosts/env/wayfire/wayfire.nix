@@ -3,11 +3,11 @@
     enable = true;
   };
   # Enable X11 Windowing System
-  services.xserver = {
-    xkb.layout = "us";
-    xkb.variant = "";
-    enable = true;
-  };
+  # services.xserver = {
+  #   xkb.layout = "us";
+  #   xkb.variant = "";
+  #   enable = true;
+  # };
   # Plugings
   programs.wayfire.plugins = with pkgs.wayfirePlugins; [
     wcm
@@ -17,14 +17,14 @@
   
   # XWayland Support
   services.displayManager.sessionPackages = [pkgs.wayfire];
-  services.xserver.windowManager.session = [
-    {
-      name = "wayfire";
-      start = ''
-        ${pkgs.wayfire}/bin/wayfire
-      '';
-    }
-  ];
+  # services.xserver.windowManager.session = [
+  #   {
+  #     name = "wayfire";
+  #     start = ''
+  #       ${pkgs.wayfire}/bin/wayfire
+  #     '';
+  #   }
+  # ];
   # XDG
   services.dbus.enable = true; # Required for portals
   xdg.portal = {
@@ -59,5 +59,5 @@
     starship
   ];
   # Point Vulkan Driver
-  environment.variables.VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
+  # environment.variables.VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
 }
