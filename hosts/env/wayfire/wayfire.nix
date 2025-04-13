@@ -1,14 +1,10 @@
 {pkgs, lib, ...}: {
+  # Enable wayfire
   programs.wayfire = {
     enable = true;
   };
-  # Enable X11 Windowing System
-  # services.xserver = {
-  #   xkb.layout = "us";
-  #   xkb.variant = "";
-  #   enable = true;
-  # };
-  # Plugings
+
+  # Plugins
   programs.wayfire.plugins = with pkgs.wayfirePlugins; [
     wcm
     wf-shell
@@ -17,14 +13,7 @@
   
   # XWayland Support
   services.displayManager.sessionPackages = [pkgs.wayfire];
-  # services.xserver.windowManager.session = [
-  #   {
-  #     name = "wayfire";
-  #     start = ''
-  #       ${pkgs.wayfire}/bin/wayfire
-  #     '';
-  #   }
-  # ];
+
   # XDG
   services.dbus.enable = true; # Required for portals
   xdg.portal = {
@@ -33,19 +22,8 @@
       pkgs.xdg-desktop-portal-wlr
       # pkgs.xdg-desktop-portal-gtk
     ];
-    # config = {
-    #   common = {
-    #     default = "*"; # Default fallback if no interface matches
-    #   };
-    #   # Prioritize wlr portal for Wayfire/WLR interfaces
-    #   wlr = {
-    #     default = "wlr";
-    #     "org.freedesktop.impl.portal.Screenshot" = "wlr";
-    #     "org.freedesktop.impl.portal.ScreenCast" = "wlr";
-    #     # Add other interfaces if needed, but these are common
-    #   };
-    # };
   };
+  
   # Packages
   environment.systemPackages = with pkgs; [
     swaynotificationcenter
