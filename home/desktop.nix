@@ -31,6 +31,9 @@
       name = "Bibata-Modern-Ice";
       size = 30;
     };
+    targets.gtk = {
+      enable = true;
+    };
     # Specifying Hyprland Session
     # targets.hyprland = {
     #   enable = true;
@@ -44,11 +47,11 @@
   #     package = pkgs.rose-pine-gtk-theme;
   #   };
     # Icons
-  #   iconTheme = {
-  #     name = "rose-pine-moon";
-  #     package = pkgs.rose-pine-icon-theme;
-  #   };
-  # };
+    # iconTheme = {
+    #   name = "rose-pine-moon";
+    #   package = pkgs.rose-pine-icon-theme;
+    # };
+ 
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
@@ -60,9 +63,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    # rose-pine-gtk-theme
-    # rose-pine-icon-theme
-    # papirus-icon-theme
+    rose-pine-gtk-theme
+    rose-pine-icon-theme
+    papirus-icon-theme
   ];
 
   # home.activation = {
