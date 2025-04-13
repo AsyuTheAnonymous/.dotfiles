@@ -10,7 +10,6 @@
     wf-shell
     wayfire-plugins-extra
   ];
-  
   # XWayland Support
   services.displayManager.sessionPackages = [pkgs.wayfire];
 
@@ -22,10 +21,13 @@
   # DBUS
   services.dbus = {
     enable = true;
-    packages = with pkgs; [ xdg-desktop-portal-wlr ];
+    packages = with pkgs; [ xdg-desktop-portal xdg-desktop-portal-wlr ];
   };
   # RTkit
   security.rtkit.enable = true;
+  systemd.user.services.xdg-desktop-portal-gtk = {
+    enable = false;
+  };
 
   # XDG
   xdg.portal = {

@@ -31,26 +31,26 @@
       name = "Bibata-Modern-Ice";
       size = 30;
     };
-    targets.gtk = {
-      enable = true;
-    };
-    # Specifying Hyprland Session
-    # targets.hyprland = {
+    # targets.gtk = {
     #   enable = true;
     # };
+    # Specifying Hyprland Session
+    targets.hyprland = {
+      enable = true;
+    };
   };
   # Some apps need this so best suit the seem how I can!
-  # gtk = lib.mkDefault {
-  #   enable = true;
-  #   theme = {
-  #     name = "rose-pine-moon";
-  #     package = pkgs.rose-pine-gtk-theme;
-  #   };
+  gtk = lib.mkDefault {
+    enable = true;
+    theme = {
+      name = "rose-pine-moon";
+      package = pkgs.rose-pine-gtk-theme;
+    };
     # Icons
-    # iconTheme = {
-    #   name = "rose-pine-moon";
-    #   package = pkgs.rose-pine-icon-theme;
-    # };
+    iconTheme = {
+      name = "rose-pine-moon";
+      package = pkgs.rose-pine-icon-theme;
+    };
  
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
@@ -75,9 +75,9 @@
   # };
 
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
-  # programs.waybar = {
-  #   enable = true;
-  # };
+  programs.waybar = {
+    enable = true;
+  };
 
   #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
@@ -90,19 +90,19 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/wayfire.ini".source = ./../hosts/env/wayfire/wayfire.ini;
-    # ".config/hypr/hyprland.conf".source = ./../hosts/env/hypr/hyprland.conf;
-    # ".config/hypr/hypridle.conf".source = ./../hosts/env/hypr/hypridle.conf;
+    # ".config/wayfire.ini".source = ./../hosts/env/wayfire/wayfire.ini;
+    ".config/hypr/hyprland.conf".source = ./../hosts/env/hypr/hyprland.conf;
+    ".config/hypr/hypridle.conf".source = ./../hosts/env/hypr/hypridle.conf;
     ".config/ghostty/config".source = ./../hosts/env/hypr/configs/ghostty/config;
-    # ".config/rofi/config.rasi".source = ./../hosts/env/hypr/configs/rofi/config.rasi;
-    # ".config/rofi/catppuccin-mocha.rasi".source = ./../hosts/env/hypr/configs/rofi/catppuccin-mocha.rasi;
-    # ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
+    ".config/rofi/config.rasi".source = ./../hosts/env/hypr/configs/rofi/config.rasi;
+    ".config/rofi/catppuccin-mocha.rasi".source = ./../hosts/env/hypr/configs/rofi/catppuccin-mocha.rasi;
+    ".config/neofetch/config.conf".source = ./../hosts/env/hypr/configs/neofetch/config.conf;
     ".config/zed/settings.json".source = ./../modules/editor/zed/settings.json;
     ".config/zed/keymap.json".source = ./../modules/editor/zed/keymap.json;
     # ".config/zed/themes".source = ./../modules/editor/zed/themes;
     # ".config/hypr/hyprpaper.conf".source = ./../hosts/env/hypr/hyprpaper.conf;
     ".config/starship.toml".source = ./../hosts/env/hypr/configs/starship/starship.toml;
-    # ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;
+    ".config/waybar".source = ./../hosts/env/hypr/configs/waybar;
     # ".config/vesktop/themes".source = ./../support/vesk-themes;
     # ".config/systemd/user/opentabletdriver.service".source = ./../support/tablet/opentabletdriver.service;
   };
