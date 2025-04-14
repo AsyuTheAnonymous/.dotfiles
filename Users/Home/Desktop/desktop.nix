@@ -91,15 +91,15 @@
   # plain files is through 'home.file'.
   home.file = {
     # ".config/wayfire.ini".source = ./../hosts/env/wayfire/wayfire.ini;
-    ".config/hypr/hyprland.conf".source = ./../../../Hosts/Environment/Hyprland/hyprland.conf;
-    ".config/hypr/hypridle.conf".source = ./../../../Hosts/Environment/Hyprland/hypridle.conf;
-    ".config/hypr/hyprpaper.conf".source = ./../../../Hosts/Environment/Hyprland/hyprpaper.conf;
-    ".config/ghostty/config".source = ./../../../Hosts/Environment/Hyprland/configs/ghostty/config;
-    ".config/rofi/config.rasi".source = ./../../../Hosts/Environment/Hyprland/configs/rofi/config.rasi;
-    ".config/rofi/catppuccin-mocha.rasi".source = ./../../../Hosts/Environment/Hyprland/configs/rofi/catppuccin-mocha.rasi;
-    ".config/neofetch/config.conf".source = ./../../../Hosts/Environment/Hyprland/configs/neofetch/config.conf;
-    ".config/starship.toml".source = ./../../../Hosts/Environment/Hyprland/configs/starship/starship.toml;
-    ".config/waybar".source = ./../../../Hosts/Environment/Hyprland/configs/waybar;
+    ".config/hypr/hyprland.conf".source = ./../../../Hosts/Environments/Hyprland/hyprland.conf;
+    ".config/hypr/hypridle.conf".source = ./../../../Hosts/Environments/Hyprland/hypridle.conf;
+    ".config/hypr/hyprpaper.conf".source = ./../../../Hosts/Environments/Hyprland/hyprpaper.conf;
+    ".config/ghostty/config".source = ./../../../Hosts/Environments/Hyprland/configs/ghostty/config;
+    ".config/rofi/config.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/config.rasi;
+    ".config/rofi/catppuccin-mocha.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/catppuccin-mocha.rasi;
+    ".config/neofetch/config.conf".source = ./../../../Hosts/Environments/Hyprland/configs/neofetch/config.conf;
+    ".config/starship.toml".source = ./../../../Hosts/Environments/Hyprland/configs/starship/starship.toml;
+    ".config/waybar".source = ./../../../Hosts/Environments/Hyprland/configs/waybar;
     # ".config/zed/settings.json".source = ./../modules/editor/zed/settings.json;
     # ".config/zed/keymap.json".source = ./../modules/editor/zed/keymap.json;
     # ".config/zed/themes".source = ./../modules/editor/zed/themes;
