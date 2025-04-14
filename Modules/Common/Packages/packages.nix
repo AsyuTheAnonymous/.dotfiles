@@ -15,7 +15,7 @@
     ./Remote/Parsec/parsec.nix
     ./Mail/Proton/mail.nix
     ./Terminals/Ghostty/ghostty.nix
-    ./Editor/Vscode/vscode.nix
+    ./Editors/Vscode/vscode.nix
   ];
 
   environment.systemPackages = with pkgs; [
