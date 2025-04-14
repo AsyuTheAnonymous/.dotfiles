@@ -28,7 +28,7 @@
   #     #   ENABLE_EVALUATION_ARENA_MODELS = "$ENABLE_EVALUATION_ARENA_MODELS";
   #   };
   # };
-  let
+let
   open-webui-package = import ./package.nix {
     lib = lib;
     buildNpmPackage = pkgs-unstable.buildNpmPackage;
