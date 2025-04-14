@@ -9,7 +9,7 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix/release-24.11";
-    nixos-generators = { 
+    nixos-generators = {
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -50,7 +50,6 @@
       inherit system;
       config.allowUnfree = true;
     };
-
   in {
     # System Config
     nixosConfigurations = {

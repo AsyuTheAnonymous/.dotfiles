@@ -1,4 +1,8 @@
-{pkgs, lib, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   # Enable wayfire
   programs.wayfire = {
     enable = true;
@@ -21,7 +25,7 @@
   # DBUS
   services.dbus = {
     enable = true;
-    packages = with pkgs; [ xdg-desktop-portal xdg-desktop-portal-wlr ];
+    packages = with pkgs; [xdg-desktop-portal xdg-desktop-portal-wlr];
   };
   # RTkit
   security.rtkit.enable = true;
@@ -57,14 +61,14 @@
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     WLR_NO_HARDWARE_CURSORS = "1";
-    
+
     # General Wayland
     MOZ_ENABLE_WAYLAND = "1";
     QT_QPA_PLATFORM = "wayland";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     SDL_VIDEODRIVER = "wayland";
     _JAVA_AWT_WM_NONREPARENTING = "1";
-    
+
     # XDG Portal
     XDG_CURRENT_DESKTOP = "wayfire";
     XDG_SESSION_TYPE = "wayland";
@@ -83,24 +87,23 @@
     starship
     # Additional recommended packages
     wl-clipboard
-    grim         # Screenshot utility
-    slurp        # Screen area selection
-    waybar       # Status bar
-    mako         # Notification daemon
-    kanshi       # Output management
-    swayidle     # Idle management
-    swaylock     # Screen locking
-    wlroots      # Required for proper functionality
+    grim # Screenshot utility
+    slurp # Screen area selection
+    waybar # Status bar
+    mako # Notification daemon
+    kanshi # Output management
+    swayidle # Idle management
+    swaylock # Screen locking
+    wlroots # Required for proper functionality
   ];
-
 
   # Security polkit settings
   security.polkit.enable = true;
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     description = "polkit-gnome-authentication-agent-1";
-    wantedBy = [ "graphical-session.target" ];
-    wants = [ "graphical-session.target" ];
-    after = [ "graphical-session.target" ];
+    wantedBy = ["graphical-session.target"];
+    wants = ["graphical-session.target"];
+    after = ["graphical-session.target"];
     serviceConfig = {
       Type = "simple";
       ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
