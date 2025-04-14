@@ -57,7 +57,7 @@
       asyus-system = lib.nixosSystem {
         inherit system;
         modules = [
-          ./hosts/desktop/desktop.nix
+          ./Hosts/Desktop/desktop.nix
           stylix.nixosModules.stylix
         ];
         specialArgs = {
@@ -72,7 +72,7 @@
       asyus-laptop = lib.nixosSystem {
         inherit system;
         modules = [
-          ./hosts/laptop/laptop.nix
+          ./Hosts/Laptop/laptop.nix
         ];
         specialArgs = {
           inherit inputs;
@@ -88,8 +88,8 @@
         system = "x86_64-linux";
         format = "iso";
         modules = [
-          ./hosts/desktop/desktop.nix
-          ./vm/desktop/iso.nix
+          ./Hosts/Desktop/desktop.nix
+          ./System/ISO/iso.nix
           stylix.nixosModules.stylix
         ];
         specialArgs = {
@@ -107,8 +107,8 @@
         system = "x86_64-linux";
         format = "iso";
         modules = [
-          ./hosts/laptop/laptop.nix
-          ./vm/desktop/iso.nix
+          ./Hosts/Laptop/laptop.nix
+          ./System/ISO/iso.nix
           stylix.nixosModules.stylix
         ];
         specialArgs = {
@@ -125,7 +125,7 @@
       "asyu@asyus-system" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./home/desktop.nix
+          ./Users/Home/Desktop/desktop.nix
           stylix.homeManagerModules.stylix
         ];
         extraSpecialArgs = {
@@ -137,7 +137,7 @@
       "asyu@asyus-laptop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./home/laptop.nix
+          ./Users/Home/Laptop/laptop.nix
         ];
         extraSpecialArgs = {
           inherit username;
