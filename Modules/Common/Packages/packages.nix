@@ -12,11 +12,13 @@
     ./Hacking/tools.nix
     ./Browsers/brave.nix
     ./Flatpak/flatpak.nix
+    ./Remote/Parsec/parsec.nix
+    ./Mail/Proton/mail.nix
+    ./Terminals/Ghostty/ghostty.nix
+    ./Editor/Vscode/vscode.nix
   ];
 
   environment.systemPackages = with pkgs; [
-    parsec-bin
-    protonmail-desktop
     nixos-generators
     neofetch
     pavucontrol
@@ -38,8 +40,6 @@
     nvd
     nixd
     alejandra
-    vscode
-    ghostty
   ];
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
