@@ -11,7 +11,7 @@ in {
     enable = true;
     port = 8080;
     package = open-webui-package;
-    
+    stateDir = "/run/media/asyu/Vault/open-webui";  # Recommended persistent storage location
     # Optional configuration examples:
     # environment = {
     #   HOST = "0.0.0.0";  # Uncomment to expose on all interfaces
@@ -19,7 +19,6 @@ in {
     #   OLLAMA_API_BASE_URL = "http://localhost:11434";  # Required for Ollama integration
     # };
     
-    # stateDir = "/var/lib/open-webui";  # Recommended persistent storage location
   };
 }
 
