@@ -1,0 +1,183 @@
+.
+├── flake.lock
+├── flake.nix
+├── Hosts
+│   ├── Desktop
+│   │   ├── desktop.nix
+│   │   └── hardware-configuration.nix
+│   ├── Environments
+│   │   ├── Hyprland
+│   │   │   ├── configs
+│   │   │   │   ├── ghostty
+│   │   │   │   │   └── config
+│   │   │   │   ├── neofetch
+│   │   │   │   │   └── config.conf
+│   │   │   │   ├── rofi
+│   │   │   │   │   ├── catppuccin-mocha.rasi
+│   │   │   │   │   └── config.rasi
+│   │   │   │   ├── starship
+│   │   │   │   │   └── starship.toml
+│   │   │   │   └── waybar
+│   │   │   │       ├── config
+│   │   │   │       ├── Minimal
+│   │   │   │       │   ├── config
+│   │   │   │       │   └── style.css
+│   │   │   │       ├── Old
+│   │   │   │       │   ├── config.jsonc
+│   │   │   │       │   ├── macchiato.css
+│   │   │   │       │   └── style.css
+│   │   │   │       ├── Solo
+│   │   │   │       │   ├── config
+│   │   │   │       │   └── style.css
+│   │   │   │       └── style.css
+│   │   │   ├── hypridle.conf
+│   │   │   ├── hyprland.conf
+│   │   │   ├── hypr.nix
+│   │   │   └── hyprpaper.conf
+│   │   ├── kde
+│   │   │   └── kde.nix
+│   │   ├── lumina
+│   │   │   └── lumi.nix
+│   │   └── wayfire
+│   │       ├── wayfire.ini
+│   │       └── wayfire.nix
+│   └── Laptop
+│       ├── hardware-configuration.nix
+│       └── laptop.nix
+├── Hypervisor
+│   └── Virt-Manager
+│       └── virt.nix
+├── Modules
+│   ├── Common
+│   │   ├── common.nix
+│   │   ├── Packages
+│   │   │   ├── AI
+│   │   │   │   └── Open-Webui
+│   │   │   │       ├── package.nix
+│   │   │   │       └── webui.nix
+│   │   │   ├── Automation
+│   │   │   │   └── automation.nix
+│   │   │   ├── Browsers
+│   │   │   │   └── brave.nix
+│   │   │   ├── Editors
+│   │   │   │   ├── Emacs
+│   │   │   │   │   └── emacs.nix
+│   │   │   │   └── Vscode
+│   │   │   │       └── vscode.nix
+│   │   │   ├── Flatpak
+│   │   │   │   └── flatpak.nix
+│   │   │   ├── Hacking
+│   │   │   │   └── tools.nix
+│   │   │   ├── Helpers
+│   │   │   │   └── nh.nix
+│   │   │   ├── Mail
+│   │   │   │   └── Proton
+│   │   │   │       └── mail.nix
+│   │   │   ├── Optimization
+│   │   │   │   ├── Cleaner
+│   │   │   │   │   └── auto.nix
+│   │   │   │   └── Nix
+│   │   │   │       └── nix.nix
+│   │   │   ├── packages.nix
+│   │   │   ├── Recording
+│   │   │   │   └── obs.nix
+│   │   │   ├── Remote
+│   │   │   │   └── Parsec
+│   │   │   │       └── parsec.nix
+│   │   │   └── Terminals
+│   │   │       └── Ghostty
+│   │   │           └── ghostty.nix
+│   │   └── Stylix
+│   │       ├── desktop.nix
+│   │       └── laptop.nix
+│   ├── Custom
+│   │   ├── custom.nix
+│   │   └── Msty
+│   │       └── default.nix
+│   ├── Desktop
+│   │   ├── AI
+│   │   ├── Browsers
+│   │   ├── desktop.nix
+│   │   ├── Editors
+│   │   ├── Gaming
+│   │   │   └── gaming.nix
+│   │   ├── Packages
+│   │   ├── Tablet
+│   │   │   └── tablet.nix
+│   │   └── Unstable
+│   │       └── unstable.nix
+│   └── Laptop
+│       ├── Browsers
+│       ├── Editors
+│       ├── laptop.nix
+│       └── Packages
+├── OS-Map.txt
+├── readme.md
+├── Scripts
+│   ├── Common
+│   ├── Desktop
+│   └── Laptop
+├── System
+│   ├── Common
+│   │   ├── audio
+│   │   │   └── pipewire.nix
+│   │   ├── bootloader
+│   │   │   ├── grub.nix
+│   │   │   └── sysd.nix
+│   │   ├── common.nix
+│   │   ├── fonts
+│   │   │   └── nerd.nix
+│   │   ├── greeter
+│   │   │   └── sddm.nix
+│   │   ├── network
+│   │   │   ├── bluetooth.nix
+│   │   │   ├── config.nix
+│   │   │   ├── firewall.nix
+│   │   │   ├── locale.nix
+│   │   │   ├── nm.nix
+│   │   │   └── ssh.nix
+│   │   ├── shell
+│   │   │   └── zsh.nix
+│   │   ├── themes
+│   │   │   └── vesk-themes
+│   │   │       ├── FVUI.theme.css
+│   │   │       ├── neutron.theme.css
+│   │   │       ├── SoftX.theme.css
+│   │   │       └── Synthesis.theme.css
+│   │   └── wallpapers
+│   │       ├── abstract.png
+│   │       ├── ascii-cat.png
+│   │       ├── cave.jpg
+│   │       ├── coffee.jpg
+│   │       ├── cute.jpg
+│   │       ├── level.png
+│   │       ├── pusheen.jpg
+│   │       └── solo.jpg
+│   ├── Desktop
+│   │   ├── desktop.nix
+│   │   ├── drives
+│   │   │   └── drives.nix
+│   │   └── gpu
+│   │       └── nvidia.nix
+│   ├── ISO
+│   │   ├── configuration.nix
+│   │   └── iso.nix
+│   └── Laptop
+│       └── laptop.nix
+└── Users
+    ├── Desktop
+    │   └── asyu.nix
+    ├── Github
+    │   └── git.nix
+    ├── Home
+    │   ├── Common
+    │   │   └── Gtk
+    │   │       └── gtk.nix
+    │   ├── Desktop
+    │   │   └── desktop.nix
+    │   └── Laptop
+    │       └── laptop.nix
+    └── Laptop
+        └── asyu.nix
+
+87 directories, 94 files
