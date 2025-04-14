@@ -5,9 +5,6 @@
 
   programs.zsh = {
     enable = true;
-    shellAliases = {
-      test = "nh os switch --dry";
-    };
     interactiveShellInit = ''
       ${pkgs.neofetch}/bin/neofetch
     '';
