@@ -48,7 +48,7 @@ mkIf enable {
   '';
 
   networking.firewall = {
-    allowedTCPPorts = [ 1514 1515 55000 9200 5601 ];
+    allowedTCPPorts = [ 1514 1515 55000 9200 443 ];
     allowedUDPPorts = [ 514 ];
   };
 
@@ -68,8 +68,8 @@ mkIf enable {
           INDEXER_PASSWORD = "SecretPassword";
           FILEBEAT_SSL_VERIFICATION_MODE = "full";
           SSL_CERTIFICATE_AUTHORITIES = "/etc/ssl/root-ca.pem";
-          SSL_CERTIFICATE = "/etc/ssl/filebeat.pem";
-          SSL_KEY = "/etc/ssl/filebeat.key";
+          SSL_CERTIFICATE = "/etc/ssl/wazuh.manager.pem";
+          SSL_KEY = "/etc/ssl/wazuh.manager-key.pem";
           API_USERNAME = "wazuh-wui";
           API_PASSWORD = "MyS3cr37P450r.*-";
         };
@@ -94,7 +94,7 @@ mkIf enable {
           "${./config/wazuh_indexer_ssl_certs/root-ca-manager.pem}:/etc/ssl/root-ca.pem"
           "${./config/wazuh_indexer_ssl_certs/wazuh.manager.pem}:/etc/ssl/filebeat.pem"
           "${./config/wazuh_indexer_ssl_certs/wazuh.manager-key.pem}:/etc/ssl/filebeat.key"
-          "${./config/wazuh_cluster/wazuh_manager.conf}:/wazuh-config-mount/etc/ossec.conf"
+          "${./config/wazuh_cluster/wazuh_manager.conf}:/var/ossec/etc/ossec.conf"
         ];
       };
 
