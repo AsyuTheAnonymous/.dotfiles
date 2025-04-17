@@ -16,6 +16,7 @@
     ./Mail/Proton/mail.nix
     ./Terminals/Ghostty/ghostty.nix
     ./Editors/Vscode/vscode.nix
+    ./Notes/Obsidian/obsidian.nix
   ];
 
   environment.systemPackages = with pkgs; [
