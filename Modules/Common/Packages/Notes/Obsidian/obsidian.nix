@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: { 
-    environment.systemPackages = with pkgs; [
-        obsidian
-    ];
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  environment.systemPackages = with pkgs; [
+    obsidian
+  ];
 }
