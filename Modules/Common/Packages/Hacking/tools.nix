@@ -10,6 +10,7 @@
     kismet
     wifite2
     metasploit
+    armitage
     john
     hashcat
     bettercap
