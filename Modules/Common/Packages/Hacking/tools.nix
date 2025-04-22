@@ -15,6 +15,10 @@
     hashcat
     bettercap
     burpsuite
+    subfinder
+    katana
+    nuclei
+    httpx
   ];
 
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
