@@ -19,6 +19,7 @@
     katana
     nuclei
     httpx
+    caido
   ];
 
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
