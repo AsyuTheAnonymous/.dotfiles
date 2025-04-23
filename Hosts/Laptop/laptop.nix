@@ -9,13 +9,13 @@
     # Hardware config (MOST ESSENTIAL)
     ./hardware-configuration.nix
     # Desktop Environments
-    ./../Environments/lumina/lumi.nix
+    ./../Environments/kde/kde.nix
     # Modules & Packages
     ./../../Modules/Laptop/laptop.nix
     # System Settings
     ./../../System/Laptop/laptop.nix
     # User
-    ./../../User/Laptop/asyu.nix
+    ./../../Users/Laptop/asyu.nix
     # Stylix
     # ./../../Modules/Common/Stylix/laptop.nix
   ];
