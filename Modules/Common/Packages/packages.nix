@@ -17,6 +17,7 @@
     ./Terminals/Ghostty/ghostty.nix
     ./Editors/Vscode/vscode.nix
     ./Notes/Obsidian/obsidian.nix
+    ./Browsers/firefox.nix
   ];
 
   environment.systemPackages = with pkgs; [
