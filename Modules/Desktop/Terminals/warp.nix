@@ -1,5 +1,5 @@
-{ packages, ... }: {
-    environment.systemPackages = with pkgs; [
+{ pkgs-unstable, ... }: {
+    environment.systemPackages = with pkgs-unstable; [
         warp-terminal
     ];
 
