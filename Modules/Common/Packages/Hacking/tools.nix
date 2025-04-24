@@ -23,6 +23,7 @@
     prometheus
     nikto
     ffuf
+    tor
   ];
 
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
