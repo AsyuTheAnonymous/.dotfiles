@@ -46,7 +46,7 @@
     enable = true;
     enableTor = true; # Automatically forwards HTTP to Tor's SOCKS port
   };
-
+  networking.nameservers = [ "127.0.0.1" ];
 
   # # Tor Service
   # services.tor = {
