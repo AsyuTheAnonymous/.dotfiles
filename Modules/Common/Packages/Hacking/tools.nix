@@ -22,6 +22,7 @@
     caido
     prometheus
     nikto
+    ffuf
   ];
 
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
