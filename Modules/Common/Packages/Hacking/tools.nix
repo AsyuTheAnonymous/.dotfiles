@@ -29,8 +29,12 @@
 
 
   # Tor Service
-  services.tor.enable = true;
-
+  services.tor = {
+    enable = true;
+    settings = {
+      SocksPort = 9050;
+    };
+  };
   # Wifi "Adapter" drivers
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
   boot.kernelModules = ["8814au"];
