@@ -31,8 +31,17 @@
   # Tor Service
   services.tor = {
     enable = true;
+    openFirewall = true;
+    relay = {
+      enable = true;
+      role = "relay";
+    };
     settings = {
-      SocksPort = 9050;
+      ContactInfo = "toradmin@example.org";
+      Nickname = "toradmin";
+      ORPort = 9001;
+      ControlPort = 9051;
+      BandWidthRate = "1 MBytes";
     };
   };
   # Wifi "Adapter" drivers
