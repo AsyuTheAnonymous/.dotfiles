@@ -4,6 +4,7 @@
     ./Gaming/gaming.nix
     ./Usb/usb.nix
     ./Unstable/unstable.nix
+    ./Terminals/Warp/warp.nix
   ];
   # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
