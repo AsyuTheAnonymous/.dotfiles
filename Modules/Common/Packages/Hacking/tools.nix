@@ -20,6 +20,8 @@
     nuclei
     httpx
     caido
+    prometheus
+    nikto
   ];
 
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
