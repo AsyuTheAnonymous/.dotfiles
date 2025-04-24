@@ -28,22 +28,43 @@
   ];
 
 
-  # Tor Service
+# Enable Tor and Privoxy for HTTP(S) proxying over Tor
   services.tor = {
     enable = true;
-    openFirewall = true;
-    relay = {
-      enable = true;
-      role = "relay";
-    };
-    settings = {
-      ContactInfo = "toradmin@example.org";
-      Nickname = "toradmin";
-      ORPort = 9001;
-      ControlPort = 9051;
-      BandWidthRate = "1 MBytes";
-    };
+    client.enable = true; # Enables fast SOCKS port (9063) for Privoxy
+    client.dns.enable = true;
+    settings.DNSPort =[{
+      addr = "127.0.0.1";
+      port = 53;
+    }];
   };
+  services.resolved = {
+    enable = true;
+    fallbackDns = [ "" ];
+  };
+  services.privoxy = {
+    enable = true;
+    enableTor = true; # Automatically forwards HTTP to Tor's SOCKS port
+  };
+
+
+  # # Tor Service
+  # services.tor = {
+  #   enable = true;
+  #   openFirewall = true;
+  #   relay = {
+  #     enable = true;
+  #     role = "relay";
+  #   };
+  #   settings = {
+  #     ContactInfo = "toradmin@example.org";
+  #     Nickname = "toradmin";
+  #     ORPort = 9001;
+  #     ControlPort = 9051;
+  #     BandWidthRate = "1 MBytes";
+  #     SocksPort = 9050;
+  #   };
+  # };
   # Wifi "Adapter" drivers
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
   boot.kernelModules = ["8814au"];
