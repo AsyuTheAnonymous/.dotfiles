@@ -26,6 +26,11 @@
     tor
   ];
 
+
+  # Tor Service
+  services.tor.enable = true;
+
+  # Wifi "Adapter" drivers
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
   boot.kernelModules = ["8814au"];
 }
