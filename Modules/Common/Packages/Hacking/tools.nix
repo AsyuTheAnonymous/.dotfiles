@@ -24,6 +24,7 @@
     nikto
     ffuf
     tor
+    torsocks
   ];
 
 
