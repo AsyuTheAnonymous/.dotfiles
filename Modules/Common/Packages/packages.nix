@@ -18,6 +18,7 @@
     ./Editors/Vscode/vscode.nix
     ./Notes/Obsidian/obsidian.nix
     ./Browsers/firefox.nix
+    ./VPN/OVPN/openvpn.nix
   ];
 
   environment.systemPackages = with pkgs; [
