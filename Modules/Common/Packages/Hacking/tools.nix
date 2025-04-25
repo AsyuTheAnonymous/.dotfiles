@@ -23,6 +23,8 @@
     prometheus
     nikto
     ffuf
+    amass
+    thc-hydra
     tor
     torsocks
   ];
