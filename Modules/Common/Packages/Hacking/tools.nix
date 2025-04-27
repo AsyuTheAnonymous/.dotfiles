@@ -27,6 +27,7 @@
     thc-hydra
     tor
     torsocks
+    postman
   ];
 
 
