@@ -24,6 +24,7 @@
     nikto
     ffuf
     amass
+    gobuster
     thc-hydra
     tor
     torsocks
