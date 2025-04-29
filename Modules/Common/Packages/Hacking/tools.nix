@@ -27,6 +27,9 @@
     gobuster
     exiftool
     interactsh
+    masscan
+    dalfox
+    gowitness
     thc-hydra
     tor
     torsocks
