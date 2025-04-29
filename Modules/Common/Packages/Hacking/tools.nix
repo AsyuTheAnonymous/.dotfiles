@@ -26,6 +26,7 @@
     amass
     gobuster
     exiftool
+    interactsh
     thc-hydra
     tor
     torsocks
