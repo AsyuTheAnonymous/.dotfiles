@@ -35,7 +35,7 @@
     tor
     torsocks
     postman
-    (pkgs.callPackage ./FSRecon/fsrecon {})
+    (import ./FSRecon/fsrecon.nix { inherit pkgs; })
   ];
 
 
