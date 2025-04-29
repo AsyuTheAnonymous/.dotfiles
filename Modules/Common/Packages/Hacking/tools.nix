@@ -25,6 +25,7 @@
     ffuf
     amass
     gobuster
+    exiftool
     thc-hydra
     tor
     torsocks
