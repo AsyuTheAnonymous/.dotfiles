@@ -1,6 +1,7 @@
 {
   config,
   pkgs-unstable,
+  pkgs,
   ...
 }: {
   environment.systemPackages = with pkgs-unstable; [
@@ -34,6 +35,7 @@
     tor
     torsocks
     postman
+    (pkgs.callPackage ./FSRecon/fsrecon {})
   ];
 
 
