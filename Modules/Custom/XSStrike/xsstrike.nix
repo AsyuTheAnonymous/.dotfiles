@@ -26,6 +26,7 @@ let
       python3Packages.prettytable
       python3Packages.requests
       python3Packages.tld
+      python3Packages.urllib3
     ];
     
     # No build phase needed
@@ -50,6 +51,7 @@ export PYTHONPATH="${with pkgs.python3Packages;
     prettytable
     requests
     tld
+    urllib3
   ]}:\$PYTHONPATH"
 cd $out/lib/xsstrike
 exec ${pkgs.python3}/bin/python3 $out/lib/xsstrike/xsstrike.py "\$@"
