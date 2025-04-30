@@ -6,16 +6,16 @@ with lib;
 let
   cfg = config.services.xsstrike;
   
-  # Create a derivation for XSStrike using stdenv instead of Python's buildPythonApplication
+  # Create a derivation for XSStrike using stdenv
   xsstrike-pkg = pkgs.stdenv.mkDerivation {
     pname = "xsstrike";
-    version = "3.1.6"; # Update this as needed
+    version = "3.1.6"; # As requested by user
     
     src = pkgs.fetchFromGitHub {
       owner = "s0md3v";
       repo = "XSStrike";
-      rev = "master"; # You can specify a specific commit or tag here
-      sha256 = "sha256-8H6/OZRKrF5dd4NcZ6Km3mxBSK6UkY1LpmgITAXG/AU="; # Replace with your hash if needed
+      rev = "master"; # You can specify a specific commit/tag if needed
+      sha256 = "sha256-8H6/OZRKrF5dd4NcZ6Km3mxBSK6UkY1LpmgITAXG/AU="; # Using your hash
     };
     
     # Required dependencies
@@ -27,10 +27,20 @@ let
       python3Packages.requests
       python3Packages.tld
       python3Packages.urllib3
+      python3Packages.idna
+      python3Packages.charset-normalizer
+      python3Packages.certifi
     ];
     
     # No build phase needed
     dontBuild = true;
+    
+    # Patch the version in the main file
+    patchPhase = ''
+      # Update the version in the source file to match our package version
+      substituteInPlace xsstrike.py \
+        --replace "v3.1.5" "v3.1.6"
+    '';
     
     # Custom installation phase
     installPhase = ''
@@ -41,7 +51,7 @@ let
       # Copy all files to the lib directory
       cp -r * $out/lib/xsstrike/
       
-      # Create a wrapper script
+      # Create a wrapper script with Python environment
       cat > $out/bin/xsstrike << EOF
 #!/bin/sh
 export PYTHONPATH="${with pkgs.python3Packages; 
@@ -52,6 +62,9 @@ export PYTHONPATH="${with pkgs.python3Packages;
     requests
     tld
     urllib3
+    idna
+    charset-normalizer
+    certifi
   ]}:\$PYTHONPATH"
 cd $out/lib/xsstrike
 exec ${pkgs.python3}/bin/python3 $out/lib/xsstrike/xsstrike.py "\$@"
