@@ -9,7 +9,7 @@
     # Modules & Packages
     ./../../Modules/Desktop/desktop.nix
     # Custom Modules
-    ./../../Modules/Custom/ReconFTW/reconftw.nix
+    ./../../Modules/Custom/custom.nix
     # Stylix
     ./../../Modules/Common/Stylix/desktop.nix
     # System Settings
