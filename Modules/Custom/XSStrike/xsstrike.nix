@@ -6,8 +6,8 @@ with lib;
 let
   cfg = config.services.xsstrike;
   
-  # Create a derivation for XSStrike
-  xsstrike-pkg = pkgs.python3Packages.buildPythonApplication {
+  # Create a derivation for XSStrike using stdenv instead of Python's buildPythonApplication
+  xsstrike-pkg = pkgs.stdenv.mkDerivation {
     pname = "xsstrike";
     version = "3.1.6"; # Update this as needed
     
@@ -15,27 +15,47 @@ let
       owner = "s0md3v";
       repo = "XSStrike";
       rev = "master"; # You can specify a specific commit or tag here
-      sha256 = "sha256-8H6/OZRKrF5dd4NcZ6Km3mxBSK6UkY1LpmgITAXG/AU="; # Replace with hash from nix-prefetch-github s0md3v XSStrike master
+      sha256 = "sha256-8H6/OZRKrF5dd4NcZ6Km3mxBSK6UkY1LpmgITAXG/AU="; # Replace with your hash if needed
     };
     
-    propagatedBuildInputs = with pkgs.python3Packages; [
-      fuzzywuzzy
-      python-levenshtein
-      prettytable
-      requests
-      tld
+    # Required dependencies
+    buildInputs = with pkgs; [
+      python3
+      python3Packages.fuzzywuzzy
+      python3Packages.levenshtein
+      python3Packages.prettytable
+      python3Packages.requests
+      python3Packages.tld
     ];
     
-    # Disable tests as they might require network access
-    doCheck = false;
+    # No build phase needed
+    dontBuild = true;
     
-    # Create a wrapper script
-    postInstall = ''
+    # Custom installation phase
+    installPhase = ''
+      # Create directories
+      mkdir -p $out/lib/xsstrike
       mkdir -p $out/bin
+      
+      # Copy all files to the lib directory
+      cp -r * $out/lib/xsstrike/
+      
+      # Create a wrapper script
       cat > $out/bin/xsstrike << EOF
 #!/bin/sh
-exec ${pkgs.python3}/bin/python3 $out/lib/python*/site-packages/xsstrike.py "\$@"
+export PYTHONPATH="${with pkgs.python3Packages; 
+  pkgs.lib.makeSearchPath "lib/python3.12/site-packages" [
+    fuzzywuzzy
+    levenshtein
+    prettytable
+    requests
+    tld
+  ]}:\$PYTHONPATH"
+cd $out/lib/xsstrike
+exec ${pkgs.python3}/bin/python3 $out/lib/xsstrike/xsstrike.py "\$@"
 EOF
+      
+      # Make the wrapper executable
       chmod +x $out/bin/xsstrike
     '';
     
