@@ -32,12 +32,14 @@
     dalfox
     gowitness
     thc-hydra
+    arjun
     tor
     torsocks
     postman
-    (import ./FSRecon/fsrecon.nix {
-      inherit (pkgs) lib stdenv nmap subfinder gobuster httpx gowitness nuclei makeWrapper bash;
-    })
+    feroxbuster
+    # (import ./FSRecon/fsrecon.nix {
+    #   inherit (pkgs) lib stdenv nmap subfinder gobuster httpx gowitness nuclei makeWrapper bash;
+    # })
   ];
 
 
