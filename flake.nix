@@ -13,6 +13,10 @@
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    protonvpn = {
+      url = "github:emmanuelrosa/nixos-protonvpn";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   # Outputs
   outputs = {
@@ -22,6 +26,7 @@
     home-manager,
     stylix,
     nixos-generators,
+    protonvpn,
     ...
   } @ inputs:
   # Variables

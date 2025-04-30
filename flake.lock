@@ -326,12 +326,33 @@
         "type": "github"
       }
     },
+    "protonvpn": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1639531459,
+        "narHash": "sha256-EYy65CEh1h0UGUwiMU0RGSKj0yjDx/QNWsmqyE+040s=",
+        "owner": "emmanuelrosa",
+        "repo": "nixos-protonvpn",
+        "rev": "96c4cebda6e090e87839b37c18aef0a7344be175",
+        "type": "github"
+      },
+      "original": {
+        "owner": "emmanuelrosa",
+        "repo": "nixos-protonvpn",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixos-generators": "nixos-generators",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "protonvpn": "protonvpn",
         "stylix": "stylix"
       }
     },
