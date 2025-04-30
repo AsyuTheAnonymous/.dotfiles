@@ -64,6 +64,7 @@
         modules = [
           ./Hosts/Desktop/desktop.nix
           stylix.nixosModules.stylix
+          protonvpn.nixosModules.protonvpn
         ];
         specialArgs = {
           inherit inputs;
