@@ -78,10 +78,10 @@ let
           git python3 go jq wget curl nmap whois bind nodejs
           openssl unzip procps findutils gawk gnused gnugrep coreutils
         ])} \
-        --run "mkdir -p ''${HOME:-/tmp}/Tools ''${HOME:-/tmp}/go" \
-        --set GOPATH "''${GOPATH:-''${HOME:-/tmp}/go}" \
-        --set PATH "$PATH:''${GOPATH:-''${HOME:-/tmp}/go}/bin" \
-        --add-flags "$@"
+        --run "export HOME=\''${HOME:-/tmp}; mkdir -p \$HOME/Tools \$HOME/go ${cfg.dataDir}/Tools ${cfg.dataDir}/Recon" \
+        --set GOPATH "\$HOME/go" \
+        --set PATH "$PATH:\$HOME/go/bin" \
+        --set RECONFTW_HOME "${cfg.dataDir}"
     '';
     
     meta = with lib; {
