@@ -37,6 +37,7 @@
     torsocks
     postman
     feroxbuster
+    xnlinkfinder
     # (import ./FSRecon/fsrecon.nix {
     #   inherit (pkgs) lib stdenv nmap subfinder gobuster httpx gowitness nuclei makeWrapper bash;
     # })
