@@ -8,6 +8,8 @@
     ./../Environments/Hyprland/hypr.nix
     # Modules & Packages
     ./../../Modules/Desktop/desktop.nix
+    # Custom Modules
+    ./../../Modules/Custom/ReconFTW/reconftw.nix
     # Stylix
     ./../../Modules/Common/Stylix/desktop.nix
     # System Settings
