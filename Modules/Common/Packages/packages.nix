@@ -19,7 +19,7 @@
     ./Notes/Obsidian/obsidian.nix
     ./Browsers/firefox.nix
     ./VPN/OVPN/openvpn.nix
-    ./VPN/Proton/proton.nix
+    # ./VPN/Proton/proton.nix
   ];
 
   environment.systemPackages = with pkgs; [
