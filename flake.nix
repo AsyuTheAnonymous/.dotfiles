@@ -13,10 +13,10 @@
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    protonvpn = {
-      url = "github:emmanuelrosa/nixos-protonvpn";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # protonvpn = {
+    #   url = "github:emmanuelrosa/nixos-protonvpn";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
   # Outputs
   outputs = {
@@ -26,7 +26,7 @@
     home-manager,
     stylix,
     nixos-generators,
-    protonvpn,
+    # protonvpn,
     ...
   } @ inputs:
   # Variables
@@ -64,7 +64,7 @@
         modules = [
           ./Hosts/Desktop/desktop.nix
           stylix.nixosModules.stylix
-          protonvpn.nixosModules.protonvpn
+          # protonvpn.nixosModules.protonvpn
         ];
         specialArgs = {
           inherit inputs;
