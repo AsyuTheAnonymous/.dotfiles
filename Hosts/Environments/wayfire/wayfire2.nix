@@ -1,19 +1,22 @@
-{ config, lib, pkgs, ... }:
-
 {
-  imports = [ ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [];
 
   # Enable Wayfire compositor
   programs.wayfire = {
     enable = true;
-    
+
     # Configure plugins
     plugins = with pkgs.wayfirePlugins; [
       wcm # Wayfire Config Manager
       wf-shell # GTK-based panel for Wayfire
       wayfire-plugins-extra # Additional plugins
     ];
-    
+
     # Enable XWayland support (true by default)
     xwayland.enable = true;
   };
@@ -25,31 +28,31 @@
   security.rtkit.enable = true;
 
   # Configure pipewire with rtkit for audio
-#   services.pipewire = {
-#     enable = true;
-#     alsa.enable = true;
-#     alsa.support32Bit = true;
-#     pulse.enable = true;
-#     # If you want to use JACK applications, uncomment this
-#     # jack.enable = true;
-#   };
+  #   services.pipewire = {
+  #     enable = true;
+  #     alsa.enable = true;
+  #     alsa.support32Bit = true;
+  #     pulse.enable = true;
+  #     # If you want to use JACK applications, uncomment this
+  #     # jack.enable = true;
+  #   };
 
   # XDG Portal configuration - properly configured for Wayfire
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = with pkgs; [ 
-      xdg-desktop-portal-gtk 
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
     ];
     # Configure portals with proper order
     config = {
       # Set Wayfire to use these portals in this order
       wayfire = {
-        default = [ "wlr" "gtk" ];
+        default = ["wlr" "gtk"];
       };
       # Fallback for common portals
       common = {
-        default = [ "wlr" "gtk" ];
+        default = ["wlr" "gtk"];
       };
     };
     # Explicitly configure wlr portal settings

@@ -1,19 +1,22 @@
-{ config, lib, pkgs, ... }:
-
 {
-  imports = [ ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [];
 
   # Enable Wayfire compositor
   programs.wayfire = {
     enable = true;
-    
+
     # Configure plugins
     plugins = with pkgs.wayfirePlugins; [
       wcm # Wayfire Config Manager
       wf-shell # GTK-based panel for Wayfire
       wayfire-plugins-extra # Additional plugins
     ];
-    
+
     # Enable XWayland support (true by default)
     xwayland.enable = true;
   };
@@ -32,12 +35,11 @@
   # };
   # Perplexity says this is the minimum
   xdg.portal = {
-  enable = true;
-  wlr.enable = true;
-  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  config.common.default = [ "wlr" "gtk" ];
-};
-
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    config.common.default = ["wlr" "gtk"];
+  };
 
   # Additional packages that work well with Wayfire
   environment.systemPackages = with pkgs; [

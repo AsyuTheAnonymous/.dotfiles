@@ -43,26 +43,27 @@
     # })
   ];
 
-
-# Enable Tor and Privoxy for HTTP(S) proxying over Tor
+  # Enable Tor and Privoxy for HTTP(S) proxying over Tor
   services.tor = {
     enable = true;
     client.enable = true; # Enables fast SOCKS port (9063) for Privoxy
     client.dns.enable = true;
-    settings.DNSPort =[{
-      addr = "127.0.0.1";
-      port = 53;
-    }];
+    settings.DNSPort = [
+      {
+        addr = "127.0.0.1";
+        port = 53;
+      }
+    ];
   };
   services.resolved = {
     enable = true;
-    fallbackDns = [ "" ];
+    fallbackDns = [""];
   };
   services.privoxy = {
     enable = true;
     enableTor = true; # Automatically forwards HTTP to Tor's SOCKS port
   };
-  networking.nameservers = [ "127.0.0.1" ];
+  networking.nameservers = ["127.0.0.1"];
 
   # # Tor Service
   # services.tor = {
