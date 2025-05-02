@@ -1,118 +1,62 @@
+{ config, lib, pkgs, ... }:
+
 {
-  pkgs,
-  lib,
-  ...
-}: {
-  # Enable wayfire
+  imports = [ ];
+
+  # Enable Wayfire compositor
   programs.wayfire = {
     enable = true;
-  };
-
-  # Plugins
-  programs.wayfire.plugins = with pkgs.wayfirePlugins; [
-    wcm
-    wf-shell
-    wayfire-plugins-extra
-  ];
-  # XWayland Support
-  services.displayManager.sessionPackages = [pkgs.wayfire];
-
-  services.displayManager.sddm = {
-    wayland.enable = true;
-    # Add any other SDDM-specific settings here
-  };
-
-  # DBUS
-  services.dbus = {
-    enable = true;
-    packages = with pkgs; [xdg-desktop-portal xdg-desktop-portal-wlr];
-  };
-  # RTkit
-  security.rtkit.enable = true;
-  systemd.user.services.xdg-desktop-portal-gtk = {
-    enable = false;
-  };
-
-  # XDG
-  xdg.portal = {
-    wlr.enable = true;
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-wlr
-      # pkgs.xdg-desktop-portal-gtk
+    
+    # Configure plugins
+    plugins = with pkgs.wayfirePlugins; [
+      wcm # Wayfire Config Manager
+      wf-shell # GTK-based panel for Wayfire
+      wayfire-plugins-extra # Additional plugins
     ];
-    config = {
-      common = {
-        default = ["wlr"]; # Force wlr as default
-      };
-      # Explicitly set the preferred portals for different interfaces
-      wayfire = {
-        default = ["wlr"];
-        screenshot = ["wlr"];
-        screencast = ["wlr"];
-      };
-    };
+    
+    # Enable XWayland support (true by default)
+    xwayland.enable = true;
   };
 
-  # Wayland-specific environment variables
-  environment.sessionVariables = {
-    # NVIDIA-specific
-    LIBVA_DRIVER_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    WLR_NO_HARDWARE_CURSORS = "1";
+  # Update your existing SDDM configuration to support Wayland
+  services.displayManager.sddm.wayland.enable = true;
 
-    # General Wayland
-    MOZ_ENABLE_WAYLAND = "1";
-    QT_QPA_PLATFORM = "wayland";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    SDL_VIDEODRIVER = "wayland";
-    _JAVA_AWT_WM_NONREPARENTING = "1";
-
-    # XDG Portal
-    XDG_CURRENT_DESKTOP = "wayfire";
-    XDG_SESSION_TYPE = "wayland";
+  # Enable XDG Portal with wlr backend for better Wayland app integration
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.wayfire.default = [ "wlr" "gtk" ];
   };
 
-  # Packages
+  # Additional packages that work well with Wayfire
   environment.systemPackages = with pkgs; [
-    swaynotificationcenter
-    libnotify
-    polkit_gnome
-    networkmanagerapplet
-    qt5.qtwayland
-    qt6.qtwayland
-    xdg-utils
-    xwayland
-    starship
-    # Additional recommended packages
-    wl-clipboard
+    wl-clipboard # Clipboard utilities for Wayland
     grim # Screenshot utility
-    slurp # Screen area selection
-    waybar # Status bar
+    slurp # Region selection utility (for screenshots)
     mako # Notification daemon
+    wofi # Application launcher
     kanshi # Output management
-    swayidle # Idle management
-    swaylock # Screen locking
-    wlroots # Required for proper functionality
   ];
 
-  # Security polkit settings
-  security.polkit.enable = true;
-  systemd.user.services.polkit-gnome-authentication-agent-1 = {
-    description = "polkit-gnome-authentication-agent-1";
-    wantedBy = ["graphical-session.target"];
-    wants = ["graphical-session.target"];
-    after = ["graphical-session.target"];
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-      Restart = "on-failure";
-      RestartSec = 1;
-      TimeoutStopSec = 10;
-    };
+  # Configure environment variables for Wayland
+  environment.sessionVariables = {
+    # Enable Wayland for Firefox
+    MOZ_ENABLE_WAYLAND = "1";
+    # Enable Wayland for Qt applications
+    QT_QPA_PLATFORM = "wayland";
+    # Enable Wayland for SDL2 applications
+    SDL_VIDEODRIVER = "wayland";
+    # Enable Wayland for EFL applications
+    ECORE_EVAS_ENGINE = "wayland";
+    ELM_ENGINE = "wayland";
+    # XDG specification for Wayland
+    XDG_SESSION_TYPE = "wayland";
+    XDG_CURRENT_DESKTOP = "Wayfire";
+    # Prefer the Wayland backend for GTK applications
+    GDK_BACKEND = "wayland";
   };
 
-  # Point Vulkan Driver
-  # environment.variables.VK_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
+  # Configure fontconfig for better font rendering
+  fonts.fontconfig.enable = true;
 }
