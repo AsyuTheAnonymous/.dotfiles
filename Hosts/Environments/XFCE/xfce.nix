@@ -11,7 +11,7 @@
         enableXfwm = false;  # Disable XFCE's window manager
       };
     };
-    displayManager.lightdm.enable = true;
+    # displayManager.lightdm.enable = true;
     displayManager.defaultSession = "xfce";
     
     # NVIDIA configuration for RTX 3080
@@ -47,6 +47,10 @@
     # Themes
     arc-theme
     papirus-icon-theme
+
+    # Additional
+    starship
+    networkmanagerapplet
   ];
   
   # Session startup commands to replace xfwm4 with compiz
