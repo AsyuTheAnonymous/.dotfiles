@@ -35,9 +35,9 @@
     #   enable = true;
     # };
     # Specifying Hyprland Session
-    targets.hyprland = {
-      enable = true;
-    };
+    # targets.hyprland = {
+    #   enable = true;
+    # };
   };
   # Some apps need this so best suit the seem how I can!
   gtk = lib.mkDefault {
@@ -75,9 +75,9 @@
   # };
 
   # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
-  programs.waybar = {
-    enable = true;
-  };
+  # programs.waybar = {
+  #   enable = true;
+  # };
 
   #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
@@ -91,15 +91,15 @@
   # plain files is through 'home.file'.
   home.file = {
     # ".config/wayfire.ini".source = ./../../../Hosts/Environments/wayfire/wayfire.ini;
-    ".config/hypr/hyprland.conf".source = ./../../../Hosts/Environments/Hyprland/hyprland.conf;
-    ".config/hypr/hypridle.conf".source = ./../../../Hosts/Environments/Hyprland/hypridle.conf;
-    ".config/hypr/hyprpaper.conf".source = ./../../../Hosts/Environments/Hyprland/hyprpaper.conf;
+    # ".config/hypr/hyprland.conf".source = ./../../../Hosts/Environments/Hyprland/hyprland.conf;
+    # ".config/hypr/hypridle.conf".source = ./../../../Hosts/Environments/Hyprland/hypridle.conf;
+    # ".config/hypr/hyprpaper.conf".source = ./../../../Hosts/Environments/Hyprland/hyprpaper.conf;
     ".config/ghostty/config".source = ./../../../Hosts/Environments/Hyprland/configs/ghostty/config;
-    ".config/rofi/config.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/config.rasi;
-    ".config/rofi/catppuccin-mocha.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/catppuccin-mocha.rasi;
+    # ".config/rofi/config.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/config.rasi;
+    # ".config/rofi/catppuccin-mocha.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/catppuccin-mocha.rasi;
     ".config/neofetch/config.conf".source = ./../../../Hosts/Environments/Hyprland/configs/neofetch/config.conf;
     ".config/starship.toml".source = ./../../../Hosts/Environments/Hyprland/configs/starship/starship.toml;
-    ".config/waybar".source = ./../../../Hosts/Environments/Hyprland/configs/waybar;
+    # ".config/waybar".source = ./../../../Hosts/Environments/Hyprland/configs/waybar;
     # ".config/zed/settings.json".source = ./../modules/editor/zed/settings.json;
     # ".config/zed/keymap.json".source = ./../modules/editor/zed/keymap.json;
     # ".config/zed/themes".source = ./../modules/editor/zed/themes;

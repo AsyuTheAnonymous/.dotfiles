@@ -8,37 +8,27 @@
       xfce = {
         enable = true;
         noDesktop = false;
-        enableXfwm = false;  # Disable XFCE's window manager
+        enableXfwm = true;  # Disable XFCE's window manager
       };
     };
-    # displayManager.lightdm.enable = true;
-    displayManager.defaultSession = "xfce";
     
-    # NVIDIA configuration for RTX 3080
-    videoDrivers = [ "nvidia" ];
+    # # SDDM display manager
+    # displayManager.sddm = {
+    #   enable = true;
+    #   theme = "breeze";
+    # };
   };
   
-#   # NVIDIA specific settings
-#   nixpkgs.config.allowUnfree = true;
-#   hardware.nvidia = {
-#     modesetting.enable = true;
-#     powerManagement.enable = true;
-#     package = config.boot.kernelPackages.nvidiaPackages.stable;
-#     nvidiaSettings = true;
-#   };
+  # Updated path for defaultSession in NixOS 24.11
+  services.displayManager.defaultSession = "xfce";
   
-#   # Hardware acceleration
-#   hardware.graphics.enable = true;
-#   hardware.opengl = {
-#     enable = true;
-#     driSupport = true;
-#     driSupport32Bit = true;
-#   };
+  # NVIDIA configuration for RTX 3080
+  services.xserver.videoDrivers = [ "nvidia" ];
   
-  # Install Compiz
+  # Install Picom instead of Compiz (which isn't available)
   environment.systemPackages = with pkgs; [
-    compiz
-    compizConfig
+    # Use picom instead of compiz
+    picom
     
     # Additional XFCE plugins
     xfce.xfce4-whiskermenu-plugin
@@ -53,10 +43,27 @@
     networkmanagerapplet
   ];
   
-  # Session startup commands to replace xfwm4 with compiz
-  services.xserver.desktopManager.xfce.extraSessionCommands = ''
-    # Kill xfwm4 if it's running and start compiz
-    pkill xfwm4 || true
-    compiz --replace ccp &
-  '';
+  # Use updated path for session commands in NixOS 24.11
+  # services.xserver.displayManager.sessionCommands = ''
+  #   # Kill xfwm4 if it's running and start picom
+  #   pkill xfwm4 || true
+  #   picom --experimental-backends --backend glx --vsync &
+  # '';
+
+  # Enable XDG Desktop Portal
+  xdg.portal = {
+    enable = true;
+    # Specify the portal implementation to use
+    xdgOpenUsePortal = true;
+    # For XFCE, you'll want the GTK portal
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    # Configure portal settings
+    config = {
+      common = {
+        default = [ "gtk" ];
+      };
+    };
+  };
+  
+
 }
