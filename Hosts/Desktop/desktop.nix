@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     # Desktop Environments
     # ./../env/wayfire/wayfire.nix
-    ./../Environments/Hyprland/hypr.nix
+    ./../Environments/XFCE/xfce.nix
     # Modules & Packages
     ./../../Modules/Desktop/desktop.nix
     # Custom Modules
