@@ -22,15 +22,26 @@
   services.displayManager.sddm.wayland.enable = true;
 
   # Enable XDG Portal with wlr backend for better Wayland app integration
+  # xdg.portal = {
+  #   enable = true;
+  #   # wlr.enable = true; # Commented out - Relying on common default below
+  #   # extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # Keep GTK portal explicitly included
+  #   # config.wayfire.default = [ "wlr" "gtk" ]; # Commented out - Using common default below
+  #   # More standard way to declare preferred backends
+  #   config.common.default = [ "wlr" "gtk" ];
+  # };
+  # Perplexity says this is the minimum
   xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.wayfire.default = [ "wlr" "gtk" ];
-  };
+  enable = true;
+  wlr.enable = true;
+  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  config.common.default = [ "wlr" "gtk" ];
+};
+
 
   # Additional packages that work well with Wayfire
   environment.systemPackages = with pkgs; [
+    xdg-desktop-portal-gtk
     wl-clipboard # Clipboard utilities for Wayland
     grim # Screenshot utility
     slurp # Region selection utility (for screenshots)

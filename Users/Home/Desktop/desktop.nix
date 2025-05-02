@@ -82,15 +82,15 @@
   #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
     enable = true;
-    initExtra = ''
-      eval "$(starship init zsh)"
-    '';
+    # initExtra = ''
+    #   eval "$(starship init zsh)"
+    # '';
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # ".config/wayfire.ini".source = ./../hosts/env/wayfire/wayfire.ini;
+    ".config/wayfire.ini".source = ./../../../Hosts/Environments/wayfire/wayfire.ini;
     ".config/hypr/hyprland.conf".source = ./../../../Hosts/Environments/Hyprland/hyprland.conf;
     ".config/hypr/hypridle.conf".source = ./../../../Hosts/Environments/Hyprland/hypridle.conf;
     ".config/hypr/hyprpaper.conf".source = ./../../../Hosts/Environments/Hyprland/hyprpaper.conf;
