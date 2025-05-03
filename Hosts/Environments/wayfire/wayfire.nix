@@ -40,6 +40,8 @@
   environment.systemPackages = with pkgs; [
     # Original packages you need
     picom
+    rofi
+    starship
     xfce.xfce4-whiskermenu-plugin
     xfce.xfce4-pulseaudio-plugin
     
