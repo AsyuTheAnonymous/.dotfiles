@@ -1,75 +1,67 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }: {
-  imports = [];
+  # Keep XFCE setup alongside Wayfire
+  services.xserver = {
+    enable = true;
+    desktopManager = {
+      xfce = {
+        enable = true;
+        noDesktop = false;
+        enableXfwm = true;
+      };
+    };
+  };
 
-  # Enable Wayfire compositor
+  # Add Wayfire as an alternative session
   programs.wayfire = {
     enable = true;
-
-    # Configure plugins
     plugins = with pkgs.wayfirePlugins; [
-      wcm # Wayfire Config Manager
-      wf-shell # GTK-based panel for Wayfire
-      wayfire-plugins-extra # Additional plugins
+      wcm
+      wf-shell
+      wayfire-plugins-extra
     ];
-
-    # Enable XWayland support (true by default)
     xwayland.enable = true;
   };
 
-  # Update your existing SDDM configuration to support Wayland
-  services.displayManager.sddm.wayland.enable = true;
+  # Display manager config - allows choosing between XFCE and Wayfire
+  services.displayManager.defaultSession = "xfce";
 
-  # Enable XDG Portal with wlr backend for better Wayland app integration
-  # xdg.portal = {
-  #   enable = true;
-  #   # wlr.enable = true; # Commented out - Relying on common default below
-  #   # extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # Keep GTK portal explicitly included
-  #   # config.wayfire.default = [ "wlr" "gtk" ]; # Commented out - Using common default below
-  #   # More standard way to declare preferred backends
-  #   config.common.default = [ "wlr" "gtk" ];
-  # };
-  # Perplexity says this is the minimum
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
-    config.common.default = ["wlr" "gtk"];
-  };
+  # NVIDIA configuration for RTX 3080
+  services.xserver.videoDrivers = ["nvidia"];
 
-  # Additional packages that work well with Wayfire
+  # Install packages
   environment.systemPackages = with pkgs; [
-    xdg-desktop-portal-gtk
-    wl-clipboard # Clipboard utilities for Wayland
-    grim # Screenshot utility
-    slurp # Region selection utility (for screenshots)
-    mako # Notification daemon
-    wofi # Application launcher
-    kanshi # Output management
+    # Original packages
+    picom
+    xfce.xfce4-whiskermenu-plugin
+    xfce.xfce4-pulseaudio-plugin
+    arc-theme
+    papirus-icon-theme
+    starship
+    rofi
+    networkmanagerapplet
+    
+    # Essential Wayfire tools
+    wayfirePlugins.wcm
+    wayfirePlugins.wf-shell
   ];
 
-  # Configure environment variables for Wayland
-  environment.sessionVariables = {
-    # Enable Wayland for Firefox
-    MOZ_ENABLE_WAYLAND = "1";
-    # Enable Wayland for Qt applications
-    QT_QPA_PLATFORM = "wayland";
-    # Enable Wayland for SDL2 applications
-    SDL_VIDEODRIVER = "wayland";
-    # Enable Wayland for EFL applications
-    ECORE_EVAS_ENGINE = "wayland";
-    ELM_ENGINE = "wayland";
-    # XDG specification for Wayland
-    XDG_SESSION_TYPE = "wayland";
-    XDG_CURRENT_DESKTOP = "Wayfire";
-    # Prefer the Wayland backend for GTK applications
-    GDK_BACKEND = "wayland";
+  # Enable XDG Desktop Portal
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    wlr.enable = true; # Add Wayland portal support
+    config = {
+      common = {
+        default = ["gtk"];
+      };
+      wayfire = {
+        default = ["gtk" "wlr"];
+      };
+    };
   };
-
-  # Configure fontconfig for better font rendering
-  fonts.fontconfig.enable = true;
 }
