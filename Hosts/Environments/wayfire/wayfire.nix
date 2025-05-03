@@ -1,30 +1,30 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }: {
-  # Basic XFCE setup as fallback
+  # Keep X server for XWayland support
   services.xserver = {
     enable = true;
-    desktopManager.xfce.enable = true;
-    videoDrivers = ["nvidia"];  # NVIDIA configuration
+    # Remove XFCE desktop manager
+    # desktopManager.xfce.enable = false; -- You can just remove this section entirely
+    
+    # NVIDIA configuration for RTX 3080
+    videoDrivers = ["nvidia"];
   };
-  
-  # Default to Wayfire session
-  services.displayManager.defaultSession = "wayfire";
 
   # Enable Wayfire
   programs.wayfire = {
     enable = true;
     plugins = with pkgs.wayfirePlugins; [
-      wcm          # Config manager
-      wf-shell     # Panel and dock
+      wcm
+      wf-shell
+      wayfire-plugins-extra
     ];
     xwayland.enable = true;
   };
 
-  # UWSM configuration - minimal but essential
+  # UWSM configuration for Wayfire
   programs.uwsm = {
     enable = true;
     waylandCompositors = {
@@ -36,39 +36,48 @@
     };
   };
 
-  # Basic packages
+  # Set Wayfire as default session
+  services.displayManager.defaultSession = "wayfire";
+
+  # Core packages
   environment.systemPackages = with pkgs; [
-    # Original packages you need
-    picom
-    rofi
+    # Keep themes
+    arc-theme
+    papirus-icon-theme
+
+    # Keep utilities
     starship
+    rofi
+    networkmanagerapplet
     
-    # Essential portals
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-wlr
+    # Add Wayfire-specific tools
+    wayfirePlugins.wcm
+    wayfirePlugins.wf-shell
   ];
 
-  # Configure XDG Portal - essential minimum
+  # Configure XDG Desktop Portal for Wayfire
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     extraPortals = with pkgs; [ 
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
+      xdg-desktop-portal-wlr  # Use WLR portal for Wayland
     ];
-    # Minimal portal config
-    config.wayfire.default = ["wlr" "gtk"];
+    config = {
+      common = {
+        default = ["wlr"];
+      };
+      wayfire = {
+        default = ["wlr"];
+      };
+    };
   };
   
-  # Required services
+  # Required services for Wayfire
   services.dbus.enable = true;
-  security.rtkit.enable = true;
-  
-  # Enable PipeWire for screen sharing
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     pulse.enable = true;
   };
+  security.rtkit.enable = true;
 }
