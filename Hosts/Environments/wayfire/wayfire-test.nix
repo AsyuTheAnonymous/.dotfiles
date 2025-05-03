@@ -14,9 +14,24 @@
         enableXfwm = true;
       };
     };
+    
+    # Session commands for X11 sessions
+    displayManager = {
+      sessionCommands = ''
+        if [ "$XDG_SESSION_DESKTOP" = "wayfire" ]; then
+          export XDG_CURRENT_DESKTOP=Wayfire
+          export XDG_SESSION_TYPE=wayland
+          # For NVIDIA-specific compatibility
+          export WLR_NO_HARDWARE_CURSORS=1
+        fi
+      '';
+    };
   };
+  
+  # Use this option in NixOS 24.11
+  services.displayManager.defaultSession = "wayfire";
 
-  # Add Wayfire as an alternative session
+  # Enable Wayfire with default configuration
   programs.wayfire = {
     enable = true;
     plugins = with pkgs.wayfirePlugins; [
@@ -27,22 +42,21 @@
     xwayland.enable = true;
   };
 
-  # Display manager config
-  services.displayManager = {
-    defaultSession = "xfce";
-    # Set environment variables for Wayfire when it's launched
-    sessionCommands = ''
-      if [ "$XDG_SESSION_DESKTOP" = "wayfire" ]; then
-        export XDG_CURRENT_DESKTOP=Wayfire
-        export XDG_SESSION_TYPE=wayland
-        # For NVIDIA-specific compatibility
-        export WLR_NO_HARDWARE_CURSORS=1
-      fi
-    '';
-  };
-
   # NVIDIA configuration for RTX 3080
   services.xserver.videoDrivers = ["nvidia"];
+  
+  # Enable UWSM - the Wayland Session Manager (new in NixOS 24.11)
+  # With the correct format for waylandCompositors
+  programs.uwsm = {
+    enable = true;
+    waylandCompositors = {
+      wayfire = {
+        prettyName = "Wayfire";
+        comment = "Wayfire compositor managed by UWSM";
+        binPath = "/run/current-system/sw/bin/wayfire";
+      };
+    };
+  };
 
   # Install packages
   environment.systemPackages = with pkgs; [
@@ -59,52 +73,76 @@
     # Essential Wayfire tools
     wayfirePlugins.wcm
     wayfirePlugins.wf-shell
-    
+
     # Portal dependencies
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
     xdg-utils
+    
+    # DBus utilities
+    dbus
   ];
 
-  # Global environment variables (available in all sessions)
+  # Set global environment variables
   environment.sessionVariables = {
-    # Make sure GTK apps use portal for file dialogs
     GTK_USE_PORTAL = "1";
+    # Explicitly enable portal usage
+    NIXOS_XDG_OPEN_USE_PORTAL = "1";
   };
 
-  # Enable XDG Desktop Portal with proper configuration
+  # Configure XDG Portal
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     
-    # Make sure both GTK and WLR portals are available
     extraPortals = with pkgs; [ 
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
     ];
     
-    # Configure portal settings - explicitly match portal implementations
-    # with desktop environments
+    # Setting explicit portal configurations
     config = {
       common = {
         default = ["gtk"];
       };
-      # Special configuration for Wayfire
+      # Special configuration for Wayfire (both case variants)
       Wayfire = {
         default = ["wlr" "gtk"];
       };
+      wayfire = {
+        default = ["wlr" "gtk"];
+      };
     };
+    
+    # Ensure portals are properly configured
+    configPackages = [ pkgs.wayfire ];
   };
   
-  # Enable PipeWire for screen sharing support
+  # Enable D-Bus
+  services.dbus = {
+    enable = true;
+    packages = with pkgs; [
+      xdg-desktop-portal
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
+    implementation = "broker"; # Use dbus-broker for better compatibility
+  };
+  
+  # Enable PipeWire for screen sharing
   services.pipewire = {
     enable = true;
     alsa.enable = true;
+    alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
   };
   
-  # Create Wayfire portals configuration file
+  # Enable RealtimeKit (addresses the error in logs)
+  security.rtkit.enable = true;
+  
+  # Create portal configuration files
   environment.etc."xdg/xdg-desktop-portal/Wayfire-portals.conf".text = ''
     [preferred]
     default=wlr;gtk
@@ -112,26 +150,10 @@
     org.freedesktop.impl.portal.Screenshot=wlr
   '';
   
-  # Create a systemd user service to ensure proper environment variables
-  systemd.user.services.wayfire-xdg-env = {
-    description = "Set up XDG environment for Wayfire";
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      RemainAfterExit = true;
-      ExecStart = "${pkgs.writeShellScript "wayfire-xdg-env-setup" ''
-        if [ "$XDG_SESSION_DESKTOP" = "wayfire" ]; then
-          # Ensure proper environment variables
-          systemctl --user set-environment XDG_CURRENT_DESKTOP=Wayfire
-          systemctl --user set-environment XDG_SESSION_TYPE=wayland
-          
-          # Restart the portal services to pick up the environment variables
-          systemctl --user restart xdg-desktop-portal.service
-          systemctl --user restart xdg-desktop-portal-wlr.service
-          systemctl --user restart xdg-desktop-portal-gtk.service
-        fi
-      ''}";
-    };
-  };
+  environment.etc."xdg/xdg-desktop-portal/wayfire-portals.conf".text = ''
+    [preferred]
+    default=wlr;gtk
+    org.freedesktop.impl.portal.ScreenCast=wlr
+    org.freedesktop.impl.portal.Screenshot=wlr
+  '';
 }

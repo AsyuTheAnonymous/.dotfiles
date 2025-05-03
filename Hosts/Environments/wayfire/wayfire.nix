@@ -1,67 +1,74 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
-  # Keep XFCE setup alongside Wayfire
+  # Basic XFCE setup as fallback
   services.xserver = {
     enable = true;
-    desktopManager = {
-      xfce = {
-        enable = true;
-        noDesktop = false;
-        enableXfwm = true;
-      };
-    };
+    desktopManager.xfce.enable = true;
+    videoDrivers = ["nvidia"];  # NVIDIA configuration
   };
+  
+  # Default to Wayfire session
+  services.displayManager.defaultSession = "wayfire";
 
-  # Add Wayfire as an alternative session
+  # Enable Wayfire
   programs.wayfire = {
     enable = true;
     plugins = with pkgs.wayfirePlugins; [
-      wcm
-      wf-shell
-      wayfire-plugins-extra
+      wcm          # Config manager
+      wf-shell     # Panel and dock
     ];
     xwayland.enable = true;
   };
 
-  # Display manager config - allows choosing between XFCE and Wayfire
-  services.displayManager.defaultSession = "xfce";
+  # UWSM configuration - minimal but essential
+  programs.uwsm = {
+    enable = true;
+    waylandCompositors = {
+      wayfire = {
+        prettyName = "Wayfire";
+        comment = "Wayfire compositor";
+        binPath = "/run/current-system/sw/bin/wayfire";
+      };
+    };
+  };
 
-  # NVIDIA configuration for RTX 3080
-  services.xserver.videoDrivers = ["nvidia"];
-
-  # Install packages
+  # Basic packages
   environment.systemPackages = with pkgs; [
-    # Original packages
+    # Original packages you need
     picom
     xfce.xfce4-whiskermenu-plugin
     xfce.xfce4-pulseaudio-plugin
-    arc-theme
-    papirus-icon-theme
-    starship
-    rofi
-    networkmanagerapplet
     
-    # Essential Wayfire tools
-    wayfirePlugins.wcm
-    wayfirePlugins.wf-shell
+    # Essential portals
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
   ];
 
-  # Enable XDG Desktop Portal
+  # Configure XDG Portal - essential minimum
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
-    wlr.enable = true; # Add Wayland portal support
-    config = {
-      common = {
-        default = ["gtk"];
-      };
-      wayfire = {
-        default = ["gtk" "wlr"];
-      };
-    };
+    extraPortals = with pkgs; [ 
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
+    # Minimal portal config
+    config.wayfire.default = ["wlr" "gtk"];
+  };
+  
+  # Required services
+  services.dbus.enable = true;
+  security.rtkit.enable = true;
+  
+  # Enable PipeWire for screen sharing
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
   };
 }
