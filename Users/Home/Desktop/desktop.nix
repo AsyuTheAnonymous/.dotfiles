@@ -3,6 +3,9 @@
   lib,
   ...
 }: {
+  import = [
+    ./../Environments/autorandr.nix
+  ];
   stylix = {
     enable = true;
     # Stylix requires an image
