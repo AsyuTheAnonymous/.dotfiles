@@ -32,4 +32,5 @@
   # Enable the autorandr service
   services.autorandr.enable = true;
 
+}
 

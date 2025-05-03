@@ -3,8 +3,8 @@
   lib,
   ...
 }: {
-  import = [
-    ./../Environments/autorandr.nix
+  imports = [
+    ./../Common/Environments/autorandr.nix
   ];
   stylix = {
     enable = true;
