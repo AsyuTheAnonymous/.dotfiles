@@ -5,7 +5,6 @@
     ./Usb/usb.nix
     ./Unstable/unstable.nix
     ./Terminals/Warp/warp.nix
-    ./VPN/Proton/proton.nix
   ];
   # Sorrrrrrrrrrrrryyyyy
   nixpkgs.config.allowUnfree = true;
