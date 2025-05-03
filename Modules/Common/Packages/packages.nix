@@ -19,6 +19,7 @@
     ./Notes/Obsidian/obsidian.nix
     ./Browsers/firefox.nix
     ./VPN/OVPN/openvpn.nix
+    ./Remote/Remmina/remmina.nix
     # ./VPN/Proton/proton.nix
   ];
 
