@@ -36,6 +36,7 @@
 
     # Additional
     starship
+    rofi
     networkmanagerapplet
   ];
 
