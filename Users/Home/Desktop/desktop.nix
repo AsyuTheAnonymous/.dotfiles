@@ -44,18 +44,18 @@
     # };
   };
   # Some apps need this so best suit the seem how I can!
-  gtk = lib.mkDefault {
-    enable = true;
-    theme = {
-      name = "rose-pine-moon";
-      package = pkgs.rose-pine-gtk-theme;
-    };
-    # Icons
-    iconTheme = {
-      name = "rose-pine-moon";
-      package = pkgs.rose-pine-icon-theme;
-    };
-  };
+  # gtk = lib.mkDefault {
+  #   enable = true;
+  #   theme = {
+  #     name = "rose-pine-moon";
+  #     package = pkgs.rose-pine-gtk-theme;
+  #   };
+  #   # Icons
+  #   iconTheme = {
+  #     name = "rose-pine-moon";
+  #     package = pkgs.rose-pine-icon-theme;
+  #   };
+  # };
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
@@ -67,7 +67,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    rose-pine-gtk-theme
+    # rose-pine-gtk-theme
     rose-pine-icon-theme
     papirus-icon-theme
   ];
