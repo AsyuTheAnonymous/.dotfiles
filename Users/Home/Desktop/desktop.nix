@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./../Common/Environments/autorandr.nix
+    ./../Common/Environments/XFCE/Display/autorandr.nix
   ];
   stylix = {
     enable = true;
