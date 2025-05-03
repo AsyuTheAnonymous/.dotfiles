@@ -42,8 +42,6 @@
     picom
     rofi
     starship
-    xfce.xfce4-whiskermenu-plugin
-    xfce.xfce4-pulseaudio-plugin
     
     # Essential portals
     xdg-desktop-portal

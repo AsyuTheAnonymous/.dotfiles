@@ -1,10 +1,11 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   imports = [
-    ./../Common/Environments/XFCE/Display/autorandr.nix
+    # ./../Common/Environments/XFCE/Display/autorandr.nix
   ];
   stylix = {
     enable = true;
@@ -70,6 +71,13 @@
     rose-pine-icon-theme
     papirus-icon-theme
   ];
+
+  systemd.user.services = {
+    "xdg-desktop-portal-gtk" = {
+      Unit.X-Restart-Triggers = ["${config.home.profileDirectory}/etc/xdg/xdg-desktop-portal/wayfire-portals.conf"];
+    };
+  };
+
 
   # home.activation = {
   #   changePapirusFolders = ''
