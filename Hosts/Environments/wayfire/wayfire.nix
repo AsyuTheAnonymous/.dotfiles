@@ -43,7 +43,9 @@
   environment.systemPackages = with pkgs; [
     # Keep themes
     arc-theme
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
+    numix-icon-theme
+
     # papirus-icon-theme
 
     # Keep utilities
