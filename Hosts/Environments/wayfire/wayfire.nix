@@ -42,14 +42,30 @@
   environment.systemPackages = with pkgs; [
     # Keep themes
     papirus-icon-theme
+    adwaita-qt
+    adwaita-icon-theme
+    
     # Keep utilities
     starship
     rofi
     wdisplays
-    
-    # Add Wayfire-specific tools
+
+    # Tray
+    networkmanagerapplet
+
+    # Core
+    wlroots
     wayfirePlugins.wcm
     wayfirePlugins.wf-shell
+    xdg-desktop-portal-wlr
+    
+    # 
+    wl-clipboard
+    libinput
+
+    # Plugins
+    wayfirePlugins.windecor
+    wayfirePlugins.wayfire-plugins-extra
   ];
 
   # Configure XDG Desktop Portal for Wayfire
