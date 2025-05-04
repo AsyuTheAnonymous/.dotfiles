@@ -52,8 +52,8 @@
 
     # Core
     wlroots
-    wayfirePlugins.wcm
-    wayfirePlugins.wf-shell
+    # wayfirePlugins.wcm
+    # wayfirePlugins.wf-shell
     xdg-desktop-portal-wlr
     
     # 
@@ -62,7 +62,7 @@
 
     # Plugins
     wayfirePlugins.windecor
-    wayfirePlugins.wayfire-plugins-extra
+    # wayfirePlugins.wayfire-plugins-extra
   ];
 
   # Configure XDG Desktop Portal for Wayfire
