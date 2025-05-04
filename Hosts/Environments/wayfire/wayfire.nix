@@ -38,17 +38,13 @@
 
   # Set Wayfire as default session
   services.displayManager.defaultSession = "wayfire";
-  gtk.iconCache.enable = true;
-
   # Core packages
   environment.systemPackages = with pkgs; [
     # Keep themes
-    rose-pine-icon-theme
-    gnome-themes-extra
+    papirus-icon-theme
     # Keep utilities
     starship
     rofi
-    networkmanagerapplet
     wdisplays
     
     # Add Wayfire-specific tools
@@ -62,8 +58,6 @@
     xdgOpenUsePortal = true;
     extraPortals = with pkgs; [ 
       xdg-desktop-portal-wlr  # Use WLR portal for Wayland
-      xdg-desktop-portal-gtk
-
     ];
     config = {
       common = {
@@ -83,5 +77,4 @@
     pulse.enable = true;
   };
   security.rtkit.enable = true;
-  programs.dconf.enable = true;
 }
