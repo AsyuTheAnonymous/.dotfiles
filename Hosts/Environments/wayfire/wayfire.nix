@@ -6,9 +6,6 @@
   # Keep X server for XWayland support
   services.xserver = {
     enable = true;
-    # Remove XFCE desktop manager
-    # desktopManager.xfce.enable = false; -- You can just remove this section entirely
-    
     # NVIDIA configuration for RTX 3080
     videoDrivers = ["nvidia"];
   };
@@ -74,6 +71,7 @@
     xdgOpenUsePortal = true;
     extraPortals = with pkgs; [ 
       xdg-desktop-portal-wlr  # Use WLR portal for Wayland
+      xdg-desktop-portal-gtk
     ];
     config = {
       common = {
