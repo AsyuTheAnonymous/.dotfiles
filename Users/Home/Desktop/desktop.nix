@@ -42,6 +42,7 @@
     # targets.hyprland = {
     #   enable = true;
     # };
+
   };
   # Some apps need this so best suit the seem how I can!
   # gtk = lib.mkDefault {
@@ -68,8 +69,8 @@
   # environment.
   home.packages = with pkgs; [
     # rose-pine-gtk-theme
-    rose-pine-icon-theme
-    papirus-icon-theme
+    # rose-pine-icon-theme
+    # papirus-icon-theme
   ];
 
   # systemd.user.services = {

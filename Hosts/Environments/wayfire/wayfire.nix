@@ -43,7 +43,8 @@
   environment.systemPackages = with pkgs; [
     # Keep themes
     arc-theme
-    papirus-icon-theme
+    gnome.adwaita-icon-theme
+    # papirus-icon-theme
 
     # Keep utilities
     starship
