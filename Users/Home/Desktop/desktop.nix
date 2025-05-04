@@ -72,11 +72,11 @@
     papirus-icon-theme
   ];
 
-  systemd.user.services = {
-    "xdg-desktop-portal-gtk" = {
-      Unit.X-Restart-Triggers = ["${config.home.profileDirectory}/etc/xdg/xdg-desktop-portal/wayfire-portals.conf"];
-    };
-  };
+  # systemd.user.services = {
+  #   "xdg-desktop-portal-gtk" = {
+  #     Unit.X-Restart-Triggers = ["${config.home.profileDirectory}/etc/xdg/xdg-desktop-portal/wayfire-portals.conf"];
+  #   };
+  # };
 
 
   # home.activation = {

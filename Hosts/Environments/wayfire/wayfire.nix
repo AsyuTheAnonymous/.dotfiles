@@ -49,6 +49,7 @@
     starship
     rofi
     networkmanagerapplet
+    wdisplays
     
     # Add Wayfire-specific tools
     wayfirePlugins.wcm
