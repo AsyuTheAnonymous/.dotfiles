@@ -52,9 +52,15 @@
 
     # Core
     wlroots
+    wf-recorder
     # wayfirePlugins.wcm
     # wayfirePlugins.wf-shell
     xdg-desktop-portal-wlr
+    xorg.xrandr
+    xorg.xprop
+    xorg.xwininfo
+    xorg.xinput
+    xwayland
     
     # 
     wl-clipboard
@@ -82,6 +88,19 @@
       };
     };
   };
+  # Enable seat management for Wayfire
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd wayfire";
+        user = "greeter";
+      };
+    };
+  };
+  hardware.uinput.enable = true;
+  security.polkit.enable = true;
+
   
   # Required services for Wayfire
   services.dbus.enable = true;
