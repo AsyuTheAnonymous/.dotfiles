@@ -83,10 +83,10 @@
   #   '';
   # };
 
-  # Enable waybar (not sure if this does anything because waybar is also executed in hyprland.conf)
-  # programs.waybar = {
-  #   enable = true;
-  # };
+  # Enable waybar 
+  programs.waybar = {
+    enable = true;
+  };
 
   #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
@@ -108,7 +108,7 @@
     ".config/rofi/catppuccin-mocha.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/catppuccin-mocha.rasi;
     ".config/neofetch/config.conf".source = ./../../../Hosts/Environments/Hyprland/configs/neofetch/config.conf;
     ".config/starship.toml".source = ./../../../Hosts/Environments/Hyprland/configs/starship/starship.toml;
-    # ".config/waybar".source = ./../../../Hosts/Environments/Hyprland/configs/waybar;
+    ".config/waybar".source = ./../../../Hosts/Environments/Hyprland/configs/waybar;
     # ".config/zed/settings.json".source = ./../modules/editor/zed/settings.json;
     # ".config/zed/keymap.json".source = ./../modules/editor/zed/keymap.json;
     # ".config/zed/themes".source = ./../modules/editor/zed/themes;

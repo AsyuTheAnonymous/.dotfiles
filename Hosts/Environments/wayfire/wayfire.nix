@@ -49,6 +49,7 @@
 
     # Tray
     networkmanagerapplet
+    blueman
 
     # Core
     wlroots
@@ -65,6 +66,7 @@
     # 
     wl-clipboard
     libinput
+    cairo
 
     # Plugins
     wayfirePlugins.windecor
@@ -88,16 +90,16 @@
       };
     };
   };
-  # Enable seat management for Wayfire
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd wayfire";
-        user = "greeter";
-      };
-    };
-  };
+  # # Enable seat management for Wayfire
+  # services.greetd = {
+  #   enable = true;
+  #   settings = {
+  #     default_session = {
+  #       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd wayfire";
+  #       user = "greeter";
+  #     };
+  #   };
+  # };
   hardware.uinput.enable = true;
   security.polkit.enable = true;
 
