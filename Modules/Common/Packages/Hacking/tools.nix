@@ -12,6 +12,7 @@
     wifite2
     metasploit
     armitage
+    ubertooth
     john
     hashcat
     bettercap
