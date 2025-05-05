@@ -12,6 +12,8 @@
     wifite2
     metasploit
     armitage
+    bluez
+    bluez-tools
     ubertooth
     john
     hashcat
