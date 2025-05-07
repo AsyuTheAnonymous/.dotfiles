@@ -25,6 +25,7 @@
 
   environment.systemPackages = with pkgs; [
     nixos-generators
+    webcord
     neofetch
     pavucontrol
     bottles
