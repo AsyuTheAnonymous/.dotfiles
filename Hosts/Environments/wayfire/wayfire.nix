@@ -90,6 +90,30 @@
       };
     };
   };
+  # xdg.portal = {
+  #   enable = true;
+  #   xdgOpenUsePortal = true;
+  #   gtkUseWayland = true; 
+  #   extraPortals = with pkgs; [
+  #     xdg-desktop-portal-wlr
+  #     xdg-desktop-portal-gtk
+  #   ];
+  #   config = {
+  #     common = {
+  #       default = ["gtk" "wlr"];
+  #     };
+  #     wayfire = {
+  #       default = ["wlr"];
+  #       "org.freedesktop.portal.ScreenCast" = {
+  #         default = ["gtk" "wlr"];
+  #       };
+  #       "org.freedesktop.portal.FileChooser" = {
+  #         default = ["gtk" "wlr"];
+  #       };
+  #     };
+  #   };
+  # };
+  
   # # Enable seat management for Wayfire
   # services.greetd = {
   #   enable = true;
