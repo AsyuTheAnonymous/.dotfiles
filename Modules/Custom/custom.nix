@@ -9,7 +9,7 @@
     ./XSStrike/xsstrike.nix
   ];
   services.reconftw = {
-    enable = true;
+    enable = false;
     # Optional: Specify a custom config file
     # configFile = "/path/to/your/reconftw.cfg";
   };
