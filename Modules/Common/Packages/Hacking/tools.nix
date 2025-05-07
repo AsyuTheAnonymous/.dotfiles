@@ -6,7 +6,6 @@
 }: {
   environment.systemPackages = with pkgs-unstable; [
     aircrack-ng
-    wireshark
     nmap
     kismet
     wifite2
@@ -45,6 +44,8 @@
     #   inherit (pkgs) lib stdenv nmap subfinder gobuster httpx gowitness nuclei makeWrapper bash;
     # })
   ];
+  # Enable Wireshark, hopefully fixing root
+  programs.wireshark.enable
 
   # Enable Tor and Privoxy for HTTP(S) proxying over Tor
   services.tor = {
