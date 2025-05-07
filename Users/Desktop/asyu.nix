@@ -4,7 +4,7 @@
   ];
   users.users.asyu = {
     isNormalUser = true;
-    extraGroups = ["wheel" "input" "libvirtd" "video" "uinput"];
+    extraGroups = ["wheel" "input" "libvirtd" "video" "uinput" "wireshark" ];
     packages = with pkgs; [
     ];
   };

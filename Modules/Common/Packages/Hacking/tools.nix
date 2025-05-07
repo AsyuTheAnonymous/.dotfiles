@@ -10,6 +10,7 @@
     kismet
     wifite2
     metasploit
+    wireshark
     armitage
     bluez
     bluez-tools
