@@ -45,7 +45,7 @@
     # })
   ];
   # Enable Wireshark, hopefully fixing root
-  programs.wireshark.enable
+  programs.wireshark.enable = true;
 
   # Enable Tor and Privoxy for HTTP(S) proxying over Tor
   services.tor = {
