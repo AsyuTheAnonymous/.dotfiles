@@ -39,6 +39,7 @@
     tor
     torsocks
     postman
+    graphqlmap
     feroxbuster
     xnlinkfinder
     # (import ./FSRecon/fsrecon.nix {
