@@ -41,6 +41,7 @@
     postman
     graphqlmap
     altair
+    tor-browser
     feroxbuster
     xnlinkfinder
     # (import ./FSRecon/fsrecon.nix {
