@@ -40,6 +40,7 @@
     torsocks
     postman
     graphqlmap
+    altair
     feroxbuster
     xnlinkfinder
     # (import ./FSRecon/fsrecon.nix {
