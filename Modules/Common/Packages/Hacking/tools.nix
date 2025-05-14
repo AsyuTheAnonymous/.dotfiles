@@ -42,6 +42,7 @@
     graphqlmap
     altair
     tor-browser
+    qflipper
     feroxbuster
     xnlinkfinder
     # (import ./FSRecon/fsrecon.nix {
