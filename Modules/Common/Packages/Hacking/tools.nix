@@ -52,6 +52,9 @@
   # Enable Wireshark, hopefully fixing root
   programs.wireshark.enable = true;
 
+  hardware.flipperzero.enable = true;
+
+
   # Enable Tor and Privoxy for HTTP(S) proxying over Tor
   services.tor = {
     enable = true;
