@@ -45,6 +45,7 @@
     qflipper
     feroxbuster
     xnlinkfinder
+    dig
     # (import ./FSRecon/fsrecon.nix {
     #   inherit (pkgs) lib stdenv nmap subfinder gobuster httpx gowitness nuclei makeWrapper bash;
     # })
