@@ -98,4 +98,10 @@
   # Wifi "Adapter" drivers
   boot.extraModulePackages = [config.boot.kernelPackages.rtl8814au];
   boot.kernelModules = ["8814au"];
+
+  # THM Labs
+  networking.hosts = {
+    "10.10.36.182" = [ "enum.thm" ];
+  };
+
 }
