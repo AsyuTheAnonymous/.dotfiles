@@ -22,10 +22,10 @@
     ],
     "custom/thm-vpn": {
         "format": "THM: {}",
-        "exec": "~/scripts/thm-vpn-toggle.sh",
+        "exec": "~/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
         "return-type": "json",
         "interval": "once",
-        "on-click": "~/scripts/thm-vpn-toggle.sh",
+        "on-click": "~/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
         "signal": 8,
         "tooltip": true
     },
