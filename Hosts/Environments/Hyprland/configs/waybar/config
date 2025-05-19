@@ -20,23 +20,15 @@
         "network",
         "clock"
     ],
+
     "custom/thm-vpn": {
-        "format": "THM: {}",
-        "exec": "if pgrep -f 'openvpn --config /home/asyu/VPN/THM/thm.ovpn' > /dev/null; then echo 'On'; else echo 'Off'; fi",
-        "return-type": "text",
+        "format": "{}",
+        "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
+        "return-type": "json",
         "interval": 5,
-        "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
+        "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-toggle.sh",
         "tooltip": true
     },
-    // "custom/thm-vpn": {
-    //     "format": "THM: {}",
-    //     "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
-    //     "return-type": "json",
-    //     "interval": 5,
-    //     "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
-    //     // "signal": 8,
-    //     "tooltip": true
-    // },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",

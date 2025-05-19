@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
+# File location: /home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh
 
-# Use absolute paths (no ~)
-VPN_CONFIG="/home/asyu/VPN/THM/thm.ovpn"  # Change this to your actual config filename
+# VPN name in NetworkManager
+VPN_NAME="TryHackMe"
 
-if pgrep -f "openvpn --config $VPN_CONFIG" > /dev/null; then
+# Check if VPN is active
+if nmcli connection show --active | grep -q "$VPN_NAME"; then
     # VPN is connected
     echo '{"text": "THM: On", "class": "vpn-on", "tooltip": "Click to disconnect from THM VPN"}'
 else
