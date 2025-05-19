@@ -100,8 +100,8 @@
   boot.kernelModules = ["8814au"];
 
   # THM Labs
-  networking.hosts = {
-    "10.10.30.131" = [ "enum.thm" ];
-  };
+  # networking.hosts = {
+  #   "10.10.121.97" = [ "enum.thm" ];
+  # };
 
 }
