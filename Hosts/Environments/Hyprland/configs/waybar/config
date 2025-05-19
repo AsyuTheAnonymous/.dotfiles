@@ -25,7 +25,7 @@
         "exec": "~/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
         "return-type": "json",
         "interval": "once",
-        "on-click": "~/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
+        "on-click": "~/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
         "signal": 8,
         "tooltip": true
     },
