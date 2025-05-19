@@ -14,12 +14,21 @@
     "modules-center": ["hyprland/window"],
     "modules-right": [
         "tray",
+        "custom/thm-vpn",
         "idle_inhibitor",
         "pulseaudio",
         "network",
         "clock"
     ],
-
+    "custom/thm-vpn": {
+        "format": "THM: {}",
+        "exec": "~/scripts/thm-vpn-toggle.sh",
+        "return-type": "json",
+        "interval": "once",
+        "on-click": "~/scripts/thm-vpn-toggle.sh",
+        "signal": 8,
+        "tooltip": true
+    },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
