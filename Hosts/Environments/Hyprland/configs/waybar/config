@@ -22,8 +22,8 @@
     ],
     "custom/thm-vpn": {
         "format": "THM: {}",
-        "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
-        "return-type": "json",
+        "exec": "if pgrep -f 'openvpn --config /home/asyu/VPN/THM/thm.ovpn' > /dev/null; then echo 'On'; else echo 'Off'; fi",
+        "return-type": "text",
         "interval": 5,
         "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
         "tooltip": true
