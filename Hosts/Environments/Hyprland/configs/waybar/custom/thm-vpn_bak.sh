@@ -1,8 +1,8 @@
-cat > ~/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh << 'EOF'
 #!/bin/bash
 
-# Use absolute paths (no ~)
-VPN_CONFIG="/home/asyu/VPN/THM/thm.ovpn"  # Change this to your actual config filename
+# Path to your THM VPN config
+VPN_DIR="$HOME/VPN/THM"
+VPN_CONFIG="$VPN_DIR/thm.ovpn"  # Change this to your actual config filename
 
 # Check if VPN is connected
 if pgrep -f "openvpn --config $VPN_CONFIG" > /dev/null; then
@@ -16,4 +16,3 @@ else
     notify-send "THM VPN" "Connected" --icon=network-vpn
     echo '{"text": "THM: On", "class": "vpn-on", "tooltip": "Click to disconnect from THM VPN"}'
 fi
-EOF

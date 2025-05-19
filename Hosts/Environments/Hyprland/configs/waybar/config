@@ -22,13 +22,21 @@
     ],
     "custom/thm-vpn": {
         "format": "THM: {}",
-        "exec": "~/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
+        "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
         "return-type": "json",
-        "interval": "once",
-        "on-click": "~/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
-        "signal": 8,
+        "interval": 5,
+        "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
         "tooltip": true
     },
+    // "custom/thm-vpn": {
+    //     "format": "THM: {}",
+    //     "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
+    //     "return-type": "json",
+    //     "interval": 5,
+    //     "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn.sh",
+    //     // "signal": 8,
+    //     "tooltip": true
+    // },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
