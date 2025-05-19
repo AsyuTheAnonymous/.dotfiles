@@ -101,7 +101,7 @@
 
   # THM Labs
   networking.hosts = {
-    "10.10.36.182" = [ "enum.thm" ];
+    "10.10.30.131" = [ "enum.thm" ];
   };
 
 }
