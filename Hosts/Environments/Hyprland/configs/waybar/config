@@ -14,12 +14,21 @@
     "modules-center": ["hyprland/window"],
     "modules-right": [
         "tray",
+        "custom/thm-vpn",
         "idle_inhibitor",
         "pulseaudio",
         "network",
         "clock"
     ],
 
+    "custom/thm-vpn": {
+        "format": "{}",
+        "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
+        "return-type": "json",
+        "interval": 5,
+        "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-toggle.sh",
+        "tooltip": true
+    },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",

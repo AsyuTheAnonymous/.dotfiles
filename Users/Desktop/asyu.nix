@@ -11,4 +11,21 @@
   environment.sessionVariables = {
     FLAKE = "/home/asyu/.dotfiles/";
   };
+
+  security.sudo = {
+    enable = true;
+    extraRules = [{
+      commands = [
+        {
+          command = "${pkgs.procps}/bin/pkill -f openvpn*";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "${pkgs.openvpn}/bin/openvpn *";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+      groups = [ "wheel" ];
+    }];
+  };
 }

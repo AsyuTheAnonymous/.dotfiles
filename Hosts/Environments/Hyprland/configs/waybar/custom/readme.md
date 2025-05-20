@@ -1,0 +1,1 @@
+Move the import-thm-vpn.sh script into ~/import-thm-vpn.sh
