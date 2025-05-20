@@ -41,6 +41,8 @@
     postman
     graphqlmap
     altair
+    popsicle
+    update-systemd-resolved
     tor-browser
     qflipper
     feroxbuster
