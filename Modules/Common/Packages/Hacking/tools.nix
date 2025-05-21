@@ -15,6 +15,7 @@
     bluez
     bluez-tools
     ubertooth
+    assetfinder
     john
     hashcat
     bettercap
