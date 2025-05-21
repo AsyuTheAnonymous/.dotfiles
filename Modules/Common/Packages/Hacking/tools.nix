@@ -24,6 +24,7 @@
     nuclei
     httpx
     caido
+    dnsrecon
     prometheus
     nikto
     ffuf
@@ -102,8 +103,8 @@
   boot.kernelModules = ["8814au"];
 
   # THM Labs
-  # networking.hosts = {
-  #   "10.10.121.97" = [ "enum.thm" ];
-  # };
+  networking.hosts = {
+    "10.10.191.61" = [ "nahamstore.thm" "www.nahamstore.thm" ];
+  };
 
 }
