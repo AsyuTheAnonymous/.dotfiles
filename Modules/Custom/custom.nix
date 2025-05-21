@@ -7,6 +7,8 @@
   imports = [
     ./ReconFTW/reconftw.nix
     ./XSStrike/xsstrike.nix
+    (pkgs.callPackage ./Oniux/oniux.nix {})
+
   ];
   services.reconftw = {
     enable = false;
