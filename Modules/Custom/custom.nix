@@ -7,9 +7,11 @@
   imports = [
     ./ReconFTW/reconftw.nix
     ./XSStrike/xsstrike.nix
-    (pkgs.callPackage ./Oniux/oniux.nix {})
+    ./Oniux/oniux.nix
 
   ];
+  programs.oniux.enable = true;
+
   services.reconftw = {
     enable = false;
     # Optional: Specify a custom config file
