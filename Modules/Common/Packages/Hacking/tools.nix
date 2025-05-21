@@ -39,7 +39,7 @@
     thc-hydra
     arjun
     tor
-    oniux
+    # pkgs.oniux
     torsocks
     postman
     graphqlmap
