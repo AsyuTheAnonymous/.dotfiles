@@ -47,6 +47,9 @@
     nixd
     alejandra
   ];
-
+  # Used in the custom package overrides
+  # programs.firefox = {
+  #   enable = true;
+  # };
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 }
