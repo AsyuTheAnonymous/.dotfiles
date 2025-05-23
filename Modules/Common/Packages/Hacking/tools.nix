@@ -108,7 +108,7 @@
 
   # THM Labs
   networking.hosts = {
-    "10.10.191.61" = [ "nahamstore.thm" "www.nahamstore.thm" ];
+    "10.10.23.96" = [ "futurevera.thm" ];
   };
 
 }
