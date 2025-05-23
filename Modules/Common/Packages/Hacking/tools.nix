@@ -16,6 +16,8 @@
     bluez-tools
     ubertooth
     assetfinder
+    ruby
+    baddns
     john
     hashcat
     bettercap
