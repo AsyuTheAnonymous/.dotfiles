@@ -46,6 +46,7 @@
     nvd
     nixd
     alejandra
+    orca-slicer
   ];
   # Used in the custom package overrides
   # programs.firefox = {
