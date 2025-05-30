@@ -30,4 +30,9 @@
   # Me literally not taking my own advice
   system.stateVersion = "25.05";
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-33.4.11"
+  ];
+
+
 }
