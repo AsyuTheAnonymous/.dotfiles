@@ -26,5 +26,8 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Never change this value shit will break + doesnt affect channels
-  system.stateVersion = "24.11";
+  # system.stateVersion = "24.11";
+  # Me literally not taking my own advice
+  system.stateVersion = "25.05";
+
 }
