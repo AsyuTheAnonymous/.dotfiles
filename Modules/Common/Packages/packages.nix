@@ -11,7 +11,7 @@
     ./Helpers/nh.nix
     #./Hacking/tools.nix
     ./Browsers/brave.nix
-    #./Flatpak/flatpak.nix
+    ./Flatpak/flatpak.nix
     #./Remote/Parsec/parsec.nix
     ./Mail/Proton/mail.nix
     ./Terminals/Ghostty/ghostty.nix

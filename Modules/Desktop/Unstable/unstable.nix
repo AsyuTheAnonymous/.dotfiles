@@ -1,6 +1,7 @@
 {pkgs-unstable, ...}: {
   environment.systemPackages = with pkgs-unstable; [
     vesktop
+    warp-terminal
     #atlauncher
     prismlauncher
     #figma-linux
