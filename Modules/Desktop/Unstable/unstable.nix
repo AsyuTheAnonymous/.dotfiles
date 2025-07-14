@@ -1,12 +1,12 @@
 {pkgs-unstable, ...}: {
   environment.systemPackages = with pkgs-unstable; [
     vesktop
-    atlauncher
+    #atlauncher
     prismlauncher
-    figma-linux
+    #figma-linux
     wine
     winetricks
-    zed-editor
+    #zed-editor
     #Nix Language server
     nixd
     nil
