@@ -17,7 +17,7 @@
     # User
     ./../../Users/Desktop/asyu.nix
     # Hypervisor
-    ./../../Hypervisor/Virt-Manager/virt.nix
+    ./../../Hypervisor/hv.nix
   ];
   # Hostname
   networking.hostName = "asyus-system";
