@@ -35,7 +35,6 @@
     unrar
     zip
     tree
-    okular
     wirelesstools
     usbutils
     iw

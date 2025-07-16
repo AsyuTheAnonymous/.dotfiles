@@ -28,26 +28,26 @@
     };
 
     # Configure fonts
-    fonts = {
-      serif = {
-        package = pkgs.nerdfonts;
-        name = "JetBrainsMono Nerd Font";
-      };
+    # fonts = {
+    #   serif = {
+    #     package = pkgs.nerdfonts;
+    #     name = "JetBrainsMono Nerd Font";
+    #   };
 
-      sansSerif = {
-        package = pkgs.nerdfonts;
-        name = "JetBrainsMono Nerd Font";
-      };
+    #   sansSerif = {
+    #     package = pkgs.nerdfonts;
+    #     name = "JetBrainsMono Nerd Font";
+    #   };
 
-      monospace = {
-        package = pkgs.nerdfonts;
-        name = "JetBrainsMono Nerd Font Mono";
-      };
+    #   monospace = {
+    #     package = pkgs.nerdfonts;
+    #     name = "JetBrainsMono Nerd Font Mono";
+    #   };
 
-      emoji = {
-        package = pkgs.noto-fonts-emoji;
-        name = "Noto Color Emoji";
-      };
-    };
+    #   emoji = {
+    #     package = pkgs.noto-fonts-emoji;
+    #     name = "Noto Color Emoji";
+    #   };
+    # };
   };
 }

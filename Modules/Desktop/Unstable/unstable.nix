@@ -3,7 +3,6 @@
     vesktop
     warp-terminal
     #atlauncher
-    prismlauncher
     #figma-linux
     wine
     winetricks

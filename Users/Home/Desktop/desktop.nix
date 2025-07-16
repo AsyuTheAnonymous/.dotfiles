@@ -87,13 +87,16 @@
   # programs.waybar = {
   #   enable = true;
   # };
-
+  
   #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
     enable = true;
     initExtra = ''
       eval "$(starship init zsh)"
     '';
+    shellAliases = {
+      linuxbest = "echo i hate windows";
+    };
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
