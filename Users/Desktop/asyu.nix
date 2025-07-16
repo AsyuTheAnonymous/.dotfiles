@@ -9,7 +9,7 @@
     ];
   };
   environment.sessionVariables = {
-    FLAKE = "/home/asyu/.dotfiles/";
+    NH_FLAKE = "/home/asyu/.dotfiles/";
   };
 
   security.sudo = {
