@@ -3,7 +3,10 @@
     "position": "top",
     "height": 32,
     "spacing": 4,
-    "margin": "3, 0, 2, 0",
+    "margin-top": 3,
+    "margin-bottom": 2,
+    "margin-left": 0,
+    "margin-right": 0,
     
     "modules-left": [
         "hyprland/workspaces",
@@ -14,21 +17,12 @@
     "modules-center": ["hyprland/window"],
     "modules-right": [
         "tray",
-        "custom/thm-vpn",
         "idle_inhibitor",
         "pulseaudio",
         "network",
         "clock"
     ],
 
-    "custom/thm-vpn": {
-        "format": "{}",
-        "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
-        "return-type": "json",
-        "interval": 5,
-        "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-toggle.sh",
-        "tooltip": true
-    },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -44,7 +38,9 @@
             "urgent": "",
             "default": ""
         },
-        "sort-by-number": true
+        "sort-by-number": true,
+        "disable-scroll": false,
+        "all-outputs": true
     },
 
     "hyprland/window": {
@@ -52,20 +48,24 @@
         "max-length": 100,
         "separate-outputs": true,
         "tooltip": true,
-        "tooltip-format": "{app} - {title}"
+        "tooltip-format": "{class} - {title}"
     },
 
     "clock": {
         "interval": 1,
         "format": "{:%I:%M %p}",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d %H:%M:%S}",
+        "tooltip": true,
+        "tooltip-format": "{:%A, %B %d, %Y}"
     },
 
     "cpu": {
         "interval": 10,
         "format": " {usage}%",
         "max-length": 10,
-        "on-click": "ghostty -e htop"
+        "on-click": "kitty -e htop",
+        "tooltip": true,
+        "tooltip-format": "CPU Usage: {usage}%"
     },
 
     "memory": {
@@ -73,7 +73,7 @@
         "format": " {used:0.1f}GB",
         "max-length": 10,
         "tooltip": true,
-        "tooltip-format": "Used: {used:0.1f}GB\nTotal: {total:0.1f}GB",
+        "tooltip-format": "Used: {used:0.1f}GB ({percentage}%)\nAvailable: {avail:0.1f}GB\nTotal: {total:0.1f}GB",
         "warning": 70,
         "critical": 90
     },
@@ -83,13 +83,16 @@
         "format-alt": "{ipaddr} {icon}",
         "format-alt-click": "click-right",
         "format-wifi": "{icon} ({signalStrength}%)",
+        "format-ethernet": "{icon} {ipaddr}",
+        "format-disconnected": "{icon}",
         "format-icons": {
-            "wifi": ["睊", "直" ,""],
+            "wifi": ["睊", "直", ""],
             "ethernet": [""],
             "disconnected": [""]
         },
         "on-click": "nm-connection-editor",
-        "tooltip-format": "{ifname}: {ipaddr}"
+        "tooltip": true,
+        "tooltip-format": "{ifname}: {ipaddr}\nGateway: {gwaddr}"
     },
 
     "pulseaudio": {
@@ -100,11 +103,16 @@
             "headphone": "",
             "hands-free": "",
             "headset": "🎧",
+            "phone": "",
+            "portable": "",
+            "car": "",
             "default": ["", "", ""]
         },
-        "scroll-step": 1,
+        "scroll-step": 5,
         "on-click": "pavucontrol",
-        "tooltip": false
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": true,
+        "tooltip-format": "Volume: {volume}%"
     },
 
     "idle_inhibitor": {
@@ -113,30 +121,31 @@
             "activated": "",
             "deactivated": ""
         },
-        "tooltip": true
+        "tooltip": true,
+        "tooltip-format-activated": "Idle inhibitor: ON",
+        "tooltip-format-deactivated": "Idle inhibitor: OFF"
     },
 
     "tray": {
         "icon-size": 15,
-        "spacing": 10
+        "spacing": 10,
+        "show-passive-items": true
     },
 
     "disk": {
         "interval": 30,
         "format": " {free}",
-        "path": "/"
-    },
-
-    "mpd": {
-        "format": "{stateIcon} {artist} - {title}",
-        "format-disconnected": "🎶",
-        "format-stopped": "♪",
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)",
-        "max-length": 45
+        "path": "/",
+        "tooltip": true,
+        "tooltip-format": "Used: {used} ({percentage_used}%)\nFree: {free} ({percentage_free}%)\nTotal: {total}"
     }
 }
+
+    // "custom/thm-vpn": {
+    //     "format": "{}",
+    //     "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
+    //     "return-type": "json",
+    //     "interval": 5,
+    //     "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-toggle.sh",
+    //     "tooltip": true
+    // },

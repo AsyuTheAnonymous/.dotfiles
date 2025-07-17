@@ -31,7 +31,7 @@
         "tooltip": false,
     },
 
-    "sway/window": {
+    "hyprland/window": {
         "max-length": 25,
         "tooltip": false
     },
@@ -40,7 +40,7 @@
         "interval": 1,
         "locale": "C", 
         "format": "{:%I:%M %p}",
-        "format-alt": " {:%a,%b %d}" // Icon: calendar-alt
+        "format-alt": " {:%a,%b %d}" 
     },
 
     "cpu": {
