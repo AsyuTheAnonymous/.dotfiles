@@ -8,7 +8,6 @@
     ./ReconFTW/reconftw.nix
     ./XSStrike/xsstrike.nix
     ./Oniux/oniux.nix
-
   ];
   programs.oniux.enable = true;
 

@@ -1,13 +1,16 @@
 # Bug Bounty Environment for Laptop
-{ config, pkgs, pkgs-unstable, ... }:
-
 {
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   imports = [
-    ./recon.nix       # Reconnaissance tools optimized for laptop
-    ./exploits.nix    # Exploitation frameworks with laptop resources in mind
-    ./reversing.nix   # Reverse engineering tools
-    ./web.nix         # Web application security tools
-    ./workflows.nix   # Automated workflows and shortcuts
+    ./recon.nix # Reconnaissance tools optimized for laptop
+    ./exploits.nix # Exploitation frameworks with laptop resources in mind
+    ./reversing.nix # Reverse engineering tools
+    ./web.nix # Web application security tools
+    ./workflows.nix # Automated workflows and shortcuts
   ];
 
   # Battery-optimized system settings for a laptop
@@ -47,10 +50,10 @@
     # Proxy settings for tools
     BURP_PROXY = "http://127.0.0.1:8080";
     ZAP_PROXY = "http://127.0.0.1:8090";
-    
+
     # Resource management for laptops
     PARALLEL_THREADS = "4"; # Conservative default, adjust based on your CPU
-    
+
     # Default paths for common tools
     PATH = [
       "$BUGBOUNTY_TOOLS/bin"

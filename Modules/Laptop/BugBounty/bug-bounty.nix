@@ -1,7 +1,10 @@
 # Master Bug Bounty Module for Laptop
-{ config, pkgs, pkgs-unstable, ... }:
-
 {
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   imports = [
     ./BugBounty
   ];
@@ -12,11 +15,11 @@
       text = ''
         # Create base directories for Bug Bounty
         mkdir -p /home/asyu/BugBounty/{Tools,Targets,Reports,Templates,Scripts,notes,payloads}
-        
+
         # Create subdirectories for organization
         mkdir -p /home/asyu/BugBounty/Tools/{recon,exploit,web,mobile}
         mkdir -p /home/asyu/BugBounty/Templates/{reports,notes,scripts}
-        
+
         # Set permissions
         chown -R asyu:users /home/asyu/BugBounty
       '';
@@ -73,7 +76,7 @@
       - Use tmux sessions with `start-bb-session` to organize your workflow
       - Track your time with `bb-track` for later reporting
     '';
-    
+
     # Basic .gitignore for bug bounty directory
     "bugbounty/gitignore".text = ''
       # Bug Bounty .gitignore
@@ -84,20 +87,20 @@
       *.token
       *.secret
       *password*
-      
+
       # Ignore large files and databases
       *.db
       *.sqlite
       *.backup
-      
+
       # Ignore logs and temporary files
       *.log
       *.tmp
-      
+
       # Tool-specific files
       .burp/
       .zap/
-      
+
       # Custom directories to exclude
       private/
     '';

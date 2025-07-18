@@ -41,7 +41,7 @@
     papirus-icon-theme
     adwaita-qt
     adwaita-icon-theme
-    
+
     # Keep utilities
     starship
     rofi
@@ -62,8 +62,8 @@
     xorg.xwininfo
     xorg.xinput
     xwayland
-    
-    # 
+
+    #
     wl-clipboard
     libinput
     cairo
@@ -77,8 +77,8 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    extraPortals = with pkgs; [ 
-      xdg-desktop-portal-wlr  # Use WLR portal for Wayland
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr # Use WLR portal for Wayland
       xdg-desktop-portal-gtk
     ];
     config = {
@@ -93,7 +93,7 @@
   # xdg.portal = {
   #   enable = true;
   #   xdgOpenUsePortal = true;
-  #   gtkUseWayland = true; 
+  #   gtkUseWayland = true;
   #   extraPortals = with pkgs; [
   #     xdg-desktop-portal-wlr
   #     xdg-desktop-portal-gtk
@@ -113,7 +113,7 @@
   #     };
   #   };
   # };
-  
+
   # # Enable seat management for Wayfire
   # services.greetd = {
   #   enable = true;
@@ -127,7 +127,6 @@
   hardware.uinput.enable = true;
   security.polkit.enable = true;
 
-  
   # Required services for Wayfire
   services.dbus.enable = true;
   services.pipewire = {

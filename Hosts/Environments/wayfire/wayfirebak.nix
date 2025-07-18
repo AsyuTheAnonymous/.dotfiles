@@ -8,9 +8,9 @@
   services.xserver = {
     enable = true;
     desktopManager.xfce.enable = true;
-    videoDrivers = ["nvidia"];  # NVIDIA configuration
+    videoDrivers = ["nvidia"]; # NVIDIA configuration
   };
-  
+
   # Default to Wayfire session
   services.displayManager.defaultSession = "wayfire";
 
@@ -18,8 +18,8 @@
   programs.wayfire = {
     enable = true;
     plugins = with pkgs.wayfirePlugins; [
-      wcm          # Config manager
-      wf-shell     # Panel and dock
+      wcm # Config manager
+      wf-shell # Panel and dock
     ];
     xwayland.enable = true;
   };
@@ -42,7 +42,7 @@
     picom
     rofi
     starship
-    
+
     # Essential portals
     xdg-desktop-portal
     xdg-desktop-portal-gtk
@@ -53,18 +53,18 @@
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    extraPortals = with pkgs; [ 
+    extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
     ];
     # Minimal portal config
     config.wayfire.default = ["wlr" "gtk"];
   };
-  
+
   # Required services
   services.dbus.enable = true;
   security.rtkit.enable = true;
-  
+
   # Enable PipeWire for screen sharing
   services.pipewire = {
     enable = true;

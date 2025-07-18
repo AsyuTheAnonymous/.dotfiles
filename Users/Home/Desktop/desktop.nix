@@ -35,7 +35,7 @@
       name = "Bibata-Modern-Ice";
       size = 30;
     };
-    
+
     # targets.gtk = {
     #   enable = true;
     # };
@@ -43,7 +43,6 @@
     # targets.hyprland = {
     #   enable = true;
     # };
-
   };
   # # Some apps need this so best suit the seem how I can!
   # gtk = {
@@ -76,18 +75,17 @@
   #   };
   # };
 
-
   # home.activation = {
   #   changePapirusFolders = ''
   #     ${pkgs.catppuccin-papirus-folders}/bin/catppuccin-papirus-folders -C mocha -a blue --theme Papirus-Dark
   #   '';
   # };
 
-  # Enable waybar 
+  # Enable waybar
   # programs.waybar = {
   #   enable = true;
   # };
-  
+
   #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
     enable = true;

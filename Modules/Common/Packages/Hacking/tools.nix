@@ -62,7 +62,6 @@
 
   hardware.flipperzero.enable = true;
 
-
   # Enable Tor and Privoxy for HTTP(S) proxying over Tor
   services.tor = {
     enable = true;
@@ -108,7 +107,6 @@
 
   # THM Labs
   networking.hosts = {
-    "10.10.23.96" = [ "futurevera.thm" ];
+    "10.10.23.96" = ["futurevera.thm"];
   };
-
 }

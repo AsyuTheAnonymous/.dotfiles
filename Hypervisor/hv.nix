@@ -1,8 +1,6 @@
-{ ... }: {
-    imports = [
-        ./Virt-Manager/virt.nix
-        ./Docker/docker.nix
-    ];
-
-
+{...}: {
+  imports = [
+    ./Virt-Manager/virt.nix
+    ./Docker/docker.nix
+  ];
 }

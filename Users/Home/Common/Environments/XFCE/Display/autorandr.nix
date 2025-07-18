@@ -1,5 +1,9 @@
-  { config, lib, pkgs, ... }: {
-  
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Configure autorandr
   programs.autorandr = {
     enable = true;
@@ -13,24 +17,22 @@
           "DP-0" = {
             enable = true;
             primary = true;
-            mode = "2560x1440";  # Adjust to your preferred resolution
-            rate = "164.96";     # Adjust to your preferred refresh rate
+            mode = "2560x1440"; # Adjust to your preferred resolution
+            rate = "164.96"; # Adjust to your preferred refresh rate
             position = "0x0";
           };
           "HDMI-0" = {
             enable = true;
             primary = false;
-            mode = "1920x1080";  # Adjust to your preferred resolution
+            mode = "1920x1080"; # Adjust to your preferred resolution
             position = "2560x0"; # Position to the right of DP-0
-            rate = "74.97"; 
+            rate = "74.97";
           };
         };
       };
     };
   };
-  
+
   # Enable the autorandr service
   services.autorandr.enable = true;
-
 }
-

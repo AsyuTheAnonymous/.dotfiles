@@ -1,8 +1,16 @@
 # ./Oniux/oniux.nix
-{ config, lib, pkgs, ... }:
-
-let
-  oniuxPackage = { lib, rustPlatform, fetchFromGitLab, nix-update-script }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  oniuxPackage = {
+    lib,
+    rustPlatform,
+    fetchFromGitLab,
+    nix-update-script,
+  }:
     rustPlatform.buildRustPackage (finalAttrs: {
       pname = "oniux";
       version = "0.4.0";
@@ -18,12 +26,12 @@ let
       useFetchCargoVendor = true;
       cargoHash = "sha256-tUOxs9bTcXS3Gq6cHYe+eAGAEYSRvf3JVGugBImbvJM=";
 
-      passthru.updateScript = nix-update-script { };
+      passthru.updateScript = nix-update-script {};
 
       meta = {
         homepage = "https://gitlab.torproject.org/tpo/core/oniux";
         description = "Isolate Applications over Tor using Linux Namespaces";
-        maintainers = with lib.maintainers; [ tnias ];
+        maintainers = with lib.maintainers; [tnias];
         platforms = lib.platforms.linux;
         license = with lib.licenses; [
           asl20
@@ -32,8 +40,7 @@ let
         mainProgram = "oniux";
       };
     });
-in
-{
+in {
   # This makes it a proper NixOS module
   options = {
     programs.oniux = {
@@ -47,6 +54,6 @@ in
   };
 
   config = lib.mkIf config.programs.oniux.enable {
-    environment.systemPackages = [ config.programs.oniux.package ];
+    environment.systemPackages = [config.programs.oniux.package];
   };
 }
