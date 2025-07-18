@@ -10,7 +10,7 @@
     ./Optimization/Nix/nix.nix
     ./Helpers/nh.nix
     #./Hacking/tools.nix
-    ./Browsers/brave.nix
+    ./Browsers/libre.nix
     ./Flatpak/flatpak.nix
     #./Remote/Parsec/parsec.nix
     ./Mail/Proton/mail.nix
