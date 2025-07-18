@@ -132,7 +132,7 @@
         inherit pkgs;
         modules = [
           ./Users/Home/Desktop/desktop.nix
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
         ];
         extraSpecialArgs = {
           inherit username;

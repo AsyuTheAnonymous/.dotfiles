@@ -89,7 +89,7 @@
   #Starship and Neofetch + ZSH Enabled
   programs.zsh = {
     enable = true;
-    initExtra = ''
+    initContent = ''
       eval "$(starship init zsh)"
     '';
     shellAliases = {
@@ -106,7 +106,7 @@
     ".config/hypr/hyprpaper.conf".source = ./../../../Hosts/Environments/Hyprland/hyprpaper.conf;
     ".config/ghostty/config".source = ./../../../Hosts/Environments/Hyprland/configs/ghostty/config;
     ".config/rofi/config.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/config.rasi;
-    ".config/rofi/catppuccin-mocha.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/catppuccin-mocha.rasi;
+    ".config/rofi/frosted.rasi".source = ./../../../Hosts/Environments/Hyprland/configs/rofi/frosted.rasi;
     ".config/neofetch/config.conf".source = ./../../../Hosts/Environments/Hyprland/configs/neofetch/config.conf;
     ".config/starship.toml".source = ./../../../Hosts/Environments/Hyprland/configs/starship/starship.toml;
     ".config/waybar".source = ./../../../Hosts/Environments/Hyprland/configs/waybar;
