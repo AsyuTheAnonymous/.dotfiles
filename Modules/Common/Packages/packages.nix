@@ -25,8 +25,9 @@
 
   environment.systemPackages = with pkgs; [
     nixos-generators
+    # librechat
     appflowy
-    webcord
+    # webcord
     neofetch
     pavucontrol
     bottles

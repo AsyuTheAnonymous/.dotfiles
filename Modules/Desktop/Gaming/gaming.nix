@@ -11,6 +11,7 @@
     protonup
     lutris
     heroic
+    gamescope
     mangohud
   ];
   # Enable Game Mode
