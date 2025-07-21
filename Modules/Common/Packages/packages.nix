@@ -25,8 +25,13 @@
 
   environment.systemPackages = with pkgs; [
     nixos-generators
-    # librechat
+    gimp
+    xarchiver
+    tor
+    tor-browser
+    librechat
     appflowy
+    nodejs_22
     # webcord
     neofetch
     pavucontrol

@@ -21,7 +21,6 @@
   ];
   # Hostname
   networking.hostName = "asyus-system";
-
   # Flake Support
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -33,4 +32,5 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-33.4.11"
   ];
+  nixpkgs.config.allowUnfree = true;
 }
