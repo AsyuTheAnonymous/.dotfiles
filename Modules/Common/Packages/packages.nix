@@ -58,5 +58,6 @@
   # programs.firefox = {
   #   enable = true;
   # };
+  programs.localsend.enable = true;
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 }
