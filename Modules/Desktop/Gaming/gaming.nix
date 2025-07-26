@@ -13,6 +13,7 @@
     heroic
     gamescope
     mangohud
+    runelite
   ];
   # Enable Game Mode
   programs.gamemode.enable = true;

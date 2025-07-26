@@ -21,6 +21,7 @@
     ./VPN/OVPN/openvpn.nix
     ./Remote/Remmina/remmina.nix
     # ./VPN/Proton/proton.nix
+    ./AI/Stack/ai-framework.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -30,6 +31,7 @@
     tor
     tor-browser
     librechat
+    termius
     appflowy
     nodejs_22
     # webcord
