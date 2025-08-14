@@ -20,6 +20,8 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
+        "custom/thm-vpn",
+        "custom/proton-vpn",
         "clock"
     ],
 
@@ -138,14 +140,29 @@
         "path": "/",
         "tooltip": true,
         "tooltip-format": "Used: {used} ({percentage_used}%)\nFree: {free} ({percentage_free}%)\nTotal: {total}"
+    },
+    "custom/thm-vpn": {
+        "format": "{}",
+        "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
+        "return-type": "json",
+        "interval": 5,
+        "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-toggle.sh",
+        "tooltip": true
+    },
+    "custom/proton-vpn": {
+        "format": "{}",
+        "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/proton-vpn-status.sh",
+        "return-type": "json",
+        "interval": 5,
+        "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/proton-vpn-toggle.sh",
+        "tooltip": true,
+        "env": {
+            "PROTON_VPN_DIR": "/home/asyu/vpn/proton",
+            "PROTON_OVPN": "/home/asyu/vpn/proton/<your-preferred-file>.ovpn"
+        }
     }
+
 }
 
-    // "custom/thm-vpn": {
-    //     "format": "{}",
-    //     "exec": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-status.sh",
-    //     "return-type": "json",
-    //     "interval": 5,
-    //     "on-click": "/home/asyu/.dotfiles/Hosts/Environments/Hyprland/configs/waybar/custom/thm-vpn-toggle.sh",
-    //     "tooltip": true
-    // },
+
+    

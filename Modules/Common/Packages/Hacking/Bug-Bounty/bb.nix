@@ -17,7 +17,8 @@
     gowitness
     jq
     seclists
-
+    wireshark
+    rustscan
     # Optional, uncomment when needed:
     # graphqlmap altair
     # amass
