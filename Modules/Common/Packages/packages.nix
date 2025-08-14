@@ -9,7 +9,7 @@
     # ./Optimization/Cleaner/auto.nix
     ./Optimization/Nix/nix.nix
     ./Helpers/nh.nix
-    #./Hacking/tools.nix
+    ./Hacking/Bug-Bounty/bb.nix
     ./Browsers/libre.nix
     ./Flatpak/flatpak.nix
     #./Remote/Parsec/parsec.nix
@@ -27,13 +27,13 @@
   environment.systemPackages = with pkgs; [
     nixos-generators
     gimp
+    figma-linux
     xarchiver
     tor
     tor-browser
     librechat
     termius
     appflowy
-    nodejs_22
     # webcord
     neofetch
     pavucontrol

@@ -11,6 +11,7 @@
 
   # Main packages for my desktop system
   environment.systemPackages = with pkgs; [
+    nodejs_22
     pcmanfm
     libreoffice
     tradingview
@@ -20,4 +21,6 @@
     numix-icon-theme
     # (pkgs.callPackage ./custom/msty {})
   ];
+  #Openrgb
+  services.hardware.openrgb.enable = true;
 }
