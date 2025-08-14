@@ -13,7 +13,7 @@
     ffuf
     arjun
     nuclei
-    interactsh-client
+    interactsh
     gowitness
     jq
     seclists
