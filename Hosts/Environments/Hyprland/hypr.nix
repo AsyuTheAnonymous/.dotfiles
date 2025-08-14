@@ -1,15 +1,20 @@
-{pkgs, ...}: {
+{pkgs, lib, ...}: {
   # Enable X11 Windowing System
   services.xserver = {
     xkb.layout = "us";
     xkb.variant = "";
     enable = true;
   };
+  # Polkit
+  security.polkit.enable = true;
 
   # Enable Hyprland
   programs.hyprland = {
-    enable = true;
+    enable = lib.mkDefault true;
   };
+  # KDE Requirements
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.defaultSession = "hyprland";
 
   # Some Hyprland Dependencies
   programs.hyprland.xwayland = {
@@ -22,6 +27,7 @@
 
   # REQUIREMENTS
   environment.systemPackages = with pkgs; [
+    kdePackages.kate
     waybar
     hyprpaper
     # pcmanfm
@@ -67,6 +73,14 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-hyprland
+      pkgs.kdePackages.xdg-desktop-portal-kde
+      pkgs.xdg-desktop-portal-gtk
     ];
+    # Fallback for random apps
+    config.common.default = [ "gtk" ];
+    # When in Hyprland, prefer Hyprland portal (then gtk fallback)
+    config.hyprland.default = [ "hyprland" "gtk" ];
+    # When in Plasma, use KDE portal
+    config.plasma.default = [ "kde" ];
   };
 }

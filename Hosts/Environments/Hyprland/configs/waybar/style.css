@@ -27,6 +27,13 @@
 #custom-thm-vpn.vpn-off {
   color: #ed8796;  /* Red color for disconnected */
 }
+#custom-proton-vpn.vpn-on {
+  color: #a6da95;  /* Green color for connected */
+}
+
+#custom-proton-vpn.vpn-off {
+  color: #ed8796;  /* Red color for disconnected */
+}
 
 #workspaces {
   margin: 0 3px;
