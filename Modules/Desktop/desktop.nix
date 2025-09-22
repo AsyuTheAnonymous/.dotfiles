@@ -11,6 +11,7 @@
 
   # Main packages for my desktop system
   environment.systemPackages = with pkgs; [
+    android-tools
     nodejs_22
     pcmanfm
     libreoffice

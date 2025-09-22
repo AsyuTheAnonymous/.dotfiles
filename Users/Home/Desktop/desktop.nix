@@ -59,7 +59,7 @@
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "asyu";
   home.homeDirectory = "/home/asyu";
-  home.stateVersion = "24.11"; # Please read the comment before changing.
+  home.stateVersion = "25.05"; # Please read the comment before changing.
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -93,8 +93,7 @@
       eval "$(starship init zsh)"
     '';
     shellAliases = {
-      linuxbest = "echo i hate windows";
-    };
+      reconftw = "sudo docker run -it --rm -v \"/home/asyu/OutputFolder/:/reconftw/Recon/\" six2dez/reconftw:main -d ";    };
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

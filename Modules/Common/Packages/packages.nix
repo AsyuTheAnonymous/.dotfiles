@@ -25,12 +25,14 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    wireguard-tools
+    inkscape
+    chromium
     nixos-generators
     gimp
     figma-linux
     xarchiver
     tor
-    tor-browser
     librechat
     termius
     appflowy
@@ -62,4 +64,5 @@
   # };
   programs.localsend.enable = true;
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+
 }
