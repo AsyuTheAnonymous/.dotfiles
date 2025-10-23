@@ -92,8 +92,8 @@
     initContent = ''
       eval "$(starship init zsh)"
     '';
-    shellAliases = {
-      reconftw = "sudo docker run -it --rm -v \"/home/asyu/OutputFolder/:/reconftw/Recon/\" six2dez/reconftw:main -d ";    };
+  #   shellAliases = {
+  #     reconftw = "sudo docker run -it --rm -v \"/home/asyu/OutputFolder/:/reconftw/Recon/\" six2dez/reconftw:main -d ";    };
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

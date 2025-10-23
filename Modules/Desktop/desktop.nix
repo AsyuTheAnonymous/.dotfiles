@@ -11,7 +11,7 @@
 
   # Main packages for my desktop system
   environment.systemPackages = with pkgs; [
-    android-tools
+    # android-tools
     nodejs_22
     pcmanfm
     libreoffice
@@ -23,5 +23,5 @@
     # (pkgs.callPackage ./custom/msty {})
   ];
   #Openrgb
-  services.hardware.openrgb.enable = true;
+  # services.hardware.openrgb.enable = true;
 }
