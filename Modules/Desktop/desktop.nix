@@ -2,7 +2,7 @@
   imports = [
     ./../Common/common.nix
     ./Gaming/gaming.nix
-    ./Usb/usb.nix
+    # ./Usb/usb.nix
     ./Unstable/unstable.nix
     ./Terminals/Warp/warp.nix
   ];

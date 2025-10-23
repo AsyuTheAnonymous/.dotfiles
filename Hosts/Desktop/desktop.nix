@@ -9,7 +9,7 @@
     # Modules & Packages
     ./../../Modules/Desktop/desktop.nix
     # Custom Modules
-    ./../../Modules/Custom/custom.nix
+    # ./../../Modules/Custom/custom.nix
     # Stylix
     ./../../Modules/Common/Stylix/desktop.nix
     # System Settings
@@ -17,7 +17,7 @@
     # User
     ./../../Users/Desktop/asyu.nix
     # Hypervisor
-    ./../../Hypervisor/hv.nix
+    # ./../../Hypervisor/hv.nix
   ];
   # Hostname
   networking.hostName = "asyus-system";
@@ -31,6 +31,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-33.4.11"
+    "mbedtls-2.28.10"
   ];
   nixpkgs.config.allowUnfree = true;
 }

@@ -17,7 +17,7 @@
     ./Terminals/Ghostty/ghostty.nix
     ./Editors/Vscode/vscode.nix
     ./Notes/Obsidian/obsidian.nix
-    #./Browsers/firefox.nix
+    # ./Browsers/firefox.nix
     # ./VPN/OVPN/openvpn.nix
     # ./Remote/Remmina/remmina.nix
     # ./VPN/Proton/proton.nix
@@ -25,9 +25,9 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    vivaldi
-    sunshine
-    moonlight-qt
+    # vivaldi
+    # sunshine
+    # moonlight-qt
     wireguard-tools
     chromium
     nixos-generators
