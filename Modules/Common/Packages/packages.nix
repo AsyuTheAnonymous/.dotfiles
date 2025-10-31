@@ -25,14 +25,23 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # vivaldi
+    gnome-system-monitor
+    discord
+    freecad
+    opencode
+    vivaldi
+    distrobox
+    monado
+    pcmanfm
+    libreoffice
+    tradingview
     # sunshine
     # moonlight-qt
-    wireguard-tools
+    # wireguard-tools
     chromium
     nixos-generators
     gimp
-    figma-linux
+    # figma-linux
     xarchiver
     appflowy
     # webcord
@@ -64,6 +73,16 @@
   # };
   programs.localsend.enable = true;
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+
+  services.syncthing = {
+    enable = true;
+    user = "asyu";
+    group = "users";
+    dataDir = "/home/asyu/Share/";
+    openDefaultPorts = true;
+    configDir = "/home/asyu/.config/syncthing";
+  };
+
 
   # programs.nix-ld.enable = true;
   # programs.nix-ld.libraries = with pkgs; [ stdenv.cc.cc zlib fuse3 icu nss openssl curl expat ];

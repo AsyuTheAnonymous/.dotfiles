@@ -83,4 +83,10 @@
     # When in Plasma, use KDE portal
     config.plasma.default = [ "kde" ];
   };
+
+  
+
+
+
+
 }

@@ -2,7 +2,7 @@
   imports = [
     ./../Common/common.nix
     ./Gaming/gaming.nix
-    # ./Usb/usb.nix
+    ./Usb/usb.nix
     ./Unstable/unstable.nix
     ./Terminals/Warp/warp.nix
   ];
@@ -13,9 +13,6 @@
   environment.systemPackages = with pkgs; [
     # android-tools
     nodejs_22
-    pcmanfm
-    libreoffice
-    tradingview
     catppuccin-sddm
     catppuccin-gtk
     mpv
